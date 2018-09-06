@@ -35,6 +35,7 @@ CREATE TABLE HoaDon
 (
 	MaHoaDon nchar (20) not null primary key,
 	NgayLapHoaDon date,
+	GioLapHoaDon time,
 	TenNVLapHoaDon nvarchar (50),
 	MaNVLapHoaDon nchar (20),
 	TenKhachHang nvarchar (50),

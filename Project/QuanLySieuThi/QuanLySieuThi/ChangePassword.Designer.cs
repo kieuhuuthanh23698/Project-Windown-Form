@@ -161,7 +161,7 @@
             this.MaximumSize = new System.Drawing.Size(445, 375);
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formChangePassword";
+            this.Text = "Change Password";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

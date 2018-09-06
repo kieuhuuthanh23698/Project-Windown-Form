@@ -38,36 +38,40 @@ namespace QuanLySieuThi
                 additem(i);
         }
 
-
+        //button exit
         private void Exit_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            //Application.Exit();
-            Login f = new Login();
-            f.Show();
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+                Application.Exit();    
         }
 
-        private void HoaDon_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //DialogResult result = MessageBox.Show("Bạn có muốn thoát không 1 ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //if (result == DialogResult.Yes)
-            //    e.Cancel = false;
-            //else
-            //    e.Cancel = true;
-        }
-
-
+        //button chage password
         private void changePassword(object sender, EventArgs e)
         {
             ChangePassword f = new ChangePassword();
             f.ShowDialog();
         }
 
+        //button logout
         private void Logout(object sender, EventArgs e)
         {
             this.Close();
             Login f = new Login();
             f.Show();
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+                Application.Exit();  
+        }
+
+        private void danhmucmathang(object sender, EventArgs e)
+        {
+            Products f = new Products();
+            f.ShowDialog();
         }
     }
 
