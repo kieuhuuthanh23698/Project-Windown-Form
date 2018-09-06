@@ -8,15 +8,15 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class HoaDon : Form
+    public partial class Bill : Form
     {
-        public List<HangHoa> list;
+        //public List<HangHoa> list;
 
         public void KhoiTaoKhoHang()
         {
             int n = 100;
         }
-        public HoaDon()
+        public Bill()
         {
             InitializeComponent();
             treeView1.Nodes[0].Expand();
@@ -41,22 +41,41 @@ namespace QuanLySieuThi
 
         private void Exit_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            //Application.Exit();
+            Login f = new Login();
+            f.Show();
         }
 
         private void HoaDon_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn thoát không ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-                e.Cancel = false;
+            //DialogResult result = MessageBox.Show("Bạn có muốn thoát không 1 ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //if (result == DialogResult.Yes)
+            //    e.Cancel = false;
+            //else
+            //    e.Cancel = true;
+        }
+
+
+        private void changePassword(object sender, EventArgs e)
+        {
+            ChangePassword f = new ChangePassword();
+            f.ShowDialog();
+        }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            this.Close();
+            Login f = new Login();
+            f.Show();
         }
     }
 
-    class HangHoa
-    {
-        public String maHang { get; set; }
-        public String tenHang { get; set; }
-        public String giaBan { get; set; }
-        public String tonKho { get; set; }
-    }
+    //class HangHoa
+    //{
+    //    public String maHang { get; set; }
+    //    public String tenHang { get; set; }
+    //    public String giaBan { get; set; }
+    //    public String tonKho { get; set; }
+    //}
 }

@@ -63,6 +63,16 @@ namespace QuanLySieuThi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Alarm_Padlock_icon {
+            get {
+                object obj = ResourceManager.GetObject("Alarm-Padlock-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lable_login {
             get {
                 object obj = ResourceManager.GetObject("lable login", resourceCulture);

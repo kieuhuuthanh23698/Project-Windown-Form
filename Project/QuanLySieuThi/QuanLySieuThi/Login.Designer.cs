@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -148,7 +148,7 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // Login
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,7 +156,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(482, 419);
+            this.ClientSize = new System.Drawing.Size(482, 413);
+            this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -169,7 +170,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(pictureBox1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.MaximumSize = new System.Drawing.Size(500, 460);
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login - Quản lý siêu thị";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
