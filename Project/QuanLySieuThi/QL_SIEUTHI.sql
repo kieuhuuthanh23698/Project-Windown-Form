@@ -92,3 +92,20 @@ CREATE TABLE ThuChi
 )
 Alter table ThuChi
 Add contraint PK_ThuChi primary key (NgayThuChi,GioThuChi)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
