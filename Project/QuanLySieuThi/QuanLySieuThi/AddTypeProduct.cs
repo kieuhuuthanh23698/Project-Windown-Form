@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class ChageTypeProduct : Form
+    public partial class AddTypeProduct : Form
     {
-        public ChageTypeProduct()
+        public AddTypeProduct()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

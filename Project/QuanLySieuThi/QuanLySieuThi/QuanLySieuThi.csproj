@@ -40,11 +40,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewProduct.Designer.cs">
+      <DependentUpon>AddNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTypeProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTypeProduct.Designer.cs">
+      <DependentUpon>AddTypeProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChageTypeProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChageTypeProduct.Designer.cs">
       <DependentUpon>ChageTypeProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeProduct.Designer.cs">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,11 +90,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewProduct.resx">
+      <DependentUpon>AddNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTypeProduct.resx">
+      <DependentUpon>AddTypeProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChageTypeProduct.resx">
       <DependentUpon>ChageTypeProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeProduct.resx">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -118,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nhommathang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mathang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
