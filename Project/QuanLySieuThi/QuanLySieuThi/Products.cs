@@ -19,5 +19,11 @@ namespace QuanLySieuThi
         {
 
         }
+
+        private void themToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChageTypeProduct f = new ChageTypeProduct();
+            f.ShowDialog();
+        }
     }
 }

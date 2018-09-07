@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChageTypeProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChageTypeProduct.Designer.cs">
+      <DependentUpon>ChageTypeProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChageTypeProduct.resx">
+      <DependentUpon>ChageTypeProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Alarm-Padlock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhommathang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Node7");
-            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Node8");
-            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Node11");
-            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Node12");
-            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Node13");
-            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Node14");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node7");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node8");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node11");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node12");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node13");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node14");
             this.label1 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -50,16 +50,16 @@
             this.suaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xoaStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.thêmMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmHàngVàoKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.thêmMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmHàngVàoKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -79,52 +79,52 @@
             this.treeView1.BackColor = System.Drawing.SystemColors.Info;
             this.treeView1.Location = new System.Drawing.Point(12, 117);
             this.treeView1.Name = "treeView1";
-            treeNode91.Name = "Node0";
-            treeNode91.Text = "Node0";
-            treeNode92.Name = "Node1";
-            treeNode92.Text = "Node1";
-            treeNode93.Name = "Node2";
-            treeNode93.Text = "Node2";
-            treeNode94.Name = "Node3";
-            treeNode94.Text = "Node3";
-            treeNode95.Name = "Node4";
-            treeNode95.Text = "Node4";
-            treeNode96.Name = "Node5";
-            treeNode96.Text = "Node5";
-            treeNode97.Name = "Node6";
-            treeNode97.Text = "Node6";
-            treeNode98.Name = "Node7";
-            treeNode98.Text = "Node7";
-            treeNode99.Name = "Node8";
-            treeNode99.Text = "Node8";
-            treeNode100.Name = "Node9";
-            treeNode100.Text = "Node9";
-            treeNode101.Name = "Node10";
-            treeNode101.Text = "Node10";
-            treeNode102.Name = "Node11";
-            treeNode102.Text = "Node11";
-            treeNode103.Name = "Node12";
-            treeNode103.Text = "Node12";
-            treeNode104.Name = "Node13";
-            treeNode104.Text = "Node13";
-            treeNode105.Name = "Node14";
-            treeNode105.Text = "Node14";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            treeNode2.Name = "Node1";
+            treeNode2.Text = "Node1";
+            treeNode3.Name = "Node2";
+            treeNode3.Text = "Node2";
+            treeNode4.Name = "Node3";
+            treeNode4.Text = "Node3";
+            treeNode5.Name = "Node4";
+            treeNode5.Text = "Node4";
+            treeNode6.Name = "Node5";
+            treeNode6.Text = "Node5";
+            treeNode7.Name = "Node6";
+            treeNode7.Text = "Node6";
+            treeNode8.Name = "Node7";
+            treeNode8.Text = "Node7";
+            treeNode9.Name = "Node8";
+            treeNode9.Text = "Node8";
+            treeNode10.Name = "Node9";
+            treeNode10.Text = "Node9";
+            treeNode11.Name = "Node10";
+            treeNode11.Text = "Node10";
+            treeNode12.Name = "Node11";
+            treeNode12.Text = "Node11";
+            treeNode13.Name = "Node12";
+            treeNode13.Text = "Node12";
+            treeNode14.Name = "Node13";
+            treeNode14.Text = "Node13";
+            treeNode15.Name = "Node14";
+            treeNode15.Text = "Node14";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode91,
-            treeNode92,
-            treeNode93,
-            treeNode94,
-            treeNode95,
-            treeNode96,
-            treeNode97,
-            treeNode98,
-            treeNode99,
-            treeNode100,
-            treeNode101,
-            treeNode102,
-            treeNode103,
-            treeNode104,
-            treeNode105});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15});
             this.treeView1.Size = new System.Drawing.Size(307, 551);
             this.treeView1.TabIndex = 1;
             // 
@@ -139,7 +139,7 @@
             this.xoaStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(12, 80);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(307, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(174, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -148,6 +148,7 @@
             this.themToolStripMenuItem.Name = "themToolStripMenuItem";
             this.themToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.themToolStripMenuItem.Text = "Thêm";
+            this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
             // 
             // suaToolStripMenuItem
             // 
@@ -185,6 +186,31 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên mặt hàng";
+            this.columnHeader1.Width = 111;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mã mặt hàng";
+            this.columnHeader2.Width = 114;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giá mua";
+            this.columnHeader3.Width = 91;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Giá bán";
+            this.columnHeader4.Width = 96;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Số lượng";
+            this.columnHeader5.Width = 79;
+            // 
             // menuStrip2
             // 
             this.menuStrip2.AutoSize = false;
@@ -197,7 +223,7 @@
             this.thêmHàngVàoKhoToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(376, 80);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(600, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(494, 24);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -224,31 +250,6 @@
             this.thêmHàngVàoKhoToolStripMenuItem.Name = "thêmHàngVàoKhoToolStripMenuItem";
             this.thêmHàngVàoKhoToolStripMenuItem.Size = new System.Drawing.Size(151, 20);
             this.thêmHàngVàoKhoToolStripMenuItem.Text = "Thêm hàng vào kho";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tên mặt hàng";
-            this.columnHeader1.Width = 111;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mã mặt hàng";
-            this.columnHeader2.Width = 114;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giá mua";
-            this.columnHeader3.Width = 91;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Giá bán";
-            this.columnHeader4.Width = 96;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Số lượng";
-            this.columnHeader5.Width = 79;
             // 
             // Products
             // 
