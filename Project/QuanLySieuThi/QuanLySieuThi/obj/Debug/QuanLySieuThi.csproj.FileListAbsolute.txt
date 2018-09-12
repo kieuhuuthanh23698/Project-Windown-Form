@@ -34,3 +34,6 @@ C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuTh
 C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Bill.resources
 C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Products.resources
 C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.GenerateResource.Cache
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.AddNewNhanVien.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.KhachHang.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.NhanVien.resources
