@@ -68,16 +68,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 25);
+            this.label1.Location = new System.Drawing.Point(278, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 25);
+            this.label1.Size = new System.Drawing.Size(200, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC MẶT HÀNG";
             // 
             // treeView1
             // 
             this.treeView1.BackColor = System.Drawing.SystemColors.Info;
-            this.treeView1.Location = new System.Drawing.Point(12, 117);
+            this.treeView1.Location = new System.Drawing.Point(9, 95);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Node0";
             treeNode1.Text = "Node0";
@@ -125,7 +127,7 @@
             treeNode13,
             treeNode14,
             treeNode15});
-            this.treeView1.Size = new System.Drawing.Size(307, 551);
+            this.treeView1.Size = new System.Drawing.Size(231, 448);
             this.treeView1.TabIndex = 1;
             // 
             // menuStrip1
@@ -137,30 +139,31 @@
             this.themToolStripMenuItem,
             this.suaToolStripMenuItem,
             this.xoaStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(12, 80);
+            this.menuStrip1.Location = new System.Drawing.Point(9, 65);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(186, 34);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(140, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // themToolStripMenuItem
             // 
             this.themToolStripMenuItem.Name = "themToolStripMenuItem";
-            this.themToolStripMenuItem.Size = new System.Drawing.Size(58, 30);
+            this.themToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.themToolStripMenuItem.Text = "Thêm";
             this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
             // 
             // suaToolStripMenuItem
             // 
             this.suaToolStripMenuItem.Name = "suaToolStripMenuItem";
-            this.suaToolStripMenuItem.Size = new System.Drawing.Size(46, 30);
+            this.suaToolStripMenuItem.Size = new System.Drawing.Size(38, 24);
             this.suaToolStripMenuItem.Text = "Sửa";
             this.suaToolStripMenuItem.Click += new System.EventHandler(this.suaToolStripMenuItem_Click);
             // 
             // xoaStripMenuItem1
             // 
             this.xoaStripMenuItem1.Name = "xoaStripMenuItem1";
-            this.xoaStripMenuItem1.Size = new System.Drawing.Size(47, 30);
+            this.xoaStripMenuItem1.Size = new System.Drawing.Size(39, 24);
             this.xoaStripMenuItem1.Text = "Xóa";
             // 
             // listView1
@@ -177,11 +180,12 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(376, 117);
-            this.listView1.MaximumSize = new System.Drawing.Size(600, 550);
+            this.listView1.Location = new System.Drawing.Point(282, 95);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.MaximumSize = new System.Drawing.Size(451, 448);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(600, 550);
+            this.listView1.Size = new System.Drawing.Size(451, 448);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -195,7 +199,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Mã mặt hàng";
-            this.columnHeader2.Width = 114;
+            this.columnHeader2.Width = 109;
             // 
             // columnHeader3
             // 
@@ -222,51 +226,53 @@
             this.chỉnhSửaToolStripMenuItem,
             this.xóaMặtHàngToolStripMenuItem,
             this.thêmHàngVàoKhoToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(376, 80);
+            this.menuStrip2.Location = new System.Drawing.Point(282, 65);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(597, 34);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(448, 28);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // thêmMặtHàngToolStripMenuItem
             // 
             this.thêmMặtHàngToolStripMenuItem.Name = "thêmMặtHàngToolStripMenuItem";
-            this.thêmMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(125, 30);
+            this.thêmMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.thêmMặtHàngToolStripMenuItem.Text = "Thêm mặt hàng";
             this.thêmMặtHàngToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // chỉnhSửaToolStripMenuItem
             // 
             this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(87, 30);
+            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh Sửa";
             this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chageProduct);
             // 
             // xóaMặtHàngToolStripMenuItem
             // 
             this.xóaMặtHàngToolStripMenuItem.Name = "xóaMặtHàngToolStripMenuItem";
-            this.xóaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(114, 30);
+            this.xóaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.xóaMặtHàngToolStripMenuItem.Text = "Xóa mặt hàng";
             // 
             // thêmHàngVàoKhoToolStripMenuItem
             // 
             this.thêmHàngVàoKhoToolStripMenuItem.Name = "thêmHàngVàoKhoToolStripMenuItem";
-            this.thêmHàngVàoKhoToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.thêmHàngVàoKhoToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.thêmHàngVàoKhoToolStripMenuItem.Text = "Thêm hàng vào kho";
             // 
             // Products
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(982, 683);
+            this.ClientSize = new System.Drawing.Size(736, 555);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1000, 730);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(754, 600);
             this.Name = "Products";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menuStrip1.ResumeLayout(false);
