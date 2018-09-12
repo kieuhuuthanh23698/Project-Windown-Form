@@ -73,6 +73,24 @@ namespace QuanLySieuThi
             Products f = new Products();
             f.ShowDialog();
         }
+
+        private void Moformthongtin(object sender, EventArgs e)
+        {
+            thongtinsieuthics f = new thongtinsieuthics();
+            f.ShowDialog();
+        }
+
+        private void moformhoadon(object sender, EventArgs e)
+        {
+            thongkehoadon f = new thongkehoadon();
+            f.ShowDialog();
+        }
+
+        private void moformthongkethuchi(object sender, EventArgs e)
+        {
+            thongkethuchi f = new thongkethuchi();
+            f.ShowDialog();
+        }
     }
 
     //class HangHoa
