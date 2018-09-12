@@ -22,3 +22,6 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.ChageTypeProduct.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.AddNewProduct.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.ChangeProduct.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongtinsieuthics.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongkehoadon.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongkethuchi.resources
