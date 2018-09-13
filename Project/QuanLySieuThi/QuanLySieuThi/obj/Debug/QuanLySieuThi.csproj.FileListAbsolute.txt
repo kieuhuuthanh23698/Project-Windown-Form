@@ -14,7 +14,30 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Properties.Resources.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongkehoadon.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongkethuchi.resources
+<<<<<<< HEAD
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.thongtinsieuthics.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.GenerateResource.Cache
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.exe
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.pdb
+=======
+=======
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.exe
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.pdb
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.AddNewProduct.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.AddTypeProduct.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.ChageTypeProduct.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.ChangePassword.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.ChangeProduct.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Login.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Bill.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.Products.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.AddNewNhanVien.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.KhachHang.resources
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Debug\QuanLySieuThi.NhanVien.resources
+=======
+>>>>>>> accf79c9c4da25c2a96e176b340f90d281b7fa2e
+>>>>>>> bcf088e0ee8922651ea9dcb89ddc7392b699ebc1
+>>>>>>> 655b48ddef7c80068a7807dfaa1895689f24f38c
