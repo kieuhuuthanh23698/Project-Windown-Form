@@ -39,11 +39,7 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = null;
-<<<<<<< HEAD
 //            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.nhommathang;
-=======
-            //this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.nhommathang1;
->>>>>>> 655b48ddef7c80068a7807dfaa1895689f24f38c
             this.pictureBox1.Location = new System.Drawing.Point(2, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(444, 59);
