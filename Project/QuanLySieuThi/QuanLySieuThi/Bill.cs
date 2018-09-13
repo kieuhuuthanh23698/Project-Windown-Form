@@ -91,6 +91,18 @@ namespace QuanLySieuThi
             thongkethuchi f = new thongkethuchi();
             f.ShowDialog();
         }
+
+        private void moFormDanhMucKhachHang(object sender, EventArgs e)
+        {
+            KhachHang f = new KhachHang();
+            f.Show();
+        }
+
+        private void moFormDanhMucNhanVien(object sender, EventArgs e)
+        {
+            NhanVien f = new NhanVien();
+            f.Show();
+        }
     }
 
     //class HangHoa

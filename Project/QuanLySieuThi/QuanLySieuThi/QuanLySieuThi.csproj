@@ -106,9 +106,11 @@
     <Compile Include="Products.Designer.cs">
       <DependentUpon>Products.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="thongkehoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +129,11 @@
     <Compile Include="thongtinsieuthics.Designer.cs">
       <DependentUpon>thongtinsieuthics.cs</DependentUpon>
     </Compile>
-=======
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddNewNhanVien.resx">
       <DependentUpon>AddNewNhanVien.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> accf79c9c4da25c2a96e176b340f90d281b7fa2e
     <EmbeddedResource Include="AddNewProduct.resx">
       <DependentUpon>AddNewProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,13 +167,8 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="thongkehoadon.resx">
       <DependentUpon>thongkehoadon.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,8 +178,6 @@
     <EmbeddedResource Include="thongtinsieuthics.resx">
       <DependentUpon>thongtinsieuthics.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> accf79c9c4da25c2a96e176b340f90d281b7fa2e
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,19 +189,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lable login.png" />
+    <None Include="Resources\vinMart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\labelLogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Alarm-Padlock-icon.png" />
+    <None Include="Resources\matHang.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nhommathang.png" />
+    <None Include="Resources\nhomMatHang.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mathang.png" />
+    <None Include="Resources\iconChangePassword.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

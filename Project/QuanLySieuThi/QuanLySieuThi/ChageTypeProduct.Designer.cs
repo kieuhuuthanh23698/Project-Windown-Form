@@ -74,7 +74,7 @@
             // pictureBox2
             // 
             this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = global::QuanLySieuThi.Properties.Resources.nhommathang;
+            this.pictureBox2.Image = global::QuanLySieuThi.Properties.Resources.nhomMatHang;
             this.pictureBox2.Location = new System.Drawing.Point(2, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(444, 59);
