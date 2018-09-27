@@ -20,3 +20,5 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.pdb
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.csprojResolveAssemblyReference.cache
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.KetNoi.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.hoaDon.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.FormMain.resources
