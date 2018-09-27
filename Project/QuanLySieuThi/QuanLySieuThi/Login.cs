@@ -10,29 +10,50 @@ namespace QuanLySieuThi
 {
     public partial class Login : Form
     {
-        string s = "";
+        string chuoiKetNoi;
 
-        public Login(string s)
+
+        public Login()
         {
             InitializeComponent();
-            this.s = s;
-            MessageBox.Show(s);
         }
 
-        //button login
-        private void button1_Click(object sender, EventArgs e)
+        public Login(string chuoiKetNoi)
+        {
+            InitializeComponent();
+            this.chuoiKetNoi = chuoiKetNoi;
+            MessageBox.Show(chuoiKetNoi);
+            txtTenDangNhap.Focus();
+        }    
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
             Bill hoaDon = new Bill();
             hoaDon.Show();
             this.Hide();
         }
 
-        //button exit
-        private void button2_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn thoát không ?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
-                Application.Exit();            
+                Application.Exit(); 
+        }
+
+        private void txtTenDangNhap_Leave(object sender, EventArgs e)
+        {
+            if (txtTenDangNhap.Text == "")
+                this.errorProvider1.SetError(txtTenDangNhap, "Bạn không được để trống tên đăng nhập !");
+            else
+                this.errorProvider1.Clear();
+        }
+
+        private void txtMatKhau_Leave(object sender, EventArgs e)
+        {
+            if (txtMatKhau.Text == "")
+                this.errorProvider1.SetError(txtMatKhau, "Bạn không được để trống tên đăng nhập !");
+            else
+                this.errorProvider1.Clear();
         }
     }
 }

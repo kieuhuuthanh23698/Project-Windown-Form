@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTenDangNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnDangNhap = new DevComponents.DotNetBar.ButtonX();
+            this.txtMatKhau = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnThoat = new DevComponents.DotNetBar.ButtonX();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,21 +54,6 @@
             this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên đăng nhập :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(270, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(270, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(194, 22);
-            this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
@@ -79,52 +67,22 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(270, 259);
+            this.checkBox1.Location = new System.Drawing.Point(278, 259);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(142, 21);
-            this.checkBox1.TabIndex = 6;
+            this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ghi nhớ mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(270, 296);
+            this.checkBox2.Location = new System.Drawing.Point(278, 296);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(155, 21);
-            this.checkBox2.TabIndex = 7;
+            this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "Tự động đăng nhập";
             this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(270, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(389, 372);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 30);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(30, 340);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(420, 3);
-            this.label3.TabIndex = 10;
             // 
             // pictureBox2
             // 
@@ -136,43 +94,106 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // line1
+            // 
+            this.line1.Location = new System.Drawing.Point(12, 332);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(511, 23);
+            this.line1.TabIndex = 12;
+            this.line1.Text = "line1";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.labelLogin;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.BackgroundImage = global::QuanLySieuThi.Properties.Resources.labelLogin;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 145);
-            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.Size = new System.Drawing.Size(519, 117);
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtTenDangNhap
+            // 
+            // 
+            // 
+            // 
+            this.txtTenDangNhap.Border.Class = "TextBoxBorder";
+            this.txtTenDangNhap.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(278, 177);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(253, 22);
+            this.txtTenDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDangNhap.Location = new System.Drawing.Point(278, 378);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // txtMatKhau
+            // 
+            // 
+            // 
+            // 
+            this.txtMatKhau.Border.Class = "TextBoxBorder";
+            this.txtMatKhau.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMatKhau.Location = new System.Drawing.Point(278, 217);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(253, 22);
+            this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.Leave += new System.EventHandler(this.txtMatKhau_Leave);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.Location = new System.Drawing.Point(430, 378);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThoat.TabIndex = 6;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Login
             // 
-            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(482, 413);
+            this.ClientSize = new System.Drawing.Size(579, 413);
             this.ControlBox = false;
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.line1);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 460);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login - Quản lý siêu thị";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,15 +203,16 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
+        private DevComponents.DotNetBar.Controls.Line line1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenDangNhap;
+        private DevComponents.DotNetBar.ButtonX btnDangNhap;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMatKhau;
+        private DevComponents.DotNetBar.ButtonX btnThoat;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }
