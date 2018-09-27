@@ -14,7 +14,7 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KetNoi());
+            Application.Run(new Bill());
         }
     }
 }
