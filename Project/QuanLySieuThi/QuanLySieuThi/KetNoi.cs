@@ -30,7 +30,8 @@ namespace QuanLySieuThi
                 sql.Open();
                 if (sql.State == System.Data.ConnectionState.Open)
                 {
-                    Login frmlogin = new Login(chuoiKetNoi);
+                    //đưa kết nối vào form login
+                    Login frmlogin = new Login(sql);
                     this.Hide();
                     frmlogin.Show();
                 }
