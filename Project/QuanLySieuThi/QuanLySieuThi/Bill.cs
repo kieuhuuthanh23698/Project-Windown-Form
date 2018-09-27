@@ -57,7 +57,7 @@ namespace QuanLySieuThi
         private void Logout(object sender, EventArgs e)
         {
             this.Close();
-            Login f = new Login();
+            Login f = new Login("");
             f.Show();
         }
 

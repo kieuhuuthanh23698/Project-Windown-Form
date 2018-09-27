@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="ChangeProduct.Designer.cs">
       <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KetNoi.Designer.cs">
+      <DependentUpon>KetNoi.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -148,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeProduct.resx">
       <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KetNoi.resx">
+      <DependentUpon>KetNoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>

@@ -10,9 +10,13 @@ namespace QuanLySieuThi
 {
     public partial class Login : Form
     {
-        public Login()
+        string s = "";
+
+        public Login(string s)
         {
             InitializeComponent();
+            this.s = s;
+            MessageBox.Show(s);
         }
 
         //button login
