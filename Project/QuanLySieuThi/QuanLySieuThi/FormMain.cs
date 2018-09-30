@@ -19,5 +19,27 @@ namespace QuanLySieuThi
             dockContainerItem1.Control.Controls.Add(f);
             f.Show();
         }
+
+        private void logout(object sender, EventArgs e)
+        {
+            this.Close();
+            Login frmLogin = new Login("");
+            frmLogin.Show();
+        }
+
+        private void exit(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void changePass(object sender, EventArgs e)
+        {
+            ChangePassword frmChangePass = new ChangePassword();
+            frmChangePass.ShowDialog();
+        }
+
+        private void danhMucMatHang(object sender, EventArgs e)
+        {
+        }
     }
 }

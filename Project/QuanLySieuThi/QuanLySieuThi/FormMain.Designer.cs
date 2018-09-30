@@ -117,6 +117,8 @@
             this.dockSite6 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
@@ -125,8 +127,6 @@
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.dockSite9.SuspendLayout();
@@ -199,18 +199,21 @@
             this.đỔIMẬTKHẨUĐĂNGNHẬPToolStripMenuItem.Name = "đỔIMẬTKHẨUĐĂNGNHẬPToolStripMenuItem";
             this.đỔIMẬTKHẨUĐĂNGNHẬPToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
             this.đỔIMẬTKHẨUĐĂNGNHẬPToolStripMenuItem.Text = "ĐỔI MẬT KHẨU ĐĂNG NHẬP";
+            this.đỔIMẬTKHẨUĐĂNGNHẬPToolStripMenuItem.Click += new System.EventHandler(this.changePass);
             // 
             // đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem
             // 
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Name = "đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem";
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Text = "ĐĂNG XUẤT KHỎI HỆ THỐNG";
+            this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Click += new System.EventHandler(this.logout);
             // 
             // Exit_ToolStripMenuItem
             // 
             this.Exit_ToolStripMenuItem.Name = "Exit_ToolStripMenuItem";
             this.Exit_ToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
             this.Exit_ToolStripMenuItem.Text = "THOÁT KHỎI HỆ THỐNG";
+            this.Exit_ToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
             // hOẠTĐỘNGToolStripMenuItem
             // 
@@ -245,6 +248,7 @@
             this.daToolStripMenuItem.Name = "daToolStripMenuItem";
             this.daToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.daToolStripMenuItem.Text = "Danh mục mặt hàng";
+            this.daToolStripMenuItem.Click += new System.EventHandler(this.danhMucMatHang);
             // 
             // danhMụcKháchHàngToolStripMenuItem
             // 
@@ -669,7 +673,7 @@
             this.buttonItem9});
             this.bar1.Location = new System.Drawing.Point(0, 28);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(1389, 29);
+            this.bar1.Size = new System.Drawing.Size(1389, 33);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 39;
@@ -742,10 +746,10 @@
             this.dockSite9.Controls.Add(this.bar2);
             this.dockSite9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockSite9.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1389, 589)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
-            this.dockSite9.Location = new System.Drawing.Point(0, 57);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1389, 585)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            this.dockSite9.Location = new System.Drawing.Point(0, 61);
             this.dockSite9.Name = "dockSite9";
-            this.dockSite9.Size = new System.Drawing.Size(1389, 589);
+            this.dockSite9.Size = new System.Drawing.Size(1389, 585);
             this.dockSite9.TabIndex = 49;
             this.dockSite9.TabStop = false;
             // 
@@ -772,7 +776,7 @@
             this.bar2.Location = new System.Drawing.Point(0, 0);
             this.bar2.Name = "bar2";
             this.bar2.SelectedDockTab = 0;
-            this.bar2.Size = new System.Drawing.Size(1389, 589);
+            this.bar2.Size = new System.Drawing.Size(1389, 585);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar2.TabIndex = 0;
@@ -783,7 +787,7 @@
             // 
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 28);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(1383, 558);
+            this.panelDockContainer1.Size = new System.Drawing.Size(1383, 554);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -802,9 +806,9 @@
             this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite1.Location = new System.Drawing.Point(0, 57);
+            this.dockSite1.Location = new System.Drawing.Point(0, 61);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 589);
+            this.dockSite1.Size = new System.Drawing.Size(0, 585);
             this.dockSite1.TabIndex = 41;
             this.dockSite1.TabStop = false;
             // 
@@ -813,9 +817,9 @@
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(1389, 57);
+            this.dockSite2.Location = new System.Drawing.Point(1389, 61);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 589);
+            this.dockSite2.Size = new System.Drawing.Size(0, 585);
             this.dockSite2.TabIndex = 42;
             this.dockSite2.TabStop = false;
             // 
@@ -870,46 +874,6 @@
             this.dockSite3.TabIndex = 43;
             this.dockSite3.TabStop = false;
             // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "Hóa đơn";
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.Text = "Danh mục mặt hàng";
-            // 
-            // buttonItem4
-            // 
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.Text = "Danh mục khách hàng";
-            // 
-            // buttonItem5
-            // 
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.Text = "Danh mục nhân viên";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Thống kê thu chi";
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Text = "Thống kê hóa đơn";
-            // 
-            // buttonItem8
-            // 
-            this.buttonItem8.Name = "buttonItem8";
-            this.buttonItem8.Text = "Thông tin cửa hàng";
-            // 
-            // buttonItem9
-            // 
-            this.buttonItem9.Name = "buttonItem9";
-            this.buttonItem9.Text = "Thoát khỏi hệ thống";
-            // 
             // buttonItem1
             // 
             this.buttonItem1.Name = "buttonItem1";
@@ -917,9 +881,68 @@
             // 
             // buttonItem10
             // 
+            this.buttonItem10.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem10.ForeColor = System.Drawing.Color.Red;
+            this.buttonItem10.Image = global::QuanLySieuThi.Properties.Resources.logout_icon;
             this.buttonItem10.Name = "buttonItem10";
             this.buttonItem10.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.buttonItem10.Text = "EXIT";
+            this.buttonItem10.Text = "LOGOUT";
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem2.Image = global::QuanLySieuThi.Properties.Resources.bill_icon;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "Hóa đơn";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem3.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.Text = "Danh mục mặt hàng";
+            // 
+            // buttonItem4
+            // 
+            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem4.Image = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.Text = "Danh mục khách hàng";
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem5.Image = global::QuanLySieuThi.Properties.Resources.nhan_vien;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "Danh mục nhân viên";
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem6.Image = global::QuanLySieuThi.Properties.Resources.chart_icon;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "Thống kê thu chi";
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem7.Image = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Text = "Thống kê hóa đơn";
+            // 
+            // buttonItem8
+            // 
+            this.buttonItem8.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem8.Image = global::QuanLySieuThi.Properties.Resources.store_icon;
+            this.buttonItem8.Name = "buttonItem8";
+            this.buttonItem8.Text = "Thông tin cửa hàng";
+            // 
+            // buttonItem9
+            // 
+            this.buttonItem9.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem9.Image = global::QuanLySieuThi.Properties.Resources.Close_2_icon;
+            this.buttonItem9.Name = "buttonItem9";
+            this.buttonItem9.Text = "Thoát khỏi hệ thống";
             // 
             // FormMain
             // 

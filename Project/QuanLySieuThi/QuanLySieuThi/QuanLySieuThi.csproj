@@ -231,6 +231,33 @@
   <ItemGroup>
     <None Include="Resources\iconChangePassword.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khach_hang_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang-hoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhan_vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongkeHoaDon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
