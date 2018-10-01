@@ -8,16 +8,16 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace QuanLySieuThi
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
         KetNoiDuLieu link;
 
-        public Login(string s)
+        public frmLogin(string s)
         {
             InitializeComponent();
         }
 
-        public Login(KetNoiDuLieu link)
+        public frmLogin(KetNoiDuLieu link)
         {
             InitializeComponent();
             this.link = link;
@@ -26,18 +26,11 @@ namespace QuanLySieuThi
 
         private string xacNhanTaiKhoan(string username, string password)
         {
-            //kiểm tra kết nối trước khi xác nhận tài khoảng
             link.Connec();
             try
             {
                 string chuoiCommand = "select MaNhanVien from Users where UserName = '" + username + "' and Passwords = '" + password + "'";
                 return link.commandScalar(chuoiCommand);
-                //SqlCommand cm = new SqlCommand(chuoiCommand,this.sql);
-                //String kq = (String)cm.ExecuteScalar() + "";
-                //return kq;
-                ////if (kq != "")
-                //    return ;
-                //return false;
             }
             catch
             {
@@ -55,7 +48,7 @@ namespace QuanLySieuThi
                 {
                     string manv = xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text);
                     MessageBox.Show(manv);
-                    FormMain frmMain = new FormMain(link, manv);
+                    frmMain frmMain = new frmMain(link, manv);
                     frmMain.Show();
                     this.Hide();
                 }

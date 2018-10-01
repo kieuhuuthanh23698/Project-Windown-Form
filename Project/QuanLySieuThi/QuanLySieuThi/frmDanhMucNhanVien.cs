@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class thongkethuchi : Form
+    public partial class frmDanhMucNhanVien : Form
     {
-        public thongkethuchi()
+        public frmDanhMucNhanVien()
         {
             InitializeComponent();
         }

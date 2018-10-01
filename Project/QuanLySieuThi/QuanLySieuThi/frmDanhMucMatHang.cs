@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class Products : Form
+    public partial class frmDanhMucMatHang : Form
     {
-        public Products()
+        public frmDanhMucMatHang()
         {
             InitializeComponent();
         }
@@ -22,19 +22,19 @@ namespace QuanLySieuThi
 
         private void themToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddTypeProduct f = new AddTypeProduct();
+            frmThemNhomMatHang f = new frmThemNhomMatHang();
             f.ShowDialog();
         }
 
         private void suaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChageTypeProduct f = new ChageTypeProduct();
+            frmDoiTenNhomMatHang f = new frmDoiTenNhomMatHang();
             f.ShowDialog();
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddNewProduct f = new AddNewProduct();
+            frmThemSanPham f = new frmThemSanPham();
             f.ShowDialog();
         }
 

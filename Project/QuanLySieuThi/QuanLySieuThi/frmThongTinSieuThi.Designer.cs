@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class thongtinsieuthics
+    partial class frmThongTinSieuThi
     {
         /// <summary>
         /// Required designer variable.

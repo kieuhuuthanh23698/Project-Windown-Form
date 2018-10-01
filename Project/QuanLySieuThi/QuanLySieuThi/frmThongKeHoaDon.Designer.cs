@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class thongkethuchi
+    partial class frmThongKeHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(397, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(144, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THỐNG KÊ THU CHI";
+            this.label1.Text = "Phiếu bán hàng";
             // 
             // listView1
             // 
@@ -58,65 +58,73 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader9,
+            this.columnHeader5,
+            this.columnHeader6});
             this.listView1.GridLines = true;
-            this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(12, 37);
+            this.listView1.Location = new System.Drawing.Point(22, 50);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(812, 375);
+            this.listView1.Size = new System.Drawing.Size(873, 427);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Trạng thái";
+            this.columnHeader1.Text = "Mã hóa đơn";
+            this.columnHeader1.Width = 83;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Tên hàng hóa";
+            this.columnHeader2.Text = "Ngày lập hóa đơn";
+            this.columnHeader2.Width = 123;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Mã hàng hóa";
+            this.columnHeader3.Text = "Tên nhân viên";
+            this.columnHeader3.Width = 96;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Số lượng ";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Số tiền thu chi";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Ngày thu chi";
+            this.columnHeader4.Text = "Mã mặt hàng";
+            this.columnHeader4.Width = 98;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Giờ thu chi";
+            this.columnHeader7.Text = "Tên mặt hàng";
+            this.columnHeader7.Width = 100;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Tên nhân viên thu chi";
+            this.columnHeader8.Text = "Số lượng";
+            this.columnHeader8.Width = 64;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Mã nhân viên thu chi";
+            this.columnHeader9.Text = "Đơn giá";
+            this.columnHeader9.Width = 65;
             // 
-            // thongkethuchi
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Giảm giá %";
+            this.columnHeader5.Width = 89;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Thành tiền";
+            this.columnHeader6.Width = 121;
+            // 
+            // thongkehoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 424);
+            this.ClientSize = new System.Drawing.Size(921, 489);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
-            this.Name = "thongkethuchi";
-            this.Text = "thongkethuchi";
+            this.Name = "thongkehoadon";
+            this.Text = "thongkehoadon";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,10 +138,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

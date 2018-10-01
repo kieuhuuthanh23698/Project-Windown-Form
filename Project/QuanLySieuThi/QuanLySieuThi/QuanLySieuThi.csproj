@@ -41,66 +41,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewNhanVien.cs">
+    <Compile Include="frmThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewNhanVien.Designer.cs">
-      <DependentUpon>AddNewNhanVien.cs</DependentUpon>
+    <Compile Include="frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewProduct.cs">
+    <Compile Include="frmThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewProduct.Designer.cs">
-      <DependentUpon>AddNewProduct.cs</DependentUpon>
+    <Compile Include="frmThemSanPham.Designer.cs">
+      <DependentUpon>frmThemSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTypeProduct.cs">
+    <Compile Include="frmThemNhomMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTypeProduct.Designer.cs">
-      <DependentUpon>AddTypeProduct.cs</DependentUpon>
+    <Compile Include="frmThemNhomMatHang.Designer.cs">
+      <DependentUpon>frmThemNhomMatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChageTypeProduct.cs">
+    <Compile Include="frmDoiTenNhomMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChageTypeProduct.Designer.cs">
-      <DependentUpon>ChageTypeProduct.cs</DependentUpon>
+    <Compile Include="frmDoiTenNhomMatHang.Designer.cs">
+      <DependentUpon>frmDoiTenNhomMatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangeProduct.cs">
+    <Compile Include="frmDoiThongTinMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangeProduct.Designer.cs">
-      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    <Compile Include="frmDoiThongTinMatHang.Designer.cs">
+      <DependentUpon>frmDoiThongTinMatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="hoaDon.cs">
+    <Compile Include="frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hoaDon.Designer.cs">
-      <DependentUpon>hoaDon.cs</DependentUpon>
+    <Compile Include="frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="KetNoi.cs">
+    <Compile Include="frmKetNoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KetNoi.Designer.cs">
-      <DependentUpon>KetNoi.cs</DependentUpon>
+    <Compile Include="frmKetNoi.Designer.cs">
+      <DependentUpon>frmKetNoi.cs</DependentUpon>
     </Compile>
     <Compile Include="KetNoiDuLieu.cs" />
-    <Compile Include="KhachHang.cs">
+    <Compile Include="frmDanhMucKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <Compile Include="frmDanhMucKhachHang.Designer.cs">
+      <DependentUpon>frmDanhMucKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.cs">
+    <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill.cs">
       <SubType>Form</SubType>
@@ -108,104 +108,104 @@
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="frmDanhMucNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="frmDanhMucNhanVien.Designer.cs">
+      <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Products.cs">
+    <Compile Include="frmDanhMucMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Products.Designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
+    <Compile Include="frmDanhMucMatHang.Designer.cs">
+      <DependentUpon>frmDanhMucMatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="thongkehoadon.cs">
+    <Compile Include="frmThongKeHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thongkehoadon.Designer.cs">
-      <DependentUpon>thongkehoadon.cs</DependentUpon>
+    <Compile Include="frmThongKeHoaDon.Designer.cs">
+      <DependentUpon>frmThongKeHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="thongkethuchi.cs">
+    <Compile Include="frmThongKeThuChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thongkethuchi.Designer.cs">
-      <DependentUpon>thongkethuchi.cs</DependentUpon>
+    <Compile Include="frmThongKeThuChi.Designer.cs">
+      <DependentUpon>frmThongKeThuChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="thongtinsieuthics.cs">
+    <Compile Include="frmThongTinSieuThi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thongtinsieuthics.Designer.cs">
-      <DependentUpon>thongtinsieuthics.cs</DependentUpon>
+    <Compile Include="frmThongTinSieuThi.Designer.cs">
+      <DependentUpon>frmThongTinSieuThi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormMain.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewNhanVien.resx">
-      <DependentUpon>AddNewNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewProduct.resx">
-      <DependentUpon>AddNewProduct.cs</DependentUpon>
+    <EmbeddedResource Include="frmThemSanPham.resx">
+      <DependentUpon>frmThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTypeProduct.resx">
-      <DependentUpon>AddTypeProduct.cs</DependentUpon>
+    <EmbeddedResource Include="frmThemNhomMatHang.resx">
+      <DependentUpon>frmThemNhomMatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChageTypeProduct.resx">
-      <DependentUpon>ChageTypeProduct.cs</DependentUpon>
+    <EmbeddedResource Include="frmDoiTenNhomMatHang.resx">
+      <DependentUpon>frmDoiTenNhomMatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeProduct.resx">
-      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    <EmbeddedResource Include="frmDoiThongTinMatHang.resx">
+      <DependentUpon>frmDoiThongTinMatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hoaDon.resx">
-      <DependentUpon>hoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KetNoi.resx">
-      <DependentUpon>KetNoi.cs</DependentUpon>
+    <EmbeddedResource Include="frmKetNoi.resx">
+      <DependentUpon>frmKetNoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmDanhMucKhachHang.resx">
+      <DependentUpon>frmDanhMucKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmDanhMucNhanVien.resx">
+      <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
+    <EmbeddedResource Include="frmDanhMucMatHang.resx">
+      <DependentUpon>frmDanhMucMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="thongkehoadon.resx">
-      <DependentUpon>thongkehoadon.cs</DependentUpon>
+    <EmbeddedResource Include="frmThongKeHoaDon.resx">
+      <DependentUpon>frmThongKeHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thongkethuchi.resx">
-      <DependentUpon>thongkethuchi.cs</DependentUpon>
+    <EmbeddedResource Include="frmThongKeThuChi.resx">
+      <DependentUpon>frmThongKeThuChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thongtinsieuthics.resx">
-      <DependentUpon>thongtinsieuthics.cs</DependentUpon>
+    <EmbeddedResource Include="frmThongTinSieuThi.resx">
+      <DependentUpon>frmThongTinSieuThi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

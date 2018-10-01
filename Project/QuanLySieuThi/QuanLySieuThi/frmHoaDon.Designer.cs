@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class hoaDon
+    partial class frmHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -51,6 +51,7 @@
             treeNode9,
             treeNode10,
             treeNode11});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -59,9 +60,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -93,39 +91,37 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.dataGridViewHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dateTimeInput1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.numericUpDown2);
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(630, 221);
+            this.panel1.Location = new System.Drawing.Point(661, 346);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 159);
+            this.panel1.Size = new System.Drawing.Size(126, 146);
             this.panel1.TabIndex = 101;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(90, 127);
+            this.numericUpDown2.Location = new System.Drawing.Point(55, 113);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(69, 22);
+            this.numericUpDown2.Size = new System.Drawing.Size(59, 22);
             this.numericUpDown2.TabIndex = 31;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -135,10 +131,10 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(90, 83);
+            this.numericUpDown1.Location = new System.Drawing.Point(55, 69);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(69, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(59, 22);
             this.numericUpDown1.TabIndex = 30;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -149,10 +145,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(8, 126);
+            this.button4.Location = new System.Drawing.Point(11, 112);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 22);
+            this.button4.Size = new System.Drawing.Size(33, 22);
             this.button4.TabIndex = 29;
             this.button4.Text = "-";
             this.button4.UseVisualStyleBackColor = true;
@@ -160,10 +156,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(8, 82);
+            this.button3.Location = new System.Drawing.Point(11, 68);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 22);
+            this.button3.Size = new System.Drawing.Size(33, 22);
             this.button3.TabIndex = 28;
             this.button3.Text = "+";
             this.button3.UseVisualStyleBackColor = true;
@@ -171,10 +167,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(8, 22);
+            this.button2.Location = new System.Drawing.Point(11, 8);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 41);
+            this.button2.Size = new System.Drawing.Size(103, 41);
             this.button2.TabIndex = 27;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
@@ -184,68 +180,36 @@
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(915, 167);
+            this.textBox3.Location = new System.Drawing.Point(980, 167);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(517, 22);
+            this.textBox3.Size = new System.Drawing.Size(489, 22);
             this.textBox3.TabIndex = 100;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(799, 167);
+            this.label14.Location = new System.Drawing.Point(867, 170);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 17);
             this.label14.TabIndex = 99;
             this.label14.Text = "KHÁCH HÀNG";
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(1333, 56);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox2.Mask = "00:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox2.TabIndex = 98;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1263, 60);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 17);
-            this.label13.TabIndex = 97;
-            this.label13.Text = "GIỜ";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(1125, 60);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 96;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(648, 684);
+            this.button5.Location = new System.Drawing.Point(661, 693);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 112);
+            this.button5.Size = new System.Drawing.Size(126, 112);
             this.button5.TabIndex = 95;
             this.button5.Text = "THANH TOÁN";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Aquamarine;
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -262,11 +226,11 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(803, 587);
+            this.groupBox1.Location = new System.Drawing.Point(870, 598);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(629, 209);
+            this.groupBox1.Size = new System.Drawing.Size(601, 209);
             this.groupBox1.TabIndex = 94;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÍNH TIỀN";
@@ -286,7 +250,7 @@
             this.comboBox1.Location = new System.Drawing.Point(196, 121);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 28);
+            this.comboBox1.Size = new System.Drawing.Size(333, 28);
             this.comboBox1.TabIndex = 23;
             // 
             // textBox11
@@ -296,7 +260,7 @@
             this.textBox11.Location = new System.Drawing.Point(196, 156);
             this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(361, 27);
+            this.textBox11.Size = new System.Drawing.Size(333, 27);
             this.textBox11.TabIndex = 22;
             // 
             // label12
@@ -327,7 +291,7 @@
             this.textBox9.Location = new System.Drawing.Point(196, 86);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(361, 27);
+            this.textBox9.Size = new System.Drawing.Size(333, 27);
             this.textBox9.TabIndex = 18;
             // 
             // label10
@@ -344,7 +308,7 @@
             // textBox8
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(412, 54);
+            this.textBox8.Location = new System.Drawing.Point(384, 54);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(145, 27);
@@ -356,7 +320,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(369, 58);
+            this.label9.Location = new System.Drawing.Point(341, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(22, 18);
             this.label9.TabIndex = 15;
@@ -369,7 +333,7 @@
             this.textBox7.Location = new System.Drawing.Point(196, 54);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
+            this.textBox7.Size = new System.Drawing.Size(72, 27);
             this.textBox7.TabIndex = 14;
             // 
             // label8
@@ -390,7 +354,7 @@
             this.textBox6.Location = new System.Drawing.Point(196, 21);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(361, 27);
+            this.textBox6.Size = new System.Drawing.Size(333, 27);
             this.textBox6.TabIndex = 12;
             // 
             // label7
@@ -406,8 +370,7 @@
             // 
             // listView2
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -419,11 +382,11 @@
             this.listView2.GridLines = true;
             this.listView2.LabelEdit = true;
             this.listView2.LabelWrap = false;
-            this.listView2.Location = new System.Drawing.Point(803, 221);
+            this.listView2.Location = new System.Drawing.Point(868, 221);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
             this.listView2.ShowGroups = false;
-            this.listView2.Size = new System.Drawing.Size(629, 350);
+            this.listView2.Size = new System.Drawing.Size(601, 362);
             this.listView2.TabIndex = 93;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -458,16 +421,16 @@
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(915, 109);
+            this.textBox5.Location = new System.Drawing.Point(980, 109);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(517, 22);
+            this.textBox5.Size = new System.Drawing.Size(489, 22);
             this.textBox5.TabIndex = 92;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(799, 109);
+            this.label6.Location = new System.Drawing.Point(867, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 91;
@@ -477,16 +440,16 @@
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(915, 60);
+            this.textBox4.Location = new System.Drawing.Point(980, 60);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.Size = new System.Drawing.Size(146, 22);
             this.textBox4.TabIndex = 90;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(799, 60);
+            this.label5.Location = new System.Drawing.Point(867, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 17);
             this.label5.TabIndex = 89;
@@ -496,7 +459,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1037, 60);
+            this.label4.Location = new System.Drawing.Point(1132, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 88;
@@ -517,7 +480,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(541, 5);
+            this.button1.Location = new System.Drawing.Point(628, 6);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -527,7 +490,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(429, 9);
+            this.textBox2.Location = new System.Drawing.Point(551, 9);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(49, 22);
@@ -535,7 +498,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(327, 9);
+            this.label2.Location = new System.Drawing.Point(449, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 22);
             this.label2.TabIndex = 84;
@@ -546,7 +509,7 @@
             this.textBox1.Location = new System.Drawing.Point(119, 9);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
+            this.textBox1.Size = new System.Drawing.Size(306, 22);
             this.textBox1.TabIndex = 83;
             // 
             // label1
@@ -557,54 +520,6 @@
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 82;
             this.label1.Text = "Tìm kiếm";
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(31, 357);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(584, 439);
-            this.listView1.TabIndex = 81;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 82;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "MÃ HÀNG";
-            this.columnHeader2.Width = 82;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "TÊN HÀNG";
-            this.columnHeader3.Width = 82;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "GIÁ BÁN";
-            this.columnHeader4.Width = 93;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "TỒN KHO";
-            this.columnHeader5.Width = 90;
             // 
             // treeView1
             // 
@@ -638,8 +553,85 @@
             treeNode12.Text = "Tất cả";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode12});
-            this.treeView1.Size = new System.Drawing.Size(584, 271);
+            this.treeView1.Size = new System.Drawing.Size(579, 271);
             this.treeView1.TabIndex = 80;
+            // 
+            // dataGridViewHangHoa
+            // 
+            this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewHangHoa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(34, 348);
+            this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
+            this.dataGridViewHangHoa.ReadOnly = true;
+            this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewHangHoa.RowTemplate.Height = 24;
+            this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 459);
+            this.dataGridViewHangHoa.TabIndex = 102;
+            // 
+            // dateTimeInput1
+            // 
+            this.dateTimeInput1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.dateTimeInput1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimeInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimeInput1.ButtonDropDown.Visible = true;
+            this.dateTimeInput1.IsPopupCalendarOpen = false;
+            this.dateTimeInput1.Location = new System.Drawing.Point(1202, 60);
+            // 
+            // 
+            // 
+            this.dateTimeInput1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimeInput1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimeInput1.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2018, 10, 1, 0, 0, 0, 0);
+            this.dateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimeInput1.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimeInput1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput1.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimeInput1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dateTimeInput1.Name = "dateTimeInput1";
+            this.dateTimeInput1.Size = new System.Drawing.Size(267, 22);
+            this.dateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimeInput1.TabIndex = 103;
+            this.dateTimeInput1.Value = new System.DateTime(2018, 10, 1, 16, 20, 10, 0);
             // 
             // hoaDon
             // 
@@ -648,12 +640,11 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1471, 838);
             this.ControlBox = false;
+            this.Controls.Add(this.dateTimeInput1);
+            this.Controls.Add(this.dataGridViewHangHoa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView2);
@@ -668,7 +659,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.treeView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "hoaDon";
@@ -678,6 +668,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,9 +685,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -727,13 +716,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.TreeView treeView1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewHangHoa;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput1;
 
 
 

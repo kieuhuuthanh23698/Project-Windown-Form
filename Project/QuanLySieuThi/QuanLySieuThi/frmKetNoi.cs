@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class KetNoi : Form
+    public partial class frmKetNoi : Form
     {
         //Data Source=LAPTOP-CQ1BQQH5\SQLEXPRESS;Initial Catalog=QL_SIEUTHI;Persist Security Info=True;User ID=sa
         //string chuoiKetNoi = "";
         //SqlConnection sql;
-        public KetNoi()
+        public frmKetNoi()
         {
             InitializeComponent();
             txtDataSource.Focus();
@@ -32,7 +32,7 @@ namespace QuanLySieuThi
                 if (link.state() == System.Data.ConnectionState.Open)
                 {
                     //đưa kết nối vào form login
-                    Login frmlogin = new Login(link);
+                    frmLogin frmlogin = new frmLogin(link);
                     this.Hide();
                     frmlogin.Show();
                 }

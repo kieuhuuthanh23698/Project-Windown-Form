@@ -1,10 +1,5 @@
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.exe
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.pdb
-C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.AddNewNhanVien.resources
-C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.AddNewProduct.resources
-C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.AddTypeProduct.resources
-C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.ChageTypeProduct.resources
-C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.ChangePassword.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.ChangeProduct.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.KhachHang.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.Login.resources
@@ -22,3 +17,8 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.KetNoi.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.hoaDon.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.FormMain.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemNhanVien.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemSanPham.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemNhomMatHang.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmDoiTenNhomMatHang.resources
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmDoiMatKhau.resources

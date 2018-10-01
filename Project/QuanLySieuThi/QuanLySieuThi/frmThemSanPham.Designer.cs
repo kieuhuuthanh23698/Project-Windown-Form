@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class AddNewProduct
+    partial class frmThemSanPham
     {
         /// <summary>
         /// Required designer variable.

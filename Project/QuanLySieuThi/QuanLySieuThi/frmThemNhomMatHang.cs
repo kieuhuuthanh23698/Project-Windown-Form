@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class ChangePassword : Form
+    public partial class frmThemNhomMatHang : Form
     {
-        public ChangePassword()
+        public frmThemNhomMatHang()
         {
             InitializeComponent();
         }

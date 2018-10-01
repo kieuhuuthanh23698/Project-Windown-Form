@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
 using System.Data.SqlClient;
 
 
@@ -33,6 +34,16 @@ namespace QuanLySieuThi
         {
             SqlCommand com = new SqlCommand(chuoiCommand, this.sql);
             return com.ExecuteScalar() + "";
+        }
+
+        public DataSet comManTable(string chuoiComMand, string srcTable)
+        {
+            if (this.sql.State == ConnectionState.Closed)
+                this.sql.Open();
+            DataSet ds = new DataSet();
+            SqlDataAdapter sda = new SqlDataAdapter(chuoiComMand, this.sql);
+            sda.Fill(ds, srcTable);
+            return ds;
         }
     }
 }

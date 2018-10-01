@@ -49,7 +49,7 @@ namespace QuanLySieuThi
         //button chage password
         private void changePassword(object sender, EventArgs e)
         {
-            ChangePassword f = new ChangePassword();
+            frmDoiMatKhau f = new frmDoiMatKhau();
             f.ShowDialog();
         }
 
@@ -57,7 +57,7 @@ namespace QuanLySieuThi
         private void Logout(object sender, EventArgs e)
         {
             this.Close();
-            Login f = new Login("");
+            frmLogin f = new frmLogin("");
             f.Show();
         }
 
@@ -70,46 +70,39 @@ namespace QuanLySieuThi
 
         private void danhmucmathang(object sender, EventArgs e)
         {
-            Products f = new Products();
+            frmDanhMucMatHang f = new frmDanhMucMatHang();
             f.ShowDialog();
         }
 
         private void Moformthongtin(object sender, EventArgs e)
         {
-            thongtinsieuthics f = new thongtinsieuthics();
+            frmThongTinSieuThi f = new frmThongTinSieuThi();
             f.ShowDialog();
         }
 
         private void moformhoadon(object sender, EventArgs e)
         {
-            thongkehoadon f = new thongkehoadon();
+            frmThongKeHoaDon f = new frmThongKeHoaDon();
             f.ShowDialog();
         }
 
         private void moformthongkethuchi(object sender, EventArgs e)
         {
-            thongkethuchi f = new thongkethuchi();
+            frmThongKeThuChi f = new frmThongKeThuChi();
             f.ShowDialog();
         }
 
         private void moFormDanhMucKhachHang(object sender, EventArgs e)
         {
-            KhachHang f = new KhachHang();
+            frmDanhMucKhachHang f = new frmDanhMucKhachHang();
             f.Show();
         }
 
         private void moFormDanhMucNhanVien(object sender, EventArgs e)
         {
-            NhanVien f = new NhanVien();
+            frmDanhMucNhanVien f = new frmDanhMucNhanVien();
             f.Show();
         }
     }
 
-    //class HangHoa
-    //{
-    //    public String maHang { get; set; }
-    //    public String tenHang { get; set; }
-    //    public String giaBan { get; set; }
-    //    public String tonKho { get; set; }
-    //}
 }

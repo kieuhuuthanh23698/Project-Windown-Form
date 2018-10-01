@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class ChangePassword
+    partial class frmDoiMatKhau
     {
         /// <summary>
         /// Required designer variable.

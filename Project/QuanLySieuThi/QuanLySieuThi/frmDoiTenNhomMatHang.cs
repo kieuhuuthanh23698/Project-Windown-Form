@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class KhachHang : Form
+    public partial class frmDoiTenNhomMatHang : Form
     {
-        public KhachHang()
+        public frmDoiTenNhomMatHang()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class thongtinsieuthics : Form
+    public partial class frmThemSanPham : Form
     {
-        public thongtinsieuthics()
+        public frmThemSanPham()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

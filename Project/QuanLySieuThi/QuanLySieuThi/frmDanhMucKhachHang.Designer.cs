@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class KhachHang
+    partial class frmDanhMucKhachHang
     {
         /// <summary>
         /// Required designer variable.

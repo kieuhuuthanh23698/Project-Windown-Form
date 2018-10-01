@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class ChageTypeProduct : Form
+    public partial class frmThemNhanVien : Form
     {
-        public ChageTypeProduct()
+        public frmThemNhanVien()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class ChageTypeProduct
+    partial class frmDoiTenNhomMatHang
     {
         /// <summary>
         /// Required designer variable.
