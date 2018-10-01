@@ -83,6 +83,7 @@
     <Compile Include="KetNoi.Designer.cs">
       <DependentUpon>KetNoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KetNoiDuLieu.cs" />
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>

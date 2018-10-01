@@ -102,8 +102,17 @@
             this.tHÔNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.btnHoaDon = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDanhMucMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDanhMucKhachHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDanhMucNhanVien = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThongKeThuChi = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThongKeHoaDon = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThongTinCuaHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThoat = new DevComponents.DotNetBar.ButtonItem();
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
-            this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.lblTenNhanVien = new DevComponents.DotNetBar.LabelItem();
+            this.btnLogOut = new DevComponents.DotNetBar.ButtonItem();
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite9 = new DevComponents.DotNetBar.DockSite();
@@ -118,15 +127,6 @@
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.dockSite9.SuspendLayout();
@@ -203,6 +203,7 @@
             // 
             // đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem
             // 
+            this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.logout_icon;
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Name = "đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem";
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
             this.đĂNGXUẤTKHỎIHỆTHỐNGToolStripMenuItem.Text = "ĐĂNG XUẤT KHỎI HỆ THỐNG";
@@ -210,6 +211,7 @@
             // 
             // Exit_ToolStripMenuItem
             // 
+            this.Exit_ToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.Close_2_icon;
             this.Exit_ToolStripMenuItem.Name = "Exit_ToolStripMenuItem";
             this.Exit_ToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
             this.Exit_ToolStripMenuItem.Text = "THOÁT KHỎI HỆ THỐNG";
@@ -245,6 +247,7 @@
             // 
             // daToolStripMenuItem
             // 
+            this.daToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
             this.daToolStripMenuItem.Name = "daToolStripMenuItem";
             this.daToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.daToolStripMenuItem.Text = "Danh mục mặt hàng";
@@ -252,6 +255,7 @@
             // 
             // danhMụcKháchHàngToolStripMenuItem
             // 
+            this.danhMụcKháchHàngToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
             this.danhMụcKháchHàngToolStripMenuItem.Name = "danhMụcKháchHàngToolStripMenuItem";
             this.danhMụcKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.danhMụcKháchHàngToolStripMenuItem.Text = "Danh mục khách hàng";
@@ -345,6 +349,7 @@
             // 
             // dANHMỤCKHOHÀNGToolStripMenuItem
             // 
+            this.dANHMỤCKHOHÀNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
             this.dANHMỤCKHOHÀNGToolStripMenuItem.Name = "dANHMỤCKHOHÀNGToolStripMenuItem";
             this.dANHMỤCKHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(268, 24);
             this.dANHMỤCKHOHÀNGToolStripMenuItem.Text = "DANH MỤC KHO HÀNG";
@@ -483,6 +488,7 @@
             // 
             // dANHMỤCNHÂNVIÊNToolStripMenuItem
             // 
+            this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.nhan_vien;
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Name = "dANHMỤCNHÂNVIÊNToolStripMenuItem";
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Text = "DANH MỤC NHÂN VIÊN";
@@ -653,6 +659,7 @@
             // 
             // tHÔNGTINCỬAHÀNGToolStripMenuItem
             // 
+            this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.store_icon;
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Name = "tHÔNGTINCỬAHÀNGToolStripMenuItem";
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Text = "THÔNG TIN CỬA HÀNG";
@@ -663,14 +670,14 @@
             this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2,
-            this.buttonItem3,
-            this.buttonItem4,
-            this.buttonItem5,
-            this.buttonItem6,
-            this.buttonItem7,
-            this.buttonItem8,
-            this.buttonItem9});
+            this.btnHoaDon,
+            this.btnDanhMucMatHang,
+            this.btnDanhMucKhachHang,
+            this.btnDanhMucNhanVien,
+            this.btnThongKeThuChi,
+            this.btnThongKeHoaDon,
+            this.btnThongTinCuaHang,
+            this.btnThoat});
             this.bar1.Location = new System.Drawing.Point(0, 28);
             this.bar1.Name = "bar1";
             this.bar1.Size = new System.Drawing.Size(1389, 33);
@@ -679,6 +686,70 @@
             this.bar1.TabIndex = 39;
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnHoaDon.Image = global::QuanLySieuThi.Properties.Resources.bill_icon;
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Text = "Hóa đơn";
+            this.btnHoaDon.Click += new System.EventHandler(this.openHoaDon);
+            // 
+            // btnDanhMucMatHang
+            // 
+            this.btnDanhMucMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDanhMucMatHang.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
+            this.btnDanhMucMatHang.Name = "btnDanhMucMatHang";
+            this.btnDanhMucMatHang.Text = "Danh mục mặt hàng";
+            this.btnDanhMucMatHang.Click += new System.EventHandler(this.openDanhMucMatHang);
+            // 
+            // btnDanhMucKhachHang
+            // 
+            this.btnDanhMucKhachHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDanhMucKhachHang.Image = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
+            this.btnDanhMucKhachHang.Name = "btnDanhMucKhachHang";
+            this.btnDanhMucKhachHang.Text = "Danh mục khách hàng";
+            this.btnDanhMucKhachHang.Click += new System.EventHandler(this.openDanhMucKhachHang);
+            // 
+            // btnDanhMucNhanVien
+            // 
+            this.btnDanhMucNhanVien.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDanhMucNhanVien.Image = global::QuanLySieuThi.Properties.Resources.nhan_vien;
+            this.btnDanhMucNhanVien.Name = "btnDanhMucNhanVien";
+            this.btnDanhMucNhanVien.Text = "Danh mục nhân viên";
+            this.btnDanhMucNhanVien.Click += new System.EventHandler(this.openDanhMucNhanVien);
+            // 
+            // btnThongKeThuChi
+            // 
+            this.btnThongKeThuChi.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThongKeThuChi.Image = global::QuanLySieuThi.Properties.Resources.chart_icon;
+            this.btnThongKeThuChi.Name = "btnThongKeThuChi";
+            this.btnThongKeThuChi.Text = "Thống kê thu chi";
+            this.btnThongKeThuChi.Click += new System.EventHandler(this.openThongKeThuChi);
+            // 
+            // btnThongKeHoaDon
+            // 
+            this.btnThongKeHoaDon.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThongKeHoaDon.Image = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
+            this.btnThongKeHoaDon.Name = "btnThongKeHoaDon";
+            this.btnThongKeHoaDon.Text = "Thống kê hóa đơn";
+            this.btnThongKeHoaDon.Click += new System.EventHandler(this.openThongKeHoaDon);
+            // 
+            // btnThongTinCuaHang
+            // 
+            this.btnThongTinCuaHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThongTinCuaHang.Image = global::QuanLySieuThi.Properties.Resources.store_icon;
+            this.btnThongTinCuaHang.Name = "btnThongTinCuaHang";
+            this.btnThongTinCuaHang.Text = "Thông tin cửa hàng";
+            this.btnThongTinCuaHang.Click += new System.EventHandler(this.openThongTinCuaHang);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThoat.Image = global::QuanLySieuThi.Properties.Resources.Close_2_icon;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Text = "Thoát khỏi hệ thống";
+            this.btnThoat.Click += new System.EventHandler(this.exit);
             // 
             // metroStatusBar1
             // 
@@ -690,8 +761,8 @@
             this.metroStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroStatusBar1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroStatusBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.labelItem1,
-            this.buttonItem10});
+            this.lblTenNhanVien,
+            this.btnLogOut});
             this.metroStatusBar1.Location = new System.Drawing.Point(0, 646);
             this.metroStatusBar1.Name = "metroStatusBar1";
             this.metroStatusBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -699,11 +770,21 @@
             this.metroStatusBar1.TabIndex = 40;
             this.metroStatusBar1.Text = "metroStatusBar1";
             // 
-            // labelItem1
+            // lblTenNhanVien
             // 
-            this.labelItem1.BackColor = System.Drawing.Color.LightCyan;
-            this.labelItem1.Name = "labelItem1";
-            this.labelItem1.Text = "Tên nhân viên";
+            this.lblTenNhanVien.BackColor = System.Drawing.Color.LightCyan;
+            this.lblTenNhanVien.Name = "lblTenNhanVien";
+            this.lblTenNhanVien.Text = "Tên nhân viên";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnLogOut.ForeColor = System.Drawing.Color.Red;
+            this.btnLogOut.Image = global::QuanLySieuThi.Properties.Resources.logout_icon;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.btnLogOut.Text = "LOGOUT";
+            this.btnLogOut.Click += new System.EventHandler(this.logout);
             // 
             // dotNetBarManager1
             // 
@@ -769,6 +850,7 @@
             this.bar2.CanUndock = false;
             this.bar2.Controls.Add(this.panelDockContainer1);
             this.bar2.DockTabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top;
+            this.bar2.DockTabCloseButtonVisible = true;
             this.bar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
@@ -782,6 +864,7 @@
             this.bar2.TabIndex = 0;
             this.bar2.TabNavigation = true;
             this.bar2.TabStop = false;
+            this.bar2.DockTabClosed += new DevComponents.DotNetBar.DockTabClosingEventHandler(this.bar2_DockTabClosed);
             // 
             // panelDockContainer1
             // 
@@ -797,7 +880,9 @@
             // 
             // dockContainerItem1
             // 
+            this.dockContainerItem1.CanClose = DevComponents.DotNetBar.eDockContainerClose.Yes;
             this.dockContainerItem1.Control = this.panelDockContainer1;
+            this.dockContainerItem1.Image = global::QuanLySieuThi.Properties.Resources.bill_icon;
             this.dockContainerItem1.Name = "dockContainerItem1";
             this.dockContainerItem1.Text = "Hóa đơn";
             // 
@@ -878,71 +963,6 @@
             // 
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.Text = "buttonItem1";
-            // 
-            // buttonItem10
-            // 
-            this.buttonItem10.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem10.ForeColor = System.Drawing.Color.Red;
-            this.buttonItem10.Image = global::QuanLySieuThi.Properties.Resources.logout_icon;
-            this.buttonItem10.Name = "buttonItem10";
-            this.buttonItem10.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.buttonItem10.Text = "LOGOUT";
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem2.Image = global::QuanLySieuThi.Properties.Resources.bill_icon;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "Hóa đơn";
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem3.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.Text = "Danh mục mặt hàng";
-            // 
-            // buttonItem4
-            // 
-            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem4.Image = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.Text = "Danh mục khách hàng";
-            // 
-            // buttonItem5
-            // 
-            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem5.Image = global::QuanLySieuThi.Properties.Resources.nhan_vien;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.Text = "Danh mục nhân viên";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem6.Image = global::QuanLySieuThi.Properties.Resources.chart_icon;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Thống kê thu chi";
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem7.Image = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Text = "Thống kê hóa đơn";
-            // 
-            // buttonItem8
-            // 
-            this.buttonItem8.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem8.Image = global::QuanLySieuThi.Properties.Resources.store_icon;
-            this.buttonItem8.Name = "buttonItem8";
-            this.buttonItem8.Text = "Thông tin cửa hàng";
-            // 
-            // buttonItem9
-            // 
-            this.buttonItem9.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem9.Image = global::QuanLySieuThi.Properties.Resources.Close_2_icon;
-            this.buttonItem9.Name = "buttonItem9";
-            this.buttonItem9.Text = "Thoát khỏi hệ thống";
             // 
             // FormMain
             // 
@@ -1053,7 +1073,7 @@
         private System.Windows.Forms.ToolStripMenuItem tHÔNGTINCỬAHÀNGToolStripMenuItem;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.Metro.MetroStatusBar metroStatusBar1;
-        private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.LabelItem lblTenNhanVien;
         private DevComponents.DotNetBar.DotNetBarManager dotNetBarManager1;
         private DevComponents.DotNetBar.DockSite dockSite4;
         private DevComponents.DotNetBar.DockSite dockSite9;
@@ -1067,15 +1087,15 @@
         private DevComponents.DotNetBar.DockSite dockSite6;
         private DevComponents.DotNetBar.DockSite dockSite7;
         private DevComponents.DotNetBar.DockSite dockSite8;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
-        private DevComponents.DotNetBar.ButtonItem buttonItem3;
-        private DevComponents.DotNetBar.ButtonItem buttonItem4;
-        private DevComponents.DotNetBar.ButtonItem buttonItem5;
-        private DevComponents.DotNetBar.ButtonItem buttonItem6;
-        private DevComponents.DotNetBar.ButtonItem buttonItem7;
-        private DevComponents.DotNetBar.ButtonItem buttonItem8;
-        private DevComponents.DotNetBar.ButtonItem buttonItem9;
-        private DevComponents.DotNetBar.ButtonItem buttonItem10;
+        private DevComponents.DotNetBar.ButtonItem btnHoaDon;
+        private DevComponents.DotNetBar.ButtonItem btnDanhMucMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnDanhMucKhachHang;
+        private DevComponents.DotNetBar.ButtonItem btnDanhMucNhanVien;
+        private DevComponents.DotNetBar.ButtonItem btnThongKeThuChi;
+        private DevComponents.DotNetBar.ButtonItem btnThongKeHoaDon;
+        private DevComponents.DotNetBar.ButtonItem btnThongTinCuaHang;
+        private DevComponents.DotNetBar.ButtonItem btnThoat;
+        private DevComponents.DotNetBar.ButtonItem btnLogOut;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
 
     }

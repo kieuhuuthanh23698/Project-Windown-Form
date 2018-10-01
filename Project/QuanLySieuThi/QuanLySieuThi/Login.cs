@@ -10,39 +10,40 @@ namespace QuanLySieuThi
 {
     public partial class Login : Form
     {
-        SqlConnection sql;
+        KetNoiDuLieu link;
 
         public Login(string s)
         {
             InitializeComponent();
         }
 
-        public Login(SqlConnection sql)
+        public Login(KetNoiDuLieu link)
         {
             InitializeComponent();
-            this.sql = sql;
+            this.link = link;
             txtTenDangNhap.Focus();
         }
 
-        private bool xacNhanTaiKhoan(string username, string password)
+        private string xacNhanTaiKhoan(string username, string password)
         {
             //kiểm tra kết nối trước khi xác nhận tài khoảng
-            if (this.sql.State == ConnectionState.Closed)
-            {
-                this.sql.Open();
-            }
+            link.Connec();
             try
             {
-                string chuoiCommand = "select count(*) from Users where UserName = '" + username + "' and Passwords = '" + password + "'";
-                SqlCommand cm = new SqlCommand(chuoiCommand,this.sql);
-                int kq = (int)cm.ExecuteScalar();
-                MessageBox.Show(kq + "");
-                if (kq == 1)
-                    return true;
-                return false;
+                string chuoiCommand = "select MaNhanVien from Users where UserName = '" + username + "' and Passwords = '" + password + "'";
+                return link.commandScalar(chuoiCommand);
+                //SqlCommand cm = new SqlCommand(chuoiCommand,this.sql);
+                //String kq = (String)cm.ExecuteScalar() + "";
+                //return kq;
+                ////if (kq != "")
+                //    return ;
+                //return false;
             }
-            catch {}
-            return false;
+            catch
+            {
+                MessageBox.Show("Không thể kết nối vào DATABASE !", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return "";
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -50,10 +51,12 @@ namespace QuanLySieuThi
             //xét các ràng buộc csdl
             if (txtTenDangNhap.Text != "" && txtTenDangNhap.Text.Length < 30 && txtMatKhau.Text != "" && txtMatKhau.Text.Length < 30)
             {
-                if (xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text) == true)
+                if (xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text).Equals("") == false)
                 {
-                    Bill hoaDon = new Bill();
-                    hoaDon.Show();
+                    string manv = xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text);
+                    MessageBox.Show(manv);
+                    FormMain frmMain = new FormMain(link, manv);
+                    frmMain.Show();
                     this.Hide();
                 }
                 else
