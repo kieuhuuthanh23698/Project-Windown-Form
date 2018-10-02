@@ -45,5 +45,15 @@ namespace QuanLySieuThi
             sda.Fill(ds, srcTable);
             return ds;
         }
+
+        public SqlDataReader comManReader(string chuoiComMand, string srcTable)
+        {
+            if (this.sql.State == ConnectionState.Closed)
+                this.sql.Open();
+            SqlCommand com = new SqlCommand(chuoiComMand,this.sql);
+            return com.ExecuteReader();
+        }
+
+        
     }
 }

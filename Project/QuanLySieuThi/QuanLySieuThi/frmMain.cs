@@ -224,7 +224,6 @@ namespace QuanLySieuThi
                         item.Control.Controls.Add(f);
                         f.Show();
                         break;
-                        break;
                     }
             }
         }
