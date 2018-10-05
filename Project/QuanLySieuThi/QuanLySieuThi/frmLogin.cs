@@ -47,7 +47,6 @@ namespace QuanLySieuThi
                 if (xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text).Equals("") == false)
                 {
                     string manv = xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text);
-                    MessageBox.Show(manv);
                     frmMain frmMain = new frmMain(link, manv);
                     frmMain.Show();
                     this.Hide();
