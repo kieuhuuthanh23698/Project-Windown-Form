@@ -31,11 +31,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Tất cả loại hàng hóa");
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGiamSoLuong = new DevComponents.DotNetBar.ButtonX();
+            this.btnTangSoLuong = new DevComponents.DotNetBar.ButtonX();
+            this.btnXoaHangTrongGio = new DevComponents.DotNetBar.ButtonX();
             this.numericGiam = new System.Windows.Forms.NumericUpDown();
             this.numericTang = new System.Windows.Forms.NumericUpDown();
-            this.btnGiamSoLuongHangHoa = new System.Windows.Forms.Button();
-            this.btnTangSoLuongHangHoa = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTienTraLai = new System.Windows.Forms.TextBox();
@@ -67,12 +67,17 @@
             this.autoCompleteTextTenHangHoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeInput1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.numericThem = new System.Windows.Forms.NumericUpDown();
             this.cbbKhachHang = new System.Windows.Forms.ComboBox();
             this.txtNhanVien = new System.Windows.Forms.TextBox();
+            this.btnThanhToan = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericGiam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTang)).BeginInit();
@@ -84,15 +89,51 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnGiamSoLuong);
+            this.panel1.Controls.Add(this.btnTangSoLuong);
+            this.panel1.Controls.Add(this.btnXoaHangTrongGio);
             this.panel1.Controls.Add(this.numericGiam);
             this.panel1.Controls.Add(this.numericTang);
-            this.panel1.Controls.Add(this.btnGiamSoLuongHangHoa);
-            this.panel1.Controls.Add(this.btnTangSoLuongHangHoa);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(651, 348);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(151, 162);
             this.panel1.TabIndex = 101;
+            // 
+            // btnGiamSoLuong
+            // 
+            this.btnGiamSoLuong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnGiamSoLuong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnGiamSoLuong.Location = new System.Drawing.Point(24, 122);
+            this.btnGiamSoLuong.Name = "btnGiamSoLuong";
+            this.btnGiamSoLuong.Size = new System.Drawing.Size(30, 22);
+            this.btnGiamSoLuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnGiamSoLuong.TabIndex = 112;
+            this.btnGiamSoLuong.Text = "-";
+            this.btnGiamSoLuong.Click += new System.EventHandler(this.btnGiamSoLuong_Click);
+            // 
+            // btnTangSoLuong
+            // 
+            this.btnTangSoLuong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTangSoLuong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTangSoLuong.Location = new System.Drawing.Point(24, 78);
+            this.btnTangSoLuong.Name = "btnTangSoLuong";
+            this.btnTangSoLuong.Size = new System.Drawing.Size(30, 22);
+            this.btnTangSoLuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTangSoLuong.TabIndex = 111;
+            this.btnTangSoLuong.Text = "+";
+            this.btnTangSoLuong.Click += new System.EventHandler(this.btnTangSoLuong_Click);
+            // 
+            // btnXoaHangTrongGio
+            // 
+            this.btnXoaHangTrongGio.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoaHangTrongGio.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoaHangTrongGio.Location = new System.Drawing.Point(24, 13);
+            this.btnXoaHangTrongGio.Name = "btnXoaHangTrongGio";
+            this.btnXoaHangTrongGio.Size = new System.Drawing.Size(101, 49);
+            this.btnXoaHangTrongGio.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoaHangTrongGio.TabIndex = 110;
+            this.btnXoaHangTrongGio.Text = "Xóa";
+            this.btnXoaHangTrongGio.Click += new System.EventHandler(this.btnXoaHangTrongGio_Click);
             // 
             // numericGiam
             // 
@@ -104,7 +145,7 @@
             0,
             0});
             this.numericGiam.Name = "numericGiam";
-            this.numericGiam.Size = new System.Drawing.Size(59, 22);
+            this.numericGiam.Size = new System.Drawing.Size(60, 22);
             this.numericGiam.TabIndex = 31;
             this.numericGiam.Value = new decimal(new int[] {
             1,
@@ -122,46 +163,13 @@
             0,
             0});
             this.numericTang.Name = "numericTang";
-            this.numericTang.Size = new System.Drawing.Size(59, 22);
+            this.numericTang.Size = new System.Drawing.Size(60, 22);
             this.numericTang.TabIndex = 30;
             this.numericTang.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            // 
-            // btnGiamSoLuongHangHoa
-            // 
-            this.btnGiamSoLuongHangHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamSoLuongHangHoa.Location = new System.Drawing.Point(22, 121);
-            this.btnGiamSoLuongHangHoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGiamSoLuongHangHoa.Name = "btnGiamSoLuongHangHoa";
-            this.btnGiamSoLuongHangHoa.Size = new System.Drawing.Size(33, 23);
-            this.btnGiamSoLuongHangHoa.TabIndex = 29;
-            this.btnGiamSoLuongHangHoa.Text = "-";
-            this.btnGiamSoLuongHangHoa.UseVisualStyleBackColor = true;
-            // 
-            // btnTangSoLuongHangHoa
-            // 
-            this.btnTangSoLuongHangHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTangSoLuongHangHoa.Location = new System.Drawing.Point(22, 77);
-            this.btnTangSoLuongHangHoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTangSoLuongHangHoa.Name = "btnTangSoLuongHangHoa";
-            this.btnTangSoLuongHangHoa.Size = new System.Drawing.Size(33, 23);
-            this.btnTangSoLuongHangHoa.TabIndex = 28;
-            this.btnTangSoLuongHangHoa.Text = "+";
-            this.btnTangSoLuongHangHoa.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(22, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 56);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -211,6 +219,7 @@
             this.txtTienTraLai.ReadOnly = true;
             this.txtTienTraLai.Size = new System.Drawing.Size(333, 27);
             this.txtTienTraLai.TabIndex = 25;
+            this.txtTienTraLai.Text = "0";
             // 
             // label13
             // 
@@ -238,9 +247,13 @@
             "10000"});
             this.cmbTienKhachDua.Location = new System.Drawing.Point(198, 92);
             this.cmbTienKhachDua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTienKhachDua.MaxLength = 9;
             this.cmbTienKhachDua.Name = "cmbTienKhachDua";
             this.cmbTienKhachDua.Size = new System.Drawing.Size(333, 28);
             this.cmbTienKhachDua.TabIndex = 23;
+            this.cmbTienKhachDua.SelectedIndexChanged += new System.EventHandler(this.cmbTienKhachDua_SelectedIndexChanged);
+            this.cmbTienKhachDua.TextChanged += new System.EventHandler(this.cmbTienKhachDua_TextChanged);
+            this.cmbTienKhachDua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTienKhachDua_KeyPress);
             // 
             // txtTongGiaTriGioHang
             // 
@@ -252,6 +265,7 @@
             this.txtTongGiaTriGioHang.ReadOnly = true;
             this.txtTongGiaTriGioHang.Size = new System.Drawing.Size(333, 27);
             this.txtTongGiaTriGioHang.TabIndex = 22;
+            this.txtTongGiaTriGioHang.Text = "0";
             // 
             // label12
             // 
@@ -284,7 +298,8 @@
             this.txtPhanTramGiamGia.Name = "txtPhanTramGiamGia";
             this.txtPhanTramGiamGia.Size = new System.Drawing.Size(78, 27);
             this.txtPhanTramGiamGia.TabIndex = 16;
-            this.txtPhanTramGiamGia.Text = "1";
+            this.txtPhanTramGiamGia.Text = "0";
+            this.txtPhanTramGiamGia.TextChanged += new System.EventHandler(this.txtPhanTramGiamGia_TextChanged);
             this.txtPhanTramGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhanTramGiamGia_KeyPress);
             // 
             // label9
@@ -333,6 +348,7 @@
             this.txtTienHang.ReadOnly = true;
             this.txtTienHang.Size = new System.Drawing.Size(333, 27);
             this.txtTienHang.TabIndex = 12;
+            this.txtTienHang.Text = "0";
             // 
             // label7
             // 
@@ -360,11 +376,9 @@
             this.lstGioHang.FullRowSelect = true;
             this.lstGioHang.GridLines = true;
             this.lstGioHang.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lstGioHang.LabelEdit = true;
             this.lstGioHang.LabelWrap = false;
             this.lstGioHang.Location = new System.Drawing.Point(846, 221);
             this.lstGioHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lstGioHang.MultiSelect = false;
             this.lstGioHang.Name = "lstGioHang";
             this.lstGioHang.ShowGroups = false;
             this.lstGioHang.Size = new System.Drawing.Size(601, 372);
@@ -375,27 +389,27 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 72;
+            this.columnHeader1.Width = 70;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "TÊN HÀNG";
-            this.columnHeader2.Width = 163;
+            this.columnHeader2.Width = 300;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "GIÁ BÁN";
-            this.columnHeader3.Width = 82;
+            this.columnHeader3.Width = 100;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "SỐ LƯỢNG";
-            this.columnHeader4.Width = 115;
+            this.columnHeader4.Width = 100;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "THÀNH TIỀN";
-            this.columnHeader5.Width = 134;
+            this.columnHeader5.Width = 130;
             // 
             // columnHeader7
             // 
@@ -494,11 +508,20 @@
             // 
             // dataGridViewHangHoa
             // 
+            this.dataGridViewHangHoa.AllowUserToAddRows = false;
+            this.dataGridViewHangHoa.AllowUserToDeleteRows = false;
             this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewHangHoa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dataGridViewHangHoa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHangHoa,
+            this.TenHangHoa,
+            this.GiaBan,
+            this.DonVi,
+            this.Column1});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -512,11 +535,55 @@
             this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
             this.dataGridViewHangHoa.ReadOnly = true;
             this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewHangHoa.RowHeadersVisible = false;
             this.dataGridViewHangHoa.RowTemplate.Height = 24;
             this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 459);
             this.dataGridViewHangHoa.TabIndex = 102;
             this.dataGridViewHangHoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHangHoa_CellDoubleClick);
+            // 
+            // MaHangHoa
+            // 
+            this.MaHangHoa.DataPropertyName = "Mã hàng hóa";
+            this.MaHangHoa.FillWeight = 75F;
+            this.MaHangHoa.HeaderText = "Mã hàng hóa";
+            this.MaHangHoa.Name = "MaHangHoa";
+            this.MaHangHoa.ReadOnly = true;
+            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenHangHoa
+            // 
+            this.TenHangHoa.DataPropertyName = "Tên hàng hóa";
+            this.TenHangHoa.FillWeight = 225F;
+            this.TenHangHoa.HeaderText = "Tên hàng hóa";
+            this.TenHangHoa.Name = "TenHangHoa";
+            this.TenHangHoa.ReadOnly = true;
+            this.TenHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "Giá bán";
+            this.GiaBan.FillWeight = 50F;
+            this.GiaBan.HeaderText = "GIá bán";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
+            this.GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "Đơn vị";
+            this.DonVi.FillWeight = 50F;
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Số lượng";
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Số lượng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // dateTimeInput1
             // 
@@ -569,21 +636,6 @@
             this.dateTimeInput1.TabIndex = 103;
             this.dateTimeInput1.Value = new System.DateTime(2018, 10, 1, 16, 20, 10, 0);
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonX1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = global::QuanLySieuThi.Properties.Resources.shop_cart_icon1;
-            this.buttonX1.ImageFixedSize = new System.Drawing.Size(128, 128);
-            this.buttonX1.Location = new System.Drawing.Point(651, 654);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.buttonX1.Size = new System.Drawing.Size(151, 153);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 104;
-            // 
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(34, 60);
@@ -616,8 +668,6 @@
             // cbbKhachHang
             // 
             this.cbbKhachHang.FormattingEnabled = true;
-            this.cbbKhachHang.Items.AddRange(new object[] {
-            "Khách vãng lai"});
             this.cbbKhachHang.Location = new System.Drawing.Point(956, 167);
             this.cbbKhachHang.Name = "cbbKhachHang";
             this.cbbKhachHang.Size = new System.Drawing.Size(489, 24);
@@ -631,6 +681,22 @@
             this.txtNhanVien.Size = new System.Drawing.Size(489, 22);
             this.txtNhanVien.TabIndex = 109;
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThanhToan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThanhToan.Image = global::QuanLySieuThi.Properties.Resources.shop_cart_icon;
+            this.btnThanhToan.ImageFixedSize = new System.Drawing.Size(128, 128);
+            this.btnThanhToan.Location = new System.Drawing.Point(651, 654);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.btnThanhToan.Size = new System.Drawing.Size(151, 153);
+            this.btnThanhToan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThanhToan.TabIndex = 104;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -642,7 +708,7 @@
             this.Controls.Add(this.cbbKhachHang);
             this.Controls.Add(this.numericThem);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.dateTimeInput1);
             this.Controls.Add(this.dataGridViewHangHoa);
             this.Controls.Add(this.panel1);
@@ -658,9 +724,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.autoCompleteTextTenHangHoa);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHoaDon";
-            this.Text = "hoaDon";
+            this.Text = "Hóa đơn";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericGiam)).EndInit();
@@ -680,9 +746,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown numericGiam;
         private System.Windows.Forms.NumericUpDown numericTang;
-        private System.Windows.Forms.Button btnGiamSoLuongHangHoa;
-        private System.Windows.Forms.Button btnTangSoLuongHangHoa;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbTienKhachDua;
@@ -712,7 +775,7 @@
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewHangHoa;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput1;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnThanhToan;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.NumericUpDown numericThem;
         private System.Windows.Forms.TextBox txtTienTraLai;
@@ -720,6 +783,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbbKhachHang;
         private System.Windows.Forms.TextBox txtNhanVien;
+        private DevComponents.DotNetBar.ButtonX btnGiamSoLuong;
+        private DevComponents.DotNetBar.ButtonX btnTangSoLuong;
+        private DevComponents.DotNetBar.ButtonX btnXoaHangTrongGio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 
 
 

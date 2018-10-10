@@ -28,257 +28,276 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node7");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node8");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node11");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node12");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node13");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node14");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.themToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xoaStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.thêmMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmHàngVàoKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
+            this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.btnThemLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnXoaLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSuaLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.bar2 = new DevComponents.DotNetBar.Bar();
+            this.btnThemMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnXoaMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSuaMatHang = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThemHangVaoKho = new DevComponents.DotNetBar.ButtonItem();
+            this.treeViewLoaiMatHang = new DevComponents.AdvTree.AdvTree();
+            this.node1 = new DevComponents.AdvTree.Node();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.dataGridViewHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 20);
+            this.label1.Size = new System.Drawing.Size(247, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC MẶT HÀNG";
             // 
-            // treeView1
+            // bar1
             // 
-            this.treeView1.BackColor = System.Drawing.SystemColors.Info;
-            this.treeView1.Location = new System.Drawing.Point(9, 95);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Node0";
-            treeNode2.Name = "Node1";
-            treeNode2.Text = "Node1";
-            treeNode3.Name = "Node2";
-            treeNode3.Text = "Node2";
-            treeNode4.Name = "Node3";
-            treeNode4.Text = "Node3";
-            treeNode5.Name = "Node4";
-            treeNode5.Text = "Node4";
-            treeNode6.Name = "Node5";
-            treeNode6.Text = "Node5";
-            treeNode7.Name = "Node6";
-            treeNode7.Text = "Node6";
-            treeNode8.Name = "Node7";
-            treeNode8.Text = "Node7";
-            treeNode9.Name = "Node8";
-            treeNode9.Text = "Node8";
-            treeNode10.Name = "Node9";
-            treeNode10.Text = "Node9";
-            treeNode11.Name = "Node10";
-            treeNode11.Text = "Node10";
-            treeNode12.Name = "Node11";
-            treeNode12.Text = "Node11";
-            treeNode13.Name = "Node12";
-            treeNode13.Text = "Node12";
-            treeNode14.Name = "Node13";
-            treeNode14.Text = "Node13";
-            treeNode15.Name = "Node14";
-            treeNode15.Text = "Node14";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15});
-            this.treeView1.Size = new System.Drawing.Size(231, 448);
-            this.treeView1.TabIndex = 1;
+            this.bar1.AntiAlias = true;
+            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnThemLoaiMatHang,
+            this.btnXoaLoaiMatHang,
+            this.btnSuaLoaiMatHang});
+            this.bar1.Location = new System.Drawing.Point(12, 87);
+            this.bar1.Name = "bar1";
+            this.bar1.Size = new System.Drawing.Size(307, 41);
+            this.bar1.Stretch = true;
+            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bar1.TabIndex = 6;
+            this.bar1.TabStop = false;
+            this.bar1.Text = "bar1";
             // 
-            // menuStrip1
+            // btnThemLoaiMatHang
             // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.themToolStripMenuItem,
-            this.suaToolStripMenuItem,
-            this.xoaStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(9, 65);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(140, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btnThemLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
+            this.btnThemLoaiMatHang.Name = "btnThemLoaiMatHang";
+            this.btnThemLoaiMatHang.Text = "Thêm";
+            this.btnThemLoaiMatHang.Click += new System.EventHandler(this.btnThemLoaiMatHang_Click);
             // 
-            // themToolStripMenuItem
+            // btnXoaLoaiMatHang
             // 
-            this.themToolStripMenuItem.Name = "themToolStripMenuItem";
-            this.themToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
-            this.themToolStripMenuItem.Text = "Thêm";
-            this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
+            this.btnXoaLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoaLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
+            this.btnXoaLoaiMatHang.Name = "btnXoaLoaiMatHang";
+            this.btnXoaLoaiMatHang.Text = "Xóa";
+            this.btnXoaLoaiMatHang.Click += new System.EventHandler(this.btnXoaLoaiMatHang_Click);
             // 
-            // suaToolStripMenuItem
+            // btnSuaLoaiMatHang
             // 
-            this.suaToolStripMenuItem.Name = "suaToolStripMenuItem";
-            this.suaToolStripMenuItem.Size = new System.Drawing.Size(38, 24);
-            this.suaToolStripMenuItem.Text = "Sửa";
-            this.suaToolStripMenuItem.Click += new System.EventHandler(this.suaToolStripMenuItem_Click);
+            this.btnSuaLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSuaLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
+            this.btnSuaLoaiMatHang.Name = "btnSuaLoaiMatHang";
+            this.btnSuaLoaiMatHang.Text = "Sửa";
+            this.btnSuaLoaiMatHang.Click += new System.EventHandler(this.btnSuaLoaiMatHang_Click);
             // 
-            // xoaStripMenuItem1
+            // bar2
             // 
-            this.xoaStripMenuItem1.Name = "xoaStripMenuItem1";
-            this.xoaStripMenuItem1.Size = new System.Drawing.Size(39, 24);
-            this.xoaStripMenuItem1.Text = "Xóa";
+            this.bar2.AntiAlias = true;
+            this.bar2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnThemMatHang,
+            this.btnXoaMatHang,
+            this.btnSuaMatHang,
+            this.btnThemHangVaoKho});
+            this.bar2.Location = new System.Drawing.Point(393, 87);
+            this.bar2.Name = "bar2";
+            this.bar2.Size = new System.Drawing.Size(576, 41);
+            this.bar2.Stretch = true;
+            this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bar2.TabIndex = 7;
+            this.bar2.TabStop = false;
+            this.bar2.Text = "bar2";
             // 
-            // listView1
+            // btnThemMatHang
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.BackColor = System.Drawing.SystemColors.Info;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(282, 95);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listView1.MaximumSize = new System.Drawing.Size(451, 448);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(451, 448);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.btnThemMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemMatHang.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
+            this.btnThemMatHang.Name = "btnThemMatHang";
+            this.btnThemMatHang.Text = "Thêm";
+            this.btnThemMatHang.Click += new System.EventHandler(this.btnThemMatHang_Click);
             // 
-            // columnHeader1
+            // btnXoaMatHang
             // 
-            this.columnHeader1.Text = "Tên mặt hàng";
-            this.columnHeader1.Width = 111;
+            this.btnXoaMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoaMatHang.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
+            this.btnXoaMatHang.Name = "btnXoaMatHang";
+            this.btnXoaMatHang.Text = "Xóa";
+            this.btnXoaMatHang.Click += new System.EventHandler(this.btnXoaMatHang_Click);
             // 
-            // columnHeader2
+            // btnSuaMatHang
             // 
-            this.columnHeader2.Text = "Mã mặt hàng";
-            this.columnHeader2.Width = 109;
+            this.btnSuaMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSuaMatHang.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
+            this.btnSuaMatHang.Name = "btnSuaMatHang";
+            this.btnSuaMatHang.Text = "Sửa";
+            this.btnSuaMatHang.Click += new System.EventHandler(this.btnSuaMatHang_Click);
             // 
-            // columnHeader3
+            // btnThemHangVaoKho
             // 
-            this.columnHeader3.Text = "Giá mua";
-            this.columnHeader3.Width = 91;
+            this.btnThemHangVaoKho.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemHangVaoKho.Image = global::QuanLySieuThi.Properties.Resources.themHangVaoKho2_icon;
+            this.btnThemHangVaoKho.Name = "btnThemHangVaoKho";
+            this.btnThemHangVaoKho.Text = "Thêm hàng vào kho";
+            this.btnThemHangVaoKho.Click += new System.EventHandler(this.btnThemHangVaoKho_Click);
             // 
-            // columnHeader4
+            // treeViewLoaiMatHang
             // 
-            this.columnHeader4.Text = "Giá bán";
-            this.columnHeader4.Width = 96;
+            this.treeViewLoaiMatHang.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.treeViewLoaiMatHang.AllowDrop = true;
+            this.treeViewLoaiMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.treeViewLoaiMatHang.BackColor = System.Drawing.SystemColors.Window;
             // 
-            // columnHeader5
             // 
-            this.columnHeader5.Text = "Số lượng";
-            this.columnHeader5.Width = 79;
             // 
-            // menuStrip2
+            this.treeViewLoaiMatHang.BackgroundStyle.Class = "TreeBorderKey";
+            this.treeViewLoaiMatHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(17, 160);
+            this.treeViewLoaiMatHang.Name = "treeViewLoaiMatHang";
+            this.treeViewLoaiMatHang.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.node1});
+            this.treeViewLoaiMatHang.NodesConnector = this.nodeConnector1;
+            this.treeViewLoaiMatHang.NodeStyle = this.elementStyle1;
+            this.treeViewLoaiMatHang.PathSeparator = ";";
+            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(307, 486);
+            this.treeViewLoaiMatHang.Styles.Add(this.elementStyle1);
+            this.treeViewLoaiMatHang.TabIndex = 8;
+            this.treeViewLoaiMatHang.Text = "advTree1";
+            this.treeViewLoaiMatHang.NodeClick += new DevComponents.AdvTree.TreeNodeMouseEventHandler(this.treeViewLoaiMatHang_NodeClick);
             // 
-            this.menuStrip2.AutoSize = false;
-            this.menuStrip2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmMặtHàngToolStripMenuItem,
-            this.chỉnhSửaToolStripMenuItem,
-            this.xóaMặtHàngToolStripMenuItem,
-            this.thêmHàngVàoKhoToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(282, 65);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(448, 28);
-            this.menuStrip2.TabIndex = 5;
-            this.menuStrip2.Text = "menuStrip2";
+            // node1
             // 
-            // thêmMặtHàngToolStripMenuItem
+            this.node1.Name = "node1";
+            this.node1.Text = "Tất cả loại hàng hóa";
             // 
-            this.thêmMặtHàngToolStripMenuItem.Name = "thêmMặtHàngToolStripMenuItem";
-            this.thêmMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
-            this.thêmMặtHàngToolStripMenuItem.Text = "Thêm mặt hàng";
-            this.thêmMặtHàngToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
+            // nodeConnector1
             // 
-            // chỉnhSửaToolStripMenuItem
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
             // 
-            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
-            this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh Sửa";
-            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chageProduct);
+            // elementStyle1
             // 
-            // xóaMặtHàngToolStripMenuItem
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
-            this.xóaMặtHàngToolStripMenuItem.Name = "xóaMặtHàngToolStripMenuItem";
-            this.xóaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
-            this.xóaMặtHàngToolStripMenuItem.Text = "Xóa mặt hàng";
+            // dataGridViewHangHoa
             // 
-            // thêmHàngVàoKhoToolStripMenuItem
+            this.dataGridViewHangHoa.AllowUserToAddRows = false;
+            this.dataGridViewHangHoa.AllowUserToDeleteRows = false;
+            this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewHangHoa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridViewHangHoa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHangHoa,
+            this.TenHangHoa,
+            this.GiaBan,
+            this.DonVi,
+            this.Column1});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(393, 160);
+            this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
+            this.dataGridViewHangHoa.ReadOnly = true;
+            this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewHangHoa.RowHeadersVisible = false;
+            this.dataGridViewHangHoa.RowTemplate.Height = 24;
+            this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 486);
+            this.dataGridViewHangHoa.TabIndex = 103;
             // 
-            this.thêmHàngVàoKhoToolStripMenuItem.Name = "thêmHàngVàoKhoToolStripMenuItem";
-            this.thêmHàngVàoKhoToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
-            this.thêmHàngVàoKhoToolStripMenuItem.Text = "Thêm hàng vào kho";
+            // MaHangHoa
             // 
-            // Products
+            this.MaHangHoa.DataPropertyName = "Mã hàng hóa";
+            this.MaHangHoa.FillWeight = 75F;
+            this.MaHangHoa.HeaderText = "Mã hàng hóa";
+            this.MaHangHoa.Name = "MaHangHoa";
+            this.MaHangHoa.ReadOnly = true;
+            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            // TenHangHoa
+            // 
+            this.TenHangHoa.DataPropertyName = "Tên hàng hóa";
+            this.TenHangHoa.FillWeight = 225F;
+            this.TenHangHoa.HeaderText = "Tên hàng hóa";
+            this.TenHangHoa.Name = "TenHangHoa";
+            this.TenHangHoa.ReadOnly = true;
+            this.TenHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "Giá bán";
+            this.GiaBan.FillWeight = 50F;
+            this.GiaBan.HeaderText = "GIá bán";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
+            this.GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "Đơn vị";
+            this.DonVi.FillWeight = 50F;
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Số lượng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // frmDanhMucMatHang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(736, 555);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.treeView1);
+            this.ClientSize = new System.Drawing.Size(981, 681);
+            this.ControlBox = false;
+            this.Controls.Add(this.dataGridViewHangHoa);
+            this.Controls.Add(this.treeViewLoaiMatHang);
+            this.Controls.Add(this.bar2);
+            this.Controls.Add(this.bar1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(754, 600);
-            this.Name = "Products";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmDanhMucMatHang";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.Text = "Danh mục mặt hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,21 +306,24 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem themToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xoaStripMenuItem1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem thêmMặtHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaMặtHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thêmHàngVàoKhoToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private DevComponents.DotNetBar.Bar bar1;
+        private DevComponents.DotNetBar.ButtonItem btnThemLoaiMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnXoaLoaiMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnSuaLoaiMatHang;
+        private DevComponents.DotNetBar.Bar bar2;
+        private DevComponents.DotNetBar.ButtonItem btnThemMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnXoaMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnSuaMatHang;
+        private DevComponents.DotNetBar.ButtonItem btnThemHangVaoKho;
+        private DevComponents.AdvTree.AdvTree treeViewLoaiMatHang;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.AdvTree.Node node1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

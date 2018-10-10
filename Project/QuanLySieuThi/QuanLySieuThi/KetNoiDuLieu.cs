@@ -14,15 +14,25 @@ namespace QuanLySieuThi
 
         public KetNoiDuLieu(string chuoiKetNoi)
         {
+
+            this.sql = new SqlConnection(chuoiKetNoi);
             this.chuoiKetNoi = chuoiKetNoi;
-            Connec();
         }
 
-        public void Connec() 
+        public bool Connec() 
         {
-            this.sql = new SqlConnection(this.chuoiKetNoi);
-            if (sql.State == System.Data.ConnectionState.Closed)
-                sql.Open();
+            try
+            {
+                if(this.sql.State == ConnectionState.Closed)
+                    sql.Open();
+                if(this.sql.State == ConnectionState.Open)
+                    sql.Close();
+                return true; 
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
         }
 
         public System.Data.ConnectionState state()
@@ -32,28 +42,73 @@ namespace QuanLySieuThi
 
         public string commandScalar(string chuoiCommand)
         {
-            SqlCommand com = new SqlCommand(chuoiCommand, this.sql);
-            return com.ExecuteScalar() + "";
+            try
+            {
+                if (this.sql.State == ConnectionState.Closed)
+                    this.sql.Open();
+                SqlCommand com = new SqlCommand(chuoiCommand, this.sql);
+                string kq = com.ExecuteScalar() + "";
+                if (this.sql.State == ConnectionState.Open)
+                    this.sql.Close();
+                return kq.Trim();
+            }
+            catch(Exception e)
+            {
+                return "";
+            }
         }
 
         public DataSet comManTable(string chuoiComMand, string srcTable)
         {
-            if (this.sql.State == ConnectionState.Closed)
-                this.sql.Open();
-            DataSet ds = new DataSet();
-            SqlDataAdapter sda = new SqlDataAdapter(chuoiComMand, this.sql);
-            sda.Fill(ds, srcTable);
-            return ds;
+            try
+            {
+                if (this.sql.State == ConnectionState.Closed)
+                    this.sql.Open();
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter sda = new SqlDataAdapter(chuoiComMand, this.sql);
+                sda.Fill(ds, srcTable);
+                
+                if (this.sql.State == ConnectionState.Open)
+                    this.sql.Close();
+                return ds;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
         public SqlDataReader comManReader(string chuoiComMand, string srcTable)
         {
-            if (this.sql.State == ConnectionState.Closed)
-                this.sql.Open();
-            SqlCommand com = new SqlCommand(chuoiComMand,this.sql);
-            return com.ExecuteReader();
+            try
+            {
+                if (this.sql.State == ConnectionState.Closed)
+                    this.sql.Open();
+
+                SqlCommand com = new SqlCommand(chuoiComMand, this.sql);
+                SqlDataReader kq = com.ExecuteReader();
+                
+                return kq;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
+        public int insert(string chuoiComMand)
+        {
+            if (this.sql.State == ConnectionState.Closed)
+                this.sql.Open();
+            
+            SqlCommand com = new SqlCommand(chuoiComMand, this.sql);
+            int kq = com.ExecuteNonQuery();
+            
+            if (this.sql.State == ConnectionState.Open)
+                this.sql.Close();
+            return kq;
+        }
         
     }
 }

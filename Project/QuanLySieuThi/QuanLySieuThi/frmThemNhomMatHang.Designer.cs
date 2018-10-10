@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtTenNhomMatHang = new System.Windows.Forms.TextBox();
+            this.txtMaNhomMatHang = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnThemNhomMatHang = new DevComponents.DotNetBar.ButtonX();
+            this.btnThoat = new DevComponents.DotNetBar.ButtonX();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.balloonTip1 = new DevComponents.DotNetBar.BalloonTip();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-//            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.nhommathang;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(444, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -56,45 +51,90 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên nhóm mặt hàng";
             // 
-            // textBox1
+            // txtTenNhomMatHang
             // 
-            this.textBox1.Location = new System.Drawing.Point(191, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtTenNhomMatHang.Location = new System.Drawing.Point(191, 99);
+            this.txtTenNhomMatHang.Name = "txtTenNhomMatHang";
+            this.txtTenNhomMatHang.Size = new System.Drawing.Size(245, 22);
+            this.txtTenNhomMatHang.TabIndex = 2;
+            this.txtTenNhomMatHang.TextChanged += new System.EventHandler(this.txtTenNhomMatHang_TextChanged);
+            this.txtTenNhomMatHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenNhomMatHang_KeyPress);
             // 
-            // button1
+            // txtMaNhomMatHang
             // 
-            this.button1.Location = new System.Drawing.Point(227, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtMaNhomMatHang.Location = new System.Drawing.Point(191, 144);
+            this.txtMaNhomMatHang.Name = "txtMaNhomMatHang";
+            this.txtMaNhomMatHang.Size = new System.Drawing.Size(245, 22);
+            this.txtMaNhomMatHang.TabIndex = 6;
+            this.txtMaNhomMatHang.TextChanged += new System.EventHandler(this.txtMaNhomMatHang_TextChanged);
+            this.txtMaNhomMatHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaNhomMatHang_KeyPress);
             // 
-            // button2
+            // label2
             // 
-            this.button2.Location = new System.Drawing.Point(361, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Mã nhóm mặt hàng";
             // 
-            // ChageTypeProduct
+            // btnThemNhomMatHang
+            // 
+            this.btnThemNhomMatHang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemNhomMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemNhomMatHang.Location = new System.Drawing.Point(191, 199);
+            this.btnThemNhomMatHang.Name = "btnThemNhomMatHang";
+            this.btnThemNhomMatHang.Size = new System.Drawing.Size(75, 23);
+            this.btnThemNhomMatHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThemNhomMatHang.TabIndex = 7;
+            this.btnThemNhomMatHang.Text = "Thêm";
+            this.btnThemNhomMatHang.Click += new System.EventHandler(this.btnThemNhomMatHang_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.Location = new System.Drawing.Point(313, 199);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.nhomMatHang;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(444, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frmThemNhomMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 214);
+            this.ClientSize = new System.Drawing.Size(482, 278);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnThemNhomMatHang);
+            this.Controls.Add(this.txtMaNhomMatHang);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTenNhomMatHang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "ChageTypeProduct";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmThemNhomMatHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NHÓM MẶT HÀNG - THÊM MỚI";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,8 +145,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTenNhomMatHang;
+        private System.Windows.Forms.TextBox txtMaNhomMatHang;
+        private System.Windows.Forms.Label label2;
+        private DevComponents.DotNetBar.ButtonX btnThemNhomMatHang;
+        private DevComponents.DotNetBar.ButtonX btnThoat;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private DevComponents.DotNetBar.BalloonTip balloonTip1;
     }
 }

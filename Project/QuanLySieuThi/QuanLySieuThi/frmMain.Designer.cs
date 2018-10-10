@@ -969,7 +969,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1389, 668);
-            this.ControlBox = false;
             this.Controls.Add(this.dockSite9);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);

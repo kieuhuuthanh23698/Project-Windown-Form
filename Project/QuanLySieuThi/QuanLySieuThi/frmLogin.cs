@@ -26,11 +26,10 @@ namespace QuanLySieuThi
 
         private string xacNhanTaiKhoan(string username, string password)
         {
-            link.Connec();
             try
             {
-                string chuoiCommand = "select MaNhanVien from Users where UserName = '" + username + "' and Passwords = '" + password + "'";
-                return link.commandScalar(chuoiCommand);
+                string chuoiCommand = "select MaNhanVien from NhanVien where UserName = '" + username + "' and Passwords = '" + password + "'";
+                return this.link.commandScalar(chuoiCommand);
             }
             catch
             {

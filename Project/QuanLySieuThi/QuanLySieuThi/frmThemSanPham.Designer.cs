@@ -48,7 +48,7 @@
             // 
             // pictureBox1
             // 
-//            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.mathang;
+            this.pictureBox1.Image = global::QuanLySieuThi.Properties.Resources.matHang;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(445, 50);
@@ -68,14 +68,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(124, 73);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 22);
+            this.textBox1.Size = new System.Drawing.Size(304, 22);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(124, 113);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(321, 22);
+            this.textBox2.Size = new System.Drawing.Size(304, 22);
             this.textBox2.TabIndex = 4;
             // 
             // label2
@@ -91,7 +91,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(124, 160);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(321, 22);
+            this.textBox3.Size = new System.Drawing.Size(304, 22);
             this.textBox3.TabIndex = 6;
             // 
             // label3
@@ -107,7 +107,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(124, 204);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(321, 22);
+            this.textBox4.Size = new System.Drawing.Size(304, 22);
             this.textBox4.TabIndex = 8;
             // 
             // label4
@@ -139,7 +139,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(331, 254);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 22);
+            this.textBox6.Size = new System.Drawing.Size(97, 22);
             this.textBox6.TabIndex = 12;
             // 
             // label6
@@ -170,11 +170,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // AddNewProduct
+            // frmThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 371);
+            this.ClientSize = new System.Drawing.Size(462, 398);
+            this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
@@ -190,7 +191,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "AddNewProduct";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmThemSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MẶT HÀNG - THÊM MỚI";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

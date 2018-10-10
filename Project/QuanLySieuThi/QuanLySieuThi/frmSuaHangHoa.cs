@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class ChangeProduct : Form
+    public partial class frmSuaHangHoa : Form
     {
-        public ChangeProduct()
+        public frmSuaHangHoa()
         {
             InitializeComponent();
-        }
-
-        private void ChangeProduct_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

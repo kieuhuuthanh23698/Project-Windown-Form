@@ -10,9 +10,6 @@ namespace QuanLySieuThi
 {
     public partial class frmKetNoi : Form
     {
-        //Data Source=LAPTOP-CQ1BQQH5\SQLEXPRESS;Initial Catalog=QL_SIEUTHI;Persist Security Info=True;User ID=sa
-        //string chuoiKetNoi = "";
-        //SqlConnection sql;
         public frmKetNoi()
         {
             InitializeComponent();
@@ -26,10 +23,8 @@ namespace QuanLySieuThi
                 this.errorProvider1.Clear();
                 //tạo chuỗi kết nối
                 string chuoiKetNoi = @"Data Source=" + txtDataSource.Text + ";Initial Catalog=" + txtIni.Text + ";User ID=" + txtID.Text + ";Password=" + txtPass.Text;
-                //sql = new SqlConnection(chuoiKetNoi);
-                //sql.Open();
                 KetNoiDuLieu link = new KetNoiDuLieu(chuoiKetNoi);
-                if (link.state() == System.Data.ConnectionState.Open)
+                if (link.Connec() == true)
                 {
                     //đưa kết nối vào form login
                     frmLogin frmlogin = new frmLogin(link);

@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThi
 {
-    partial class ChangeProduct
+    partial class frmSuaHangHoa
     {
         /// <summary>
         /// Required designer variable.
@@ -69,7 +69,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(334, 254);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 22);
+            this.textBox6.Size = new System.Drawing.Size(98, 22);
             this.textBox6.TabIndex = 27;
             // 
             // label6
@@ -101,7 +101,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(127, 204);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(321, 22);
+            this.textBox4.Size = new System.Drawing.Size(305, 22);
             this.textBox4.TabIndex = 23;
             // 
             // label4
@@ -117,7 +117,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(127, 160);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(321, 22);
+            this.textBox3.Size = new System.Drawing.Size(305, 22);
             this.textBox3.TabIndex = 21;
             // 
             // label3
@@ -133,7 +133,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(127, 113);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(321, 22);
+            this.textBox2.Size = new System.Drawing.Size(305, 22);
             this.textBox2.TabIndex = 19;
             // 
             // label2
@@ -149,7 +149,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(127, 73);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 22);
+            this.textBox1.Size = new System.Drawing.Size(305, 22);
             this.textBox1.TabIndex = 17;
             // 
             // label1
@@ -170,11 +170,12 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // ChangeProduct
+            // frmSuaHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 360);
+            this.ClientSize = new System.Drawing.Size(462, 398);
+            this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
@@ -190,9 +191,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "ChangeProduct";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmSuaHangHoa";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MẶT HÀNG - THAY ĐỔI THÔNG TIN";
-            this.Load += new System.EventHandler(this.ChangeProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
