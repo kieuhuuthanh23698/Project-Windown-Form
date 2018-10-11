@@ -65,20 +65,6 @@ namespace QuanLySieuThi
             return kq;
         }
 
-<<<<<<< HEAD
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void frmDanhMucNhanVien_Load(object sender, EventArgs e)
-        {
-
-        }   
-=======
       
-     
-      
->>>>>>> 58031a8d9a3de79c0913cef95ef02760361dd81a
     }
 }
