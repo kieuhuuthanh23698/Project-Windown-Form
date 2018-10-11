@@ -118,59 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="hang-hoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hang-hoa.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop-cart-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop-cart-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nhan_vien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nhan_vien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="matHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\matHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="store-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\store-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xoa_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xoa_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sua_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sua_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shop-cart-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shop-cart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="themHangVaoKho_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\themHangVaoKho_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconChangePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconChangePassword.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="khach_hang_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\khach_hang_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="themHangVaoKho2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\themHangVaoKho2_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vinMart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vinMart.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chart-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="labelLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\labelLogin.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="them_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\them_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Close-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop-cart-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop-cart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,17 +133,83 @@
   <data name="bill-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bill-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="child_node" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\child_node.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="themHangVaoKho2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themHangVaoKho2_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nhomMatHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nhomMatHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="themHangVaoKho_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themHangVaoKho_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vinMart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vinMart.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chart-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop-cart-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop-cart-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sua_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sua_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thongkeHoaDon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thongkeHoaDon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nhomMatHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nhomMatHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="labelLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labelLogin.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="store-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\store-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="father_node" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\father_node.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconChangePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconChangePassword.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xoa_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xoa_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hang-hoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hang-hoa.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nhan_vien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nhan_vien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khachhang_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khachhang_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="matHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\matHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop-cart-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop-cart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="them_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\them_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mathang_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mathang_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nhanvien_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nhanvien_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="child_node" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\child_node.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khach_hang_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khach_hang_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mathang_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mathang_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mathang_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mathang_3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
