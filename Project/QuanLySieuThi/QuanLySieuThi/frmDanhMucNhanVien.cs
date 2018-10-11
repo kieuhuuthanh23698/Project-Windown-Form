@@ -44,7 +44,7 @@ namespace QuanLySieuThi
                 else
                 {
                     //them
-                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('"+txtMa.Text+"',N'"+txtTen.Text+"','6/23/1998',N'Nam',8000000,'kieuhuuthanh23698','TP HCM',20,'"+txtUsers.Text+"','"+txtMatkhau.Text+"','Admin')");
+                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('"+txtMa.Text+"',N'"+txtTen.Text+"','"+dateTimeNgaySinh.Text+"',N'"+cboxGtinh.Text+"',"+txtLuong.Text+",'"+txtMail.Text+"','"+txtDiachi.Text+"',"+cboxTuoi.Text+",'"+txtUsers.Text+"','"+txtMatkhau.Text+"','"+txtCap.Text+"')");
                     //kq = 0 them that bai
                     if (kq == 0)
                         MessageBox.Show("Khong them duoc");
@@ -63,6 +63,10 @@ namespace QuanLySieuThi
                 return false;
             }
             return kq;
-        }   
+        }
+
+      
+     
+      
     }
 }

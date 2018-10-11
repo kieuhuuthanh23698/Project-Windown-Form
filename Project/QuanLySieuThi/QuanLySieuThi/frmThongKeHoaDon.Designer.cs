@@ -45,9 +45,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Location = new System.Drawing.Point(298, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 24);
+            this.label1.Size = new System.Drawing.Size(109, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phiếu bán hàng";
             // 
@@ -64,9 +65,10 @@
             this.columnHeader5,
             this.columnHeader6});
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(22, 50);
+            this.listView1.Location = new System.Drawing.Point(16, 41);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(873, 427);
+            this.listView1.Size = new System.Drawing.Size(843, 348);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -116,14 +118,15 @@
             this.columnHeader6.Text = "Thành tiền";
             this.columnHeader6.Width = 121;
             // 
-            // thongkehoadon
+            // frmThongKeHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 489);
+            this.ClientSize = new System.Drawing.Size(882, 397);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
-            this.Name = "thongkehoadon";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmThongKeHoaDon";
             this.Text = "thongkehoadon";
             this.ResumeLayout(false);
             this.PerformLayout();

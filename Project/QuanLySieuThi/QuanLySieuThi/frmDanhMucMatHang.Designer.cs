@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btnThemLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnXoaLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
@@ -49,22 +48,15 @@
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
+            this.panelEx1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH MỤC MẶT HÀNG";
             // 
             // bar1
             // 
@@ -74,9 +66,10 @@
             this.btnThemLoaiMatHang,
             this.btnXoaLoaiMatHang,
             this.btnSuaLoaiMatHang});
-            this.bar1.Location = new System.Drawing.Point(12, 87);
+            this.bar1.Location = new System.Drawing.Point(9, 85);
+            this.bar1.Margin = new System.Windows.Forms.Padding(2);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(307, 41);
+            this.bar1.Size = new System.Drawing.Size(230, 41);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 6;
@@ -116,9 +109,10 @@
             this.btnXoaMatHang,
             this.btnSuaMatHang,
             this.btnThemHangVaoKho});
-            this.bar2.Location = new System.Drawing.Point(393, 87);
+            this.bar2.Location = new System.Drawing.Point(295, 85);
+            this.bar2.Margin = new System.Windows.Forms.Padding(2);
             this.bar2.Name = "bar2";
-            this.bar2.Size = new System.Drawing.Size(576, 41);
+            this.bar2.Size = new System.Drawing.Size(432, 41);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar2.TabIndex = 7;
@@ -169,14 +163,15 @@
             // 
             this.treeViewLoaiMatHang.BackgroundStyle.Class = "TreeBorderKey";
             this.treeViewLoaiMatHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(17, 160);
+            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(13, 142);
+            this.treeViewLoaiMatHang.Margin = new System.Windows.Forms.Padding(2);
             this.treeViewLoaiMatHang.Name = "treeViewLoaiMatHang";
             this.treeViewLoaiMatHang.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
             this.node1});
             this.treeViewLoaiMatHang.NodesConnector = this.nodeConnector1;
             this.treeViewLoaiMatHang.NodeStyle = this.elementStyle1;
             this.treeViewLoaiMatHang.PathSeparator = ";";
-            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(307, 486);
+            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(230, 395);
             this.treeViewLoaiMatHang.Styles.Add(this.elementStyle1);
             this.treeViewLoaiMatHang.TabIndex = 8;
             this.treeViewLoaiMatHang.Text = "advTree1";
@@ -214,23 +209,24 @@
             this.GiaBan,
             this.DonVi,
             this.Column1});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewHangHoa.Location = new System.Drawing.Point(393, 160);
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(295, 142);
+            this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
             this.dataGridViewHangHoa.ReadOnly = true;
             this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewHangHoa.RowHeadersVisible = false;
             this.dataGridViewHangHoa.RowTemplate.Height = 24;
             this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 486);
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(432, 395);
             this.dataGridViewHangHoa.TabIndex = 103;
             // 
             // MaHangHoa
@@ -275,20 +271,68 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.labelX2);
+            this.panelEx1.Controls.Add(this.labelX1);
+            this.panelEx1.Location = new System.Drawing.Point(12, 0);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(715, 71);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 104;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackgroundImage = global::QuanLySieuThi.Properties.Resources.mathang_1;
+            this.labelX2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(3, 3);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(168, 68);
+            this.labelX2.TabIndex = 1;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelX1.Location = new System.Drawing.Point(221, 19);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(248, 38);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "DANH MỤC MẶT HÀNG";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // frmDanhMucMatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(981, 681);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(736, 553);
             this.ControlBox = false;
+            this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.dataGridViewHangHoa);
             this.Controls.Add(this.treeViewLoaiMatHang);
             this.Controls.Add(this.bar2);
             this.Controls.Add(this.bar1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDanhMucMatHang";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -298,14 +342,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
+            this.panelEx1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem btnThemLoaiMatHang;
         private DevComponents.DotNetBar.ButtonItem btnXoaLoaiMatHang;
@@ -325,5 +368,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private DevComponents.DotNetBar.PanelEx panelEx1;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.LabelX labelX2;
     }
 }
