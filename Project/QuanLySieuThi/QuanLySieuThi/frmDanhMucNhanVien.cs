@@ -63,6 +63,16 @@ namespace QuanLySieuThi
                 return false;
             }
             return kq;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDanhMucNhanVien_Load(object sender, EventArgs e)
+        {
+
         }   
     }
 }
