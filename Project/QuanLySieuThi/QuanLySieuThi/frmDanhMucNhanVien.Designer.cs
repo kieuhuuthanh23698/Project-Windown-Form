@@ -69,23 +69,14 @@
             // 
             // txtCap
             // 
-<<<<<<< HEAD
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(980, 643);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 42);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
-=======
+
             this.txtCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCap.Location = new System.Drawing.Point(568, 444);
             this.txtCap.Margin = new System.Windows.Forms.Padding(2);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(290, 26);
             this.txtCap.TabIndex = 33;
->>>>>>> 58031a8d9a3de79c0913cef95ef02760361dd81a
+
             // 
             // txtLuong
             // 
@@ -98,23 +89,16 @@
             // 
             // txtDiachi
             // 
-<<<<<<< HEAD
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 62);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-=======
+
+           
+
             this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiachi.Location = new System.Drawing.Point(568, 344);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(290, 26);
             this.txtDiachi.TabIndex = 31;
->>>>>>> 58031a8d9a3de79c0913cef95ef02760361dd81a
+
             // 
             // txtMail
             // 
@@ -517,22 +501,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
-<<<<<<< HEAD
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-=======
-<<<<<<< HEAD
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 88531f1d24143faed726e6c4ef829d027fcb7d4d
-            this.Name = "frmDanhMucNhanVien";
-            this.Text = "NhanVien";
-            this.Load += new System.EventHandler(this.frmDanhMucNhanVien_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-=======
-            this.Name = "frmDanhMucNhanVien";
-            this.Text = "NhanVien";
->>>>>>> 58031a8d9a3de79c0913cef95ef02760361dd81a
             ((System.ComponentModel.ISupportInitialize)(this.TreeViewNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeNgaySinh)).EndInit();
