@@ -495,6 +495,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDanhMucNhanVien";
             this.Text = "NhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.TreeViewNV)).EndInit();

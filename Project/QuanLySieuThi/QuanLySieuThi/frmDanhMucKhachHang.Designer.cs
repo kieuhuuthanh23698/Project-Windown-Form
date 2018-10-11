@@ -30,7 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.btnThem = new DevComponents.DotNetBar.ButtonItem();
+            this.btnXoa = new DevComponents.DotNetBar.ButtonItem();
+            this.btnChinhsua = new DevComponents.DotNetBar.ButtonItem();
             this.dataGridViewKhachHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnLuu = new DevComponents.DotNetBar.ButtonX();
-            this.btnThem = new DevComponents.DotNetBar.ButtonItem();
-            this.btnXoa = new DevComponents.DotNetBar.ButtonItem();
-            this.btnChinhsua = new DevComponents.DotNetBar.ButtonItem();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhachHang)).BeginInit();
@@ -72,6 +72,33 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 2;
             // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelX2.Location = new System.Drawing.Point(268, 33);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(388, 43);
+            this.labelX2.TabIndex = 1;
+            this.labelX2.Text = "DANH MỤC KHÁCH HÀNG";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Image = global::QuanLySieuThi.Properties.Resources.khachhang_1;
+            this.labelX1.Location = new System.Drawing.Point(-3, 1);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(124, 108);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "labelX1";
+            // 
             // bar1
             // 
             this.bar1.AntiAlias = true;
@@ -88,6 +115,31 @@
             this.bar1.TabIndex = 3;
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
+            // 
+            // btnThem
+            // 
+            this.btnThem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThem.FontBold = true;
+            this.btnThem.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoa.FontBold = true;
+            this.btnXoa.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Text = "Xóa";
+            // 
+            // btnChinhsua
+            // 
+            this.btnChinhsua.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnChinhsua.FontBold = true;
+            this.btnChinhsua.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
+            this.btnChinhsua.Name = "btnChinhsua";
+            this.btnChinhsua.Text = "Chỉnh sửa";
             // 
             // dataGridViewKhachHang
             // 
@@ -226,58 +278,6 @@
             this.btnLuu.UseWaitCursor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnThem.FontBold = true;
-            this.btnThem.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnXoa.FontBold = true;
-            this.btnXoa.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnChinhsua
-            // 
-            this.btnChinhsua.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnChinhsua.FontBold = true;
-            this.btnChinhsua.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
-            this.btnChinhsua.Name = "btnChinhsua";
-            this.btnChinhsua.Text = "Chỉnh sửa";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Image = global::QuanLySieuThi.Properties.Resources.khachhang_1;
-            this.labelX1.Location = new System.Drawing.Point(-3, 1);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(124, 108);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "labelX1";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelX2.Location = new System.Drawing.Point(268, 33);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(388, 43);
-            this.labelX2.TabIndex = 1;
-            this.labelX2.Text = "DANH MỤC KHÁCH HÀNG";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // frmDanhMucKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +297,7 @@
             this.Controls.Add(this.dataGridViewKhachHang);
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.panelEx1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDanhMucKhachHang";
             this.Text = "KhachHang";
             this.panelEx1.ResumeLayout(false);
