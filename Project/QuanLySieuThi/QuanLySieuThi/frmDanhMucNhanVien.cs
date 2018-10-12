@@ -65,5 +65,9 @@ namespace QuanLySieuThi
             return kq;
         }
 
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
     }
 }

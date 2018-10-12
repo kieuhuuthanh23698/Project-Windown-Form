@@ -39,7 +39,8 @@ namespace QuanLySieuThi
                 }
                 else
                 {
- 
+                    frmDanhMucMatHang f = new frmDanhMucMatHang(this.kn,mahh);
+                    
                 }
             }
         }

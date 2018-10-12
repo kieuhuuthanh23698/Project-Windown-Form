@@ -66,10 +66,10 @@
             this.btnThemLoaiMatHang,
             this.btnXoaLoaiMatHang,
             this.btnSuaLoaiMatHang});
-            this.bar1.Location = new System.Drawing.Point(9, 85);
-            this.bar1.Margin = new System.Windows.Forms.Padding(2);
+            this.bar1.Location = new System.Drawing.Point(12, 105);
+            this.bar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(230, 41);
+            this.bar1.Size = new System.Drawing.Size(307, 41);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 6;
@@ -109,10 +109,10 @@
             this.btnXoaMatHang,
             this.btnSuaMatHang,
             this.btnThemHangVaoKho});
-            this.bar2.Location = new System.Drawing.Point(295, 85);
-            this.bar2.Margin = new System.Windows.Forms.Padding(2);
+            this.bar2.Location = new System.Drawing.Point(393, 105);
+            this.bar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bar2.Name = "bar2";
-            this.bar2.Size = new System.Drawing.Size(432, 41);
+            this.bar2.Size = new System.Drawing.Size(576, 41);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar2.TabIndex = 7;
@@ -163,15 +163,15 @@
             // 
             this.treeViewLoaiMatHang.BackgroundStyle.Class = "TreeBorderKey";
             this.treeViewLoaiMatHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(13, 142);
-            this.treeViewLoaiMatHang.Margin = new System.Windows.Forms.Padding(2);
+            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(17, 175);
+            this.treeViewLoaiMatHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeViewLoaiMatHang.Name = "treeViewLoaiMatHang";
             this.treeViewLoaiMatHang.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
             this.node1});
             this.treeViewLoaiMatHang.NodesConnector = this.nodeConnector1;
             this.treeViewLoaiMatHang.NodeStyle = this.elementStyle1;
             this.treeViewLoaiMatHang.PathSeparator = ";";
-            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(230, 395);
+            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(307, 486);
             this.treeViewLoaiMatHang.Styles.Add(this.elementStyle1);
             this.treeViewLoaiMatHang.TabIndex = 8;
             this.treeViewLoaiMatHang.Text = "advTree1";
@@ -218,15 +218,15 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewHangHoa.Location = new System.Drawing.Point(295, 142);
-            this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(393, 175);
+            this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
             this.dataGridViewHangHoa.ReadOnly = true;
             this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewHangHoa.RowHeadersVisible = false;
             this.dataGridViewHangHoa.RowTemplate.Height = 24;
             this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHangHoa.Size = new System.Drawing.Size(432, 395);
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 486);
             this.dataGridViewHangHoa.TabIndex = 103;
             // 
             // MaHangHoa
@@ -277,9 +277,10 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.labelX2);
             this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.Location = new System.Drawing.Point(12, 0);
+            this.panelEx1.Location = new System.Drawing.Point(16, 0);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(715, 71);
+            this.panelEx1.Size = new System.Drawing.Size(953, 87);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -297,9 +298,10 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(3, 3);
+            this.labelX2.Location = new System.Drawing.Point(4, 4);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(168, 68);
+            this.labelX2.Size = new System.Drawing.Size(207, 84);
             this.labelX2.TabIndex = 1;
             // 
             // labelX1
@@ -310,21 +312,22 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelX1.Location = new System.Drawing.Point(221, 19);
+            this.labelX1.Location = new System.Drawing.Point(295, 23);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(248, 38);
+            this.labelX1.Size = new System.Drawing.Size(331, 47);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "DANH MỤC MẶT HÀNG";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // frmDanhMucMatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(736, 553);
+            this.ClientSize = new System.Drawing.Size(981, 681);
             this.ControlBox = false;
             this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.dataGridViewHangHoa);
@@ -332,7 +335,7 @@
             this.Controls.Add(this.bar2);
             this.Controls.Add(this.bar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDanhMucMatHang";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
