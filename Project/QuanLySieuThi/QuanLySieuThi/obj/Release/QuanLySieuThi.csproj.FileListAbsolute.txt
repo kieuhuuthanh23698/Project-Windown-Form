@@ -24,7 +24,6 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.exe
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.pdb
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.csprojResolveAssemblyReference.cache
-C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemNhanVien.resources
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemSanPham.resources
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThemNhomMatHang.resources
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmDoiTenNhomMatHang.resources
