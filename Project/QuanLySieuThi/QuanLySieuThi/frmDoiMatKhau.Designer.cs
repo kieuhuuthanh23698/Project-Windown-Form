@@ -56,10 +56,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 20);
+=======
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 18);
+>>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             this.label3.TabIndex = 3;
             this.label3.Text = "Mật khẩu cũ :";
             // 
@@ -84,10 +93,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 20);
+=======
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 18);
+>>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             this.label4.TabIndex = 5;
             this.label4.Text = "Mật khẩu mới :";
             // 
@@ -103,10 +121,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 20);
+=======
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 199);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 18);
+>>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             this.label5.TabIndex = 7;
             this.label5.Text = "Nhập lại :";
             // 
@@ -184,10 +211,16 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+<<<<<<< HEAD
             this.labelX1.Location = new System.Drawing.Point(16, 4);
             this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(135, 76);
+=======
+            this.labelX1.Location = new System.Drawing.Point(12, 3);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(101, 62);
+>>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             this.labelX1.TabIndex = 0;
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
