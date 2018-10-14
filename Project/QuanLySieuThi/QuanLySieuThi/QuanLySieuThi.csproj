@@ -83,6 +83,12 @@
     <Compile Include="frmKetNoi.Designer.cs">
       <DependentUpon>frmKetNoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhapHangHoaVaoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHangHoaVaoKho.Designer.cs">
+      <DependentUpon>frmNhapHangHoaVaoKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoiDuLieu.cs" />
     <Compile Include="frmDanhMucKhachHang.cs">
       <SubType>Form</SubType>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhMucMatHang.resx">
       <DependentUpon>frmDanhMucMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHangHoaVaoKho.resx">
+      <DependentUpon>frmNhapHangHoaVaoKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

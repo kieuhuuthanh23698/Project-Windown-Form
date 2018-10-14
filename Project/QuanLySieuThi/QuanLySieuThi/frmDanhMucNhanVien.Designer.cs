@@ -69,20 +69,14 @@
             // 
             // txtCap
             // 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
             this.txtCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCap.Location = new System.Drawing.Point(757, 546);
             this.txtCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(385, 30);
             this.txtCap.TabIndex = 33;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
             // 
             // txtLuong
             // 
@@ -95,22 +89,14 @@
             // 
             // txtDiachi
             // 
-<<<<<<< HEAD
-=======
 
-           
-
->>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
             this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiachi.Location = new System.Drawing.Point(757, 423);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(385, 30);
             this.txtDiachi.TabIndex = 31;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
             // 
             // txtMail
             // 
@@ -529,14 +515,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
-<<<<<<< HEAD
+
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDanhMucNhanVien";
             this.Text = "NhanVien";
-=======
 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
->>>>>>> 4e98c9c353dda3daa45674270c459e46bf9f15a1
+
             ((System.ComponentModel.ISupportInitialize)(this.TreeViewNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeNgaySinh)).EndInit();

@@ -8,19 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class frmThemSanPham : Form
+    public partial class frmNhapHangHoaVaoKho : Form
     {
-        KetNoiDuLieu link;
-
-        public frmThemSanPham(KetNoiDuLieu link)
+        public frmNhapHangHoaVaoKho()
         {
-            this.link = link;
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
