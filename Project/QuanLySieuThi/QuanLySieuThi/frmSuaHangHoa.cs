@@ -11,13 +11,17 @@ namespace QuanLySieuThi
 {
     public partial class frmSuaHangHoa : Form
     {
+        DataGridViewRow row;
         KetNoiDuLieu kn;
-        string mahh;
-        public frmSuaHangHoa()
-        {
-            InitializeComponent();
-        }
+        String ten, giaban, donvi;
 
+        public frmSuaHangHoa(KetNoiDuLieu kn,DataGridViewRow row)
+        {
+            this.row = row;
+            this.kn = kn;
+            InitializeComponent();
+
+<<<<<<< HEAD
         private bool KtraKhoaChinh(string s)
         {
             bool kq = true;
@@ -27,25 +31,40 @@ namespace QuanLySieuThi
                 return false;
             }
             return kq;
+=======
+            txtTen.Text = row.Cells["TenHangHoa"].Value.ToString();
+            txtGiaban.Text = row.Cells["GiaBan"].Value.ToString();
+            txtDonvi.Text = row.Cells["DonVi"].Value.ToString();
+
+            ten = txtTen.Text;
+            giaban = txtGiaban.Text;
+            donvi = txtDonvi.Text;
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMa.Text != "")
+            if (ten != txtTen.Text || giaban != txtGiaban.Text || donvi != txtDonvi.Text)
             {
-                if (KtraKhoaChinh(txtMa.Text) == true)
-                {
-                    MessageBox.Show("Mã mặt hàng đã tồn tại!");
-                }
+                //sửa đổi
+                String maHang = this.row.Cells["MaHangHoa"].Value.ToString();
+                int i = this.kn.insert("update KhoHang set TenHangHoa = N'" + txtTen.Text.Trim() + "', GiaBan = '" + txtGiaban.Text.Trim() + "', DonVi = N'" + txtDonvi.Text.Trim() + "' where MaHangHoa = '" +  maHang + "'");
+                if (i != 0)
+                    MessageBox.Show("Sửa thông tin hàng hóa thành công !","SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 else
-                {
-                    frmDanhMucMatHang f = new frmDanhMucMatHang(this.kn,mahh);
-                    
-                }
+                    MessageBox.Show("Sửa thông tin hàng hóa thất bại !","SỬA THÔNG TIN HÀNG HÓA",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+            
+            this.Close();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
 
 
     
-    }
-}
+    

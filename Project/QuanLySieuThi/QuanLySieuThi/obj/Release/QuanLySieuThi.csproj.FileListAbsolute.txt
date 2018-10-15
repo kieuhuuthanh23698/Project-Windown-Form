@@ -43,3 +43,4 @@ C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySi
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.csproj.GenerateResource.Cache
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.exe
 C:\Users\Administrator.GMK1KUGNFEEWJKV\New folder\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.pdb
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmNhapHangHoaVaoKho.resources

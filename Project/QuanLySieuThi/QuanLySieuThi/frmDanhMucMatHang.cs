@@ -64,6 +64,8 @@ namespace QuanLySieuThi
             if (link.state() == ConnectionState.Open)
                 this.link.sql.Close();
         }
+        
+        // thao tác với loại thông tin loại mặt hàng
 
         private void btnThemLoaiMatHang_Click(object sender, EventArgs e)
         {
@@ -113,26 +115,43 @@ namespace QuanLySieuThi
             }
         }
 
+        // thao tác với hàng hóa
+
         private void btnThemMatHang_Click(object sender, EventArgs e)
         {
-            frmThemSanPham frm = new frmThemSanPham();
+            frmThemSanPham frm = new frmThemSanPham(this.link);
             frm.ShowDialog();
         }
 
         private void btnXoaMatHang_Click(object sender, EventArgs e)
         {
             //cho số lượng hàng hóa đó = 0
+            if (dataGridViewHangHoa.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
+                string maHangHoa = row.Cells["MaHangHoa"].Value.ToString().Trim();
+                int i = this.link.insert("update KhoHang set SoLuongrongKho = 0 where MaHangHoa = '" + maHangHoa + "'");
+                if (i != 0)
+                    MessageBox.Show("Xóa hàng hóa thành công !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Xóa hàng hóa thất bại !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                taiGridViewHangHoa();
+            }
         }
 
         private void btnSuaMatHang_Click(object sender, EventArgs e)
         {
-            frmSuaHangHoa frm = new frmSuaHangHoa();
+            DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
+            frmSuaHangHoa frm = new frmSuaHangHoa(this.link,row);
             frm.ShowDialog();
+            taiGridViewHangHoa();
         }
 
         private void btnThemHangVaoKho_Click(object sender, EventArgs e)
         {
             //sửa lại số lượng trong kho hàng
+            frmNhapHangHoaVaoKho frm = new frmNhapHangHoaVaoKho();
+            frm.ShowDialog();
         }
 
     }

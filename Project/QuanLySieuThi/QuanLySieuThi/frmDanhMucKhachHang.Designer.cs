@@ -79,9 +79,22 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+<<<<<<< HEAD
             this.labelX2.Location = new System.Drawing.Point(277, 35);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(395, 35);
+=======
+
+            this.labelX2.Location = new System.Drawing.Point(357, 41);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(517, 53);
+
+            this.labelX2.Location = new System.Drawing.Point(268, 33);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(388, 43);
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "DANH MỤC KHÁCH HÀNG";
             this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -93,10 +106,25 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Image = global::QuanLySieuThi.Properties.Resources.khachhang_1;
+<<<<<<< HEAD
             this.labelX1.Location = new System.Drawing.Point(-2, 1);
+=======
+
+            this.labelX1.Location = new System.Drawing.Point(-4, 1);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(286, 133);
+            this.labelX1.TabIndex = 0;
+
+            this.labelX1.Location = new System.Drawing.Point(-3, 1);
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(260, 110);
             this.labelX1.TabIndex = 0;
+<<<<<<< HEAD
+=======
+            this.labelX1.Text = "labelX1";
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             // 
             // bar1
             // 
@@ -296,7 +324,15 @@
             this.Controls.Add(this.dataGridViewKhachHang);
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.panelEx1);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+=======
+
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             this.Name = "frmDanhMucKhachHang";
             this.Text = "KhachHang";
             this.panelEx1.ResumeLayout(false);

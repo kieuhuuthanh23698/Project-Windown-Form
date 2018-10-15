@@ -69,12 +69,20 @@
             // 
             // txtCap
             // 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             this.txtCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCap.Location = new System.Drawing.Point(568, 444);
             this.txtCap.Margin = new System.Windows.Forms.Padding(2);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(281, 26);
             this.txtCap.TabIndex = 33;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             // 
             // txtLuong
             // 
@@ -87,12 +95,20 @@
             // 
             // txtDiachi
             // 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiachi.Location = new System.Drawing.Point(568, 344);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(281, 26);
             this.txtDiachi.TabIndex = 31;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             // 
             // txtMail
             // 
@@ -507,10 +523,20 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDanhMucNhanVien";
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.frmDanhMucNhanVien_Load);
+=======
+
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmDanhMucNhanVien";
+            this.Text = "NhanVien";
+
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
             ((System.ComponentModel.ISupportInitialize)(this.TreeViewNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeNgaySinh)).EndInit();

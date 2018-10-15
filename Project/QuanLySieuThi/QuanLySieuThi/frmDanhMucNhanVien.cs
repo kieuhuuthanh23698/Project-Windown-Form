@@ -22,10 +22,10 @@ namespace QuanLySieuThi
         }
         public void TaoTreeViewNV()
         {
-            SqlDataReader rd = kn.comManReader("select TenNhanVien from NhanVien","Nhan Vien");
-            while(rd.Read())
+            SqlDataReader rd = kn.comManReader("select TenNhanVien from NhanVien", "Nhan Vien");
+            while (rd.Read())
             {
-                DevComponents.AdvTree.Node node= new DevComponents.AdvTree.Node(rd["TenNhanVien"].ToString());
+                DevComponents.AdvTree.Node node = new DevComponents.AdvTree.Node(rd["TenNhanVien"].ToString());
                 TreeViewNV.Nodes.Add(node);
 
             }
@@ -51,8 +51,12 @@ namespace QuanLySieuThi
                 else
                 {
                     //them
+<<<<<<< HEAD
                     int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," 
                         + txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + txtCap.Text + "')");
+=======
+                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," + txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + txtCap.Text + "')");
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
                     //kq = 0 them that bai
                     if (kq == 0)
                         MessageBox.Show("Khong them duoc");
@@ -98,6 +102,7 @@ namespace QuanLySieuThi
             return kq;
         }
 
+<<<<<<< HEAD
         private bool KTMail(string s)
         {
             char[] mangchuoi = s.ToCharArray();
@@ -133,5 +138,7 @@ namespace QuanLySieuThi
         }
 
         
+=======
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
     }
 }

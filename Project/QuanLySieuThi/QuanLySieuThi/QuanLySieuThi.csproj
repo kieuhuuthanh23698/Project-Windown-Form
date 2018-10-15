@@ -90,6 +90,12 @@
     <Compile Include="frmKetNoi.Designer.cs">
       <DependentUpon>frmKetNoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhapHangHoaVaoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHangHoaVaoKho.Designer.cs">
+      <DependentUpon>frmNhapHangHoaVaoKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoiDuLieu.cs" />
     <Compile Include="frmDanhMucKhachHang.cs">
       <SubType>Form</SubType>
@@ -194,9 +200,14 @@
     <EmbeddedResource Include="frmDanhMucMatHang.resx">
       <DependentUpon>frmDanhMucMatHang.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Phieubaogia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Phieubaogia.cs</LastGenOutput>
+=======
+    <EmbeddedResource Include="frmNhapHangHoaVaoKho.resx">
+      <DependentUpon>frmNhapHangHoaVaoKho.cs</DependentUpon>
+>>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
