@@ -15,13 +15,13 @@ namespace QuanLySieuThi
         KetNoiDuLieu kn;
         String ten, giaban, donvi;
 
-        public frmSuaHangHoa(KetNoiDuLieu kn,DataGridViewRow row)
+        public frmSuaHangHoa(KetNoiDuLieu kn, DataGridViewRow row)
         {
             this.row = row;
             this.kn = kn;
             InitializeComponent();
+        }
 
-<<<<<<< HEAD
         private bool KtraKhoaChinh(string s)
         {
             bool kq = true;
@@ -31,7 +31,6 @@ namespace QuanLySieuThi
                 return false;
             }
             return kq;
-=======
             txtTen.Text = row.Cells["TenHangHoa"].Value.ToString();
             txtGiaban.Text = row.Cells["GiaBan"].Value.ToString();
             txtDonvi.Text = row.Cells["DonVi"].Value.ToString();
@@ -39,7 +38,6 @@ namespace QuanLySieuThi
             ten = txtTen.Text;
             giaban = txtGiaban.Text;
             donvi = txtDonvi.Text;
->>>>>>> 3497e4f3aa1fd8e6f409af3ee8364403b9a0c4af
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

@@ -65,30 +65,27 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "GIá bán";
             // 
-<<<<<<< HEAD
-=======
             // txtGiamua
             // 
-            this.txtGiamua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiamua.Location = new System.Drawing.Point(128, 243);
-            this.txtGiamua.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGiamua.Name = "txtGiamua";
-            this.txtGiamua.Size = new System.Drawing.Size(89, 24);
-            this.txtGiamua.TabIndex = 25;
+            //this.txtGiamua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.txtGiamua.Location = new System.Drawing.Point(128, 243);
+            //this.txtGiamua.Margin = new System.Windows.Forms.Padding(2);
+            //this.txtGiamua.Name = "txtGiamua";
+            //this.txtGiamua.Size = new System.Drawing.Size(89, 24);
+            //this.txtGiamua.TabIndex = 25;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 243);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 18);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Giá mua";
+            //this.label5.AutoSize = true;
+            //this.label5.BackColor = System.Drawing.Color.Transparent;
+            //this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label5.Location = new System.Drawing.Point(11, 243);
+            //this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label5.Name = "label5";
+            //this.label5.Size = new System.Drawing.Size(64, 18);
+            //this.label5.TabIndex = 24;
+            //this.label5.Text = "Giá mua";
             // 
->>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             // txtDonvi
             // 
             this.txtDonvi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -112,30 +109,27 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Đơn vị tính";
             // 
-<<<<<<< HEAD
-=======
             // txtNhom
             // 
-            this.txtNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhom.Location = new System.Drawing.Point(129, 168);
-            this.txtNhom.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNhom.Name = "txtNhom";
-            this.txtNhom.Size = new System.Drawing.Size(230, 24);
-            this.txtNhom.TabIndex = 21;
+            //this.txtNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.txtNhom.Location = new System.Drawing.Point(129, 168);
+            //this.txtNhom.Margin = new System.Windows.Forms.Padding(2);
+            //this.txtNhom.Name = "txtNhom";
+            //this.txtNhom.Size = new System.Drawing.Size(230, 24);
+            //this.txtNhom.TabIndex = 21;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 168);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 18);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Nhóm mặt hàng";
+            //this.label3.AutoSize = true;
+            //this.label3.BackColor = System.Drawing.Color.Transparent;
+            //this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label3.Location = new System.Drawing.Point(11, 168);
+            //this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label3.Name = "label3";
+            //this.label3.Size = new System.Drawing.Size(114, 18);
+            //this.label3.TabIndex = 20;
+            //this.label3.Text = "Nhóm mặt hàng";
             // 
->>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             // txtTen
             // 
             this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -159,30 +153,27 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Tên mặt hàng";
             // 
-<<<<<<< HEAD
-=======
             // txtMa
             // 
-            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMa.Location = new System.Drawing.Point(127, 90);
-            this.txtMa.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(230, 24);
-            this.txtMa.TabIndex = 17;
+            //this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.txtMa.Location = new System.Drawing.Point(127, 90);
+            //this.txtMa.Margin = new System.Windows.Forms.Padding(2);
+            //this.txtMa.Name = "txtMa";
+            //this.txtMa.Size = new System.Drawing.Size(230, 24);
+            //this.txtMa.TabIndex = 17;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 90);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 18);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Mã mặt hàng";
+            //this.label1.AutoSize = true;
+            //this.label1.BackColor = System.Drawing.Color.Transparent;
+            //this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label1.Location = new System.Drawing.Point(11, 90);
+            //this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(94, 18);
+            //this.label1.TabIndex = 16;
+            //this.label1.Text = "Mã mặt hàng";
             // 
->>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             // panelEx1
             // 
             this.panelEx1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -275,11 +266,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(500, 423);
-=======
             this.ClientSize = new System.Drawing.Size(366, 330);
->>>>>>> 5569fc23f6b69e22c3f74f2dfc5b3d7dfde04cd3
             this.ControlBox = false;
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThoat);
