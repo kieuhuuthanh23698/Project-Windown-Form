@@ -353,6 +353,16 @@ namespace QuanLySieuThi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sao_2 {
+            get {
+                object obj = ResourceManager.GetObject("Sao_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shop_cart_icon {
             get {
                 object obj = ResourceManager.GetObject("shop-cart-icon", resourceCulture);

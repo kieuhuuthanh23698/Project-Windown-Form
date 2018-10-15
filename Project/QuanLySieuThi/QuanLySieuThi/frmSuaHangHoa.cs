@@ -21,7 +21,7 @@ namespace QuanLySieuThi
         private bool KtraKhoaChinh(string s)
         {
             bool kq = true;
-            string i = this.kn.commandScalar("select MaNhanVien from NhanVien where MaNhanVien='" + s + "'").Trim();
+            string i = this.kn.commandScalar("select MaHangHoa from KhoHang where MaHangHoa='" + s + "'").Trim();
             if (i == "")
             {
                 return false;
