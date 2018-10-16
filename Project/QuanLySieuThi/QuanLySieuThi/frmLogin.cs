@@ -116,5 +116,10 @@ namespace QuanLySieuThi
             else
                 this.errorProvider1.Clear();
         }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

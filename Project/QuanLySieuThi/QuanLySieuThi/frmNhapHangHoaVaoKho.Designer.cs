@@ -34,7 +34,7 @@
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtGiaban = new System.Windows.Forms.TextBox();
+            this.txtSoLuongThem = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.btnLuu.Symbol = "";
             this.btnLuu.TabIndex = 47;
             this.btnLuu.Text = "Thêm";
+            this.btnLuu.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 
@@ -70,6 +71,7 @@
             this.btnThoat.Symbol = "";
             this.btnThoat.TabIndex = 48;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panelEx1
             // 
@@ -119,15 +121,15 @@
             this.labelX1.Size = new System.Drawing.Size(105, 87);
             this.labelX1.TabIndex = 0;
             // 
-            // txtGiaban
+            // txtSoLuongThem
             // 
-            this.txtGiaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaban.Location = new System.Drawing.Point(170, 196);
-            this.txtGiaban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGiaban.MaxLength = 10;
-            this.txtGiaban.Name = "txtGiaban";
-            this.txtGiaban.Size = new System.Drawing.Size(294, 29);
-            this.txtGiaban.TabIndex = 45;
+            this.txtSoLuongThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuongThem.Location = new System.Drawing.Point(170, 196);
+            this.txtSoLuongThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSoLuongThem.MaxLength = 10;
+            this.txtSoLuongThem.Name = "txtSoLuongThem";
+            this.txtSoLuongThem.Size = new System.Drawing.Size(294, 29);
+            this.txtSoLuongThem.TabIndex = 45;
             // 
             // label6
             // 
@@ -171,12 +173,13 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.panelEx1);
-            this.Controls.Add(this.txtGiaban);
+            this.Controls.Add(this.txtSoLuongThem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(525, 457);
             this.Name = "frmNhapHangHoaVaoKho";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -195,7 +198,7 @@
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private System.Windows.Forms.TextBox txtGiaban;
+        private System.Windows.Forms.TextBox txtSoLuongThem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label2;

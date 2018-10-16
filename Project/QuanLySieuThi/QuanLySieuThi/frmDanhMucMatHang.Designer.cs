@@ -50,7 +50,7 @@
             this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoluongTrongKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).BeginInit();
@@ -208,7 +208,7 @@
             this.TenHangHoa,
             this.GiaBan,
             this.DonVi,
-            this.Column1});
+            this.SoluongTrongKho});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,7 +261,7 @@
             this.labelX2.Location = new System.Drawing.Point(4, 4);
             this.labelX2.Margin = new System.Windows.Forms.Padding(4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(207, 84);
+            this.labelX2.Size = new System.Drawing.Size(121, 84);
             this.labelX2.TabIndex = 1;
             // 
             // labelX1
@@ -317,13 +317,13 @@
             this.DonVi.Name = "DonVi";
             this.DonVi.ReadOnly = true;
             // 
-            // Column1
+            // SoluongTrongKho
             // 
-            this.Column1.DataPropertyName = "Số lượng";
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Số lượng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.SoluongTrongKho.DataPropertyName = "Số lượng";
+            this.SoluongTrongKho.FillWeight = 50F;
+            this.SoluongTrongKho.HeaderText = "Số lượng";
+            this.SoluongTrongKho.Name = "SoluongTrongKho";
+            this.SoluongTrongKho.ReadOnly = true;
             // 
             // frmDanhMucMatHang
             // 
@@ -378,6 +378,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoluongTrongKho;
     }
 }

@@ -121,6 +121,7 @@ namespace QuanLySieuThi
         {
             frmThemSanPham frm = new frmThemSanPham(this.link);
             frm.ShowDialog();
+            taiGridViewHangHoa();
         }
 
         private void btnXoaMatHang_Click(object sender, EventArgs e)
@@ -130,7 +131,7 @@ namespace QuanLySieuThi
             {
                 DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
                 string maHangHoa = row.Cells["MaHangHoa"].Value.ToString().Trim();
-                int i = this.link.insert("update KhoHang set SoLuongrongKho = 0 where MaHangHoa = '" + maHangHoa + "'");
+                int i = this.link.insert("update KhoHang set SoluongTrongKho = 0 where MaHangHoa = '" + maHangHoa + "'");
                 if (i != 0)
                     MessageBox.Show("Xóa hàng hóa thành công !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
@@ -141,17 +142,25 @@ namespace QuanLySieuThi
 
         private void btnSuaMatHang_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
-            frmSuaHangHoa frm = new frmSuaHangHoa(this.link,row);
-            frm.ShowDialog();
-            taiGridViewHangHoa();
+            if (dataGridViewHangHoa.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
+                frmSuaHangHoa frm = new frmSuaHangHoa(this.link, row);
+                frm.ShowDialog();
+                taiGridViewHangHoa();
+            }
         }
 
         private void btnThemHangVaoKho_Click(object sender, EventArgs e)
         {
             //sửa lại số lượng trong kho hàng
-            frmNhapHangHoaVaoKho frm = new frmNhapHangHoaVaoKho();
-            frm.ShowDialog();
+            if (dataGridViewHangHoa.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
+                frmNhapHangHoaVaoKho frm = new frmNhapHangHoaVaoKho(this.link, row);
+                frm.ShowDialog();
+                taiGridViewHangHoa();
+            }
         }
 
     }

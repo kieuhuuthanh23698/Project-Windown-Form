@@ -458,5 +458,10 @@ namespace QuanLySieuThi
         {
             bar2.Show();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

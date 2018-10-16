@@ -203,7 +203,7 @@
     <EmbeddedResource Include="Phieubaogia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Phieubaogia.cs</LastGenOutput>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNhapHangHoaVaoKho.resx">
       <DependentUpon>frmNhapHangHoaVaoKho.cs</DependentUpon>
     </EmbeddedResource>

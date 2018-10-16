@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongKeHoaDon));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -48,13 +49,16 @@
             // 
             // panelEx1
             // 
+            this.panelEx1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.labelX2);
             this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.Location = new System.Drawing.Point(16, 0);
+            this.panelEx1.Location = new System.Drawing.Point(21, 0);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(843, 81);
+            this.panelEx1.Size = new System.Drawing.Size(1124, 100);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -73,8 +77,9 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(0, 1);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(91, 77);
+            this.labelX2.Size = new System.Drawing.Size(121, 95);
             this.labelX2.TabIndex = 1;
             // 
             // labelX1
@@ -85,15 +90,17 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelX1.Location = new System.Drawing.Point(309, 26);
+            this.labelX1.Location = new System.Drawing.Point(412, 32);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(217, 34);
+            this.labelX1.Size = new System.Drawing.Size(289, 42);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "PHIẾU BÁN HÀNG";
             // 
             // dataGridView_PBH
             // 
-            this.dataGridView_PBH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_PBH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_PBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_PBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -116,9 +123,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_PBH.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_PBH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridView_PBH.Location = new System.Drawing.Point(16, 84);
+            this.dataGridView_PBH.Location = new System.Drawing.Point(21, 124);
+            this.dataGridView_PBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView_PBH.Name = "dataGridView_PBH";
-            this.dataGridView_PBH.Size = new System.Drawing.Size(843, 301);
+            this.dataGridView_PBH.Size = new System.Drawing.Size(1124, 353);
             this.dataGridView_PBH.TabIndex = 3;
             // 
             // Column1
@@ -168,13 +176,16 @@
             // 
             // frmThongKeHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_5;
-            this.ClientSize = new System.Drawing.Size(882, 397);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1176, 513);
             this.Controls.Add(this.dataGridView_PBH);
             this.Controls.Add(this.panelEx1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThongKeHoaDon";
             this.Text = "thongkehoadon";
             this.panelEx1.ResumeLayout(false);
