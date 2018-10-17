@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QuanLySieuThi
 {
-    public partial class frmDoiTenNhomMatHang : Form
+    public partial class  frmDoiTenNhomMatHang : Form
     {
         KetNoiDuLieu link;
         string ten;

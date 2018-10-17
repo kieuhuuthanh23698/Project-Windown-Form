@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiTenNhomMatHang));
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenNhomMatHang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnLuu = new DevComponents.DotNetBar.ButtonX();
@@ -43,10 +44,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 114);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(4, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 18);
+            this.label2.Size = new System.Drawing.Size(181, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên nhóm mặt hàng";
             // 
@@ -58,10 +58,10 @@
             this.txtTenNhomMatHang.Border.Class = "TextBoxBorder";
             this.txtTenNhomMatHang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenNhomMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNhomMatHang.Location = new System.Drawing.Point(157, 114);
-            this.txtTenNhomMatHang.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenNhomMatHang.Location = new System.Drawing.Point(209, 140);
+            this.txtTenNhomMatHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenNhomMatHang.Name = "txtTenNhomMatHang";
-            this.txtTenNhomMatHang.Size = new System.Drawing.Size(206, 24);
+            this.txtTenNhomMatHang.Size = new System.Drawing.Size(275, 29);
             this.txtTenNhomMatHang.TabIndex = 7;
             // 
             // btnLuu
@@ -70,10 +70,10 @@
             this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(157, 160);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuu.Location = new System.Drawing.Point(209, 197);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(77, 27);
+            this.btnLuu.Size = new System.Drawing.Size(103, 33);
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLuu.Symbol = "";
             this.btnLuu.TabIndex = 8;
@@ -86,10 +86,10 @@
             this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(278, 160);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Location = new System.Drawing.Point(371, 197);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(85, 27);
+            this.btnThoat.Size = new System.Drawing.Size(113, 33);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.Symbol = "";
             this.btnThoat.TabIndex = 9;
@@ -103,8 +103,9 @@
             this.panelEx1.Controls.Add(this.labelX2);
             this.panelEx1.Controls.Add(this.labelX1);
             this.panelEx1.Location = new System.Drawing.Point(-1, -1);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(375, 82);
+            this.panelEx1.Size = new System.Drawing.Size(500, 101);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -122,9 +123,10 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(3, 0);
+            this.labelX2.Location = new System.Drawing.Point(4, 0);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(95, 79);
+            this.labelX2.Size = new System.Drawing.Size(127, 97);
             this.labelX2.TabIndex = 1;
             // 
             // labelX1
@@ -135,27 +137,29 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelX1.Location = new System.Drawing.Point(123, 13);
+            this.labelX1.Location = new System.Drawing.Point(164, 16);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(249, 48);
+            this.labelX1.Size = new System.Drawing.Size(332, 59);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "NHÓM MẶT HÀNG";
             // 
             // frmDoiTenNhomMatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(374, 214);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(499, 263);
             this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtTenNhomMatHang);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "frmDoiTenNhomMatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NHÓM MẶT HÀNG - CHỈNH SỬA";

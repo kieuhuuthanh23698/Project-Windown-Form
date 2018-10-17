@@ -11,8 +11,8 @@ namespace QuanLySieuThi
 {
     public partial class frmThongKeHoaDon : Form
     {
-        KetNoiDuLieu kn;
-        string hoadon;
+        //KetNoiDuLieu kn;
+        //string hoadon;
         public frmThongKeHoaDon()
         {
             InitializeComponent();

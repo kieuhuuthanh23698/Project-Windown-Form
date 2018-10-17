@@ -20,17 +20,7 @@ namespace QuanLySieuThi
             this.row = row;
             this.kn = kn;
             InitializeComponent();
-        }
 
-        private bool KtraKhoaChinh(string s)
-        {
-            bool kq = true;
-            string i = this.kn.commandScalar("select MaHangHoa from KhoHang where MaHangHoa='" + s + "'").Trim();
-            if (i == "")
-            {
-                return false;
-            }
-            return kq;
             txtTen.Text = row.Cells["TenHangHoa"].Value.ToString();
             txtGiaban.Text = row.Cells["GiaBan"].Value.ToString();
             txtDonvi.Text = row.Cells["DonVi"].Value.ToString();
@@ -46,13 +36,13 @@ namespace QuanLySieuThi
             {
                 //sửa đổi
                 String maHang = this.row.Cells["MaHangHoa"].Value.ToString();
-                int i = this.kn.insert("update KhoHang set TenHangHoa = N'" + txtTen.Text.Trim() + "', GiaBan = '" + txtGiaban.Text.Trim() + "', DonVi = N'" + txtDonvi.Text.Trim() + "' where MaHangHoa = '" +  maHang + "'");
+                int i = this.kn.insert("update KhoHang set TenHangHoa = N'" + txtTen.Text.Trim() + "', GiaBan = '" + txtGiaban.Text.Trim() + "', DonVi = N'" + txtDonvi.Text.Trim() + "' where MaHangHoa = '" + maHang + "'");
                 if (i != 0)
-                    MessageBox.Show("Sửa thông tin hàng hóa thành công !","SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa thông tin hàng hóa thành công !", "SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Sửa thông tin hàng hóa thất bại !","SỬA THÔNG TIN HÀNG HÓA",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa thông tin hàng hóa thất bại !", "SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
             this.Close();
         }
 
