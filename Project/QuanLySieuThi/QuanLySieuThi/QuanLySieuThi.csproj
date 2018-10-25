@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmReportHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +229,19 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="app.config" />
+    <None Include="DataSetHoaDon.xsc">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHoaDon.xss">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
