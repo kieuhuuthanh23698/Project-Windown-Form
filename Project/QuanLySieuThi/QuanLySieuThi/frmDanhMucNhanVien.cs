@@ -53,14 +53,14 @@ namespace QuanLySieuThi
                     //them
                     //int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," 
                     //    + txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + txtCap.Text + "')");
-                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," + txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + txtCap.Text + "')");
+                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," + txtLuong.Text + ",'" + txtMail.Text + "',N'" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "',N'" + txtCap.Text + "')");
                     //kq = 0 them that bai
                     if (kq == 0)
                         MessageBox.Show("Khong them duoc");
                     else
                     {
                         MessageBox.Show("Thêm thành công");
-                        //TaoTreeViewNV();
+                        TaoTreeViewNV();
                     }
 
                 }
@@ -82,7 +82,7 @@ namespace QuanLySieuThi
                 else
                 {
                     MessageBox.Show("Sửa thành công!");
-                    //TaoTreeViewNV();
+                    TaoTreeViewNV();
                     frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.kn, manv);
                 }
             }
@@ -130,6 +130,31 @@ namespace QuanLySieuThi
             if (TreeViewNV.SelectedNode != null)
             {
                 
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMa.Text != "")
+                {
+                    string xoanv = "delete NhanVien from NhanVien where MaNhanVien='" + txtMa.Text + "'";
+                    int kq = kn.insert(xoanv);
+                    if (kq != 0)
+                    {
+                        MessageBox.Show("Đã xóa nhân viên");
+                        TaoTreeViewNV();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+            }
+            catch
+            {
+ 
             }
         }
 
