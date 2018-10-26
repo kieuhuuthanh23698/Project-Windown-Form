@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Tất cả loại hàng hóa");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Tất cả loại hàng hóa");
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGiamSoLuong = new DevComponents.DotNetBar.ButtonX();
             this.btnTangSoLuong = new DevComponents.DotNetBar.ButtonX();
@@ -78,6 +78,8 @@
             this.cbbKhachHang = new System.Windows.Forms.ComboBox();
             this.txtNhanVien = new System.Windows.Forms.TextBox();
             this.btnThanhToan = new DevComponents.DotNetBar.ButtonX();
+            this.txtGio = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericGiam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTang)).BeginInit();
@@ -193,7 +195,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Aquamarine;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtTienTraLai);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.cmbTienKhachDua);
@@ -206,7 +208,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTienHang);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(844, 620);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -221,11 +223,12 @@
             // 
             this.txtTienTraLai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTienTraLai.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienTraLai.Location = new System.Drawing.Point(198, 164);
             this.txtTienTraLai.Margin = new System.Windows.Forms.Padding(2);
             this.txtTienTraLai.Name = "txtTienTraLai";
             this.txtTienTraLai.ReadOnly = true;
-            this.txtTienTraLai.Size = new System.Drawing.Size(378, 25);
+            this.txtTienTraLai.Size = new System.Drawing.Size(378, 26);
             this.txtTienTraLai.TabIndex = 25;
             this.txtTienTraLai.Text = "0";
             // 
@@ -233,7 +236,7 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(48, 168);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -246,6 +249,7 @@
             // 
             this.cmbTienKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTienKhachDua.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTienKhachDua.FormattingEnabled = true;
             this.cmbTienKhachDua.Items.AddRange(new object[] {
             "500000",
@@ -258,7 +262,7 @@
             this.cmbTienKhachDua.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTienKhachDua.MaxLength = 9;
             this.cmbTienKhachDua.Name = "cmbTienKhachDua";
-            this.cmbTienKhachDua.Size = new System.Drawing.Size(378, 25);
+            this.cmbTienKhachDua.Size = new System.Drawing.Size(378, 26);
             this.cmbTienKhachDua.TabIndex = 23;
             this.cmbTienKhachDua.SelectedIndexChanged += new System.EventHandler(this.cmbTienKhachDua_SelectedIndexChanged);
             this.cmbTienKhachDua.TextChanged += new System.EventHandler(this.cmbTienKhachDua_TextChanged);
@@ -268,11 +272,12 @@
             // 
             this.txtTongGiaTriGioHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTongGiaTriGioHang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongGiaTriGioHang.Location = new System.Drawing.Point(198, 128);
             this.txtTongGiaTriGioHang.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongGiaTriGioHang.Name = "txtTongGiaTriGioHang";
             this.txtTongGiaTriGioHang.ReadOnly = true;
-            this.txtTongGiaTriGioHang.Size = new System.Drawing.Size(378, 25);
+            this.txtTongGiaTriGioHang.Size = new System.Drawing.Size(378, 26);
             this.txtTongGiaTriGioHang.TabIndex = 22;
             this.txtTongGiaTriGioHang.Text = "0";
             // 
@@ -280,7 +285,7 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(46, 130);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -293,7 +298,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(48, 99);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -305,10 +310,11 @@
             // txtPhanTramGiamGia
             // 
             this.txtPhanTramGiamGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhanTramGiamGia.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhanTramGiamGia.Location = new System.Drawing.Point(512, 58);
             this.txtPhanTramGiamGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhanTramGiamGia.Name = "txtPhanTramGiamGia";
-            this.txtPhanTramGiamGia.Size = new System.Drawing.Size(64, 25);
+            this.txtPhanTramGiamGia.Size = new System.Drawing.Size(64, 26);
             this.txtPhanTramGiamGia.TabIndex = 16;
             this.txtPhanTramGiamGia.Text = "0";
             this.txtPhanTramGiamGia.TextChanged += new System.EventHandler(this.txtPhanTramGiamGia_TextChanged);
@@ -318,12 +324,12 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(453, 67);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 18);
+            this.label9.Size = new System.Drawing.Size(26, 18);
             this.label9.TabIndex = 15;
             this.label9.Text = "%";
             // 
@@ -331,11 +337,12 @@
             // 
             this.txtGiamGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGiamGia.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiamGia.Location = new System.Drawing.Point(198, 58);
             this.txtGiamGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.ReadOnly = true;
-            this.txtGiamGia.Size = new System.Drawing.Size(239, 25);
+            this.txtGiamGia.Size = new System.Drawing.Size(239, 26);
             this.txtGiamGia.TabIndex = 14;
             this.txtGiamGia.Text = "0";
             // 
@@ -343,7 +350,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(48, 66);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -356,11 +363,12 @@
             // 
             this.txtTienHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTienHang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienHang.Location = new System.Drawing.Point(198, 24);
             this.txtTienHang.Margin = new System.Windows.Forms.Padding(2);
             this.txtTienHang.Name = "txtTienHang";
             this.txtTienHang.ReadOnly = true;
-            this.txtTienHang.Size = new System.Drawing.Size(378, 25);
+            this.txtTienHang.Size = new System.Drawing.Size(378, 26);
             this.txtTienHang.TabIndex = 12;
             this.txtTienHang.Text = "0";
             // 
@@ -368,7 +376,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(48, 32);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -452,7 +460,7 @@
             this.txtMaHoaDon.Location = new System.Drawing.Point(956, 60);
             this.txtMaHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.Size = new System.Drawing.Size(242, 22);
+            this.txtMaHoaDon.Size = new System.Drawing.Size(279, 22);
             this.txtMaHoaDon.TabIndex = 90;
             // 
             // label5
@@ -475,7 +483,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(1204, 62);
+            this.label4.Location = new System.Drawing.Point(1257, 60);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
@@ -559,14 +567,14 @@
             this.GiaBan,
             this.DonVi,
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewHangHoa.Location = new System.Drawing.Point(34, 348);
             this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(2);
@@ -625,8 +633,7 @@
             // 
             // dateTimeInput1
             // 
-            this.dateTimeInput1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimeInput1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -635,7 +642,7 @@
             this.dateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dateTimeInput1.ButtonDropDown.Visible = true;
             this.dateTimeInput1.IsPopupCalendarOpen = false;
-            this.dateTimeInput1.Location = new System.Drawing.Point(1274, 60);
+            this.dateTimeInput1.Location = new System.Drawing.Point(1319, 60);
             this.dateTimeInput1.Margin = new System.Windows.Forms.Padding(2);
             // 
             // 
@@ -671,7 +678,7 @@
             this.dateTimeInput1.MonthCalendar.TodayButtonVisible = true;
             this.dateTimeInput1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dateTimeInput1.Name = "dateTimeInput1";
-            this.dateTimeInput1.Size = new System.Drawing.Size(171, 22);
+            this.dateTimeInput1.Size = new System.Drawing.Size(126, 22);
             this.dateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeInput1.TabIndex = 103;
             this.dateTimeInput1.Value = new System.DateTime(2018, 10, 1, 16, 20, 10, 0);
@@ -681,10 +688,10 @@
             this.treeView1.Location = new System.Drawing.Point(34, 60);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Tất cả loại hàng hóa";
+            treeNode2.Name = "Node0";
+            treeNode2.Text = "Tất cả loại hàng hóa";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode2});
             this.treeView1.Size = new System.Drawing.Size(576, 259);
             this.treeView1.TabIndex = 105;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
@@ -726,7 +733,7 @@
             this.txtNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhanVien.Name = "txtNhanVien";
             this.txtNhanVien.ReadOnly = true;
-            this.txtNhanVien.Size = new System.Drawing.Size(489, 22);
+            this.txtNhanVien.Size = new System.Drawing.Size(279, 22);
             this.txtNhanVien.TabIndex = 109;
             // 
             // btnThanhToan
@@ -746,6 +753,30 @@
             this.btnThanhToan.TabIndex = 104;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
+            // txtGio
+            // 
+            this.txtGio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGio.Location = new System.Drawing.Point(1318, 109);
+            this.txtGio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGio.Name = "txtGio";
+            this.txtGio.ReadOnly = true;
+            this.txtGio.Size = new System.Drawing.Size(127, 22);
+            this.txtGio.TabIndex = 111;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(1257, 114);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 110;
+            this.label10.Text = "GIỜ";
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -755,6 +786,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 853);
             this.ControlBox = false;
+            this.Controls.Add(this.txtGio);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtNhanVien);
             this.Controls.Add(this.cbbKhachHang);
             this.Controls.Add(this.numericThem);
@@ -843,6 +876,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.TextBox txtGio;
+        private System.Windows.Forms.Label label10;
 
 
 

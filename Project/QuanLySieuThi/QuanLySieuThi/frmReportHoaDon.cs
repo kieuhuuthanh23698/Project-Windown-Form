@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace QuanLySieuThi
 {
@@ -13,25 +15,40 @@ namespace QuanLySieuThi
     {
         KetNoiDuLieu link;
         string maHoaDon;
-        
+        DataTable dt;
+   
         public frmReportHoaDon(KetNoiDuLieu link,string maHoaDon)
         {
             this.link = link;
             this.maHoaDon = maHoaDon;
             InitializeComponent();
             crystalReportViewer1.RefreshReport();
-
-        }
-
-        private void btn_Show_Click(object sender, EventArgs e)
-        {
+            //
             Phieubaogia pbg = new Phieubaogia();
             string chuoiQuery = "select * from ChiTietHoaDon, HoaDon where HoaDon.MaHoaDon = '" + maHoaDon + "' and ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon";
-            DataTable dt = this.link.comManTable(chuoiQuery,"ChiTietHoaDon").Tables["ChiTietHoaDon"];
+            dt = this.link.comManTable(chuoiQuery, "ChiTietHoaDon").Tables["ChiTietHoaDon"];
             pbg.SetDataSource(dt);
             crystalReportViewer1.ReportSource = pbg;
-            crystalReportViewer1.Refresh();
+            crystalReportViewer1.Refresh();          
         }
+
+        private void btnExportFilePDF_Click(object sender, EventArgs e)
+        {
+            ///xuất report ra file pdf
+            try
+            {
+                ReportDocument rd = new ReportDocument();
+                rd.Load(@"C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\Phieubaogia.rpt");
+                rd.SetDataSource(dt);
+                rd.ExportToDisk(ExportFormatType.PortableDocFormat, maHoaDon + ".pdf");
+                MessageBox.Show("Đã export report ra file " + maHoaDon + ".pdf");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
 
     }
 }

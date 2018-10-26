@@ -9,11 +9,11 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ChiTietHoaDonTableAdapter" GeneratorDataComponentClassName="ChiTietHoaDonTableAdapter" Name="ChiTietHoaDon" UserDataComponentName="ChiTietHoaDonTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QL_SIEUTHIConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QL_SIEUTHIConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ChiTietHoaDon.ThanhTien, ChiTietHoaDon.Soluong, ChiTietHoaDon.GiaBan, ChiTietHoaDon.TenHangHoa, HoaDon.MaHoaDon, ChiTietHoaDon.MaHoaDon AS Expr1, HoaDon.NgayLapHoaDon, HoaDon.TenNVLapHoaDon, 
-                  HoaDon.TenKhachHang, HoaDon.TienHang, HoaDon.PhanTramGiamGia, HoaDon.GiamGia, HoaDon.TongThanhTien, HoaDon.KhachDua, HoaDon.TraLai
+                  HoaDon.TenKhachHang, HoaDon.TienHang, HoaDon.PhanTramGiamGia, HoaDon.GiamGia, HoaDon.TongThanhTien, HoaDon.KhachDua, HoaDon.TraLai, HoaDon.GioLapHoaDon
 FROM     ChiTietHoaDon INNER JOIN
                   HoaDon ON ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon
 WHERE  (HoaDon.MaHoaDon = @mahoadon)</CommandText>
@@ -40,6 +40,7 @@ WHERE  (HoaDon.MaHoaDon = @mahoadon)</CommandText>
               <Mapping SourceColumn="TongThanhTien" DataSetColumn="TongThanhTien" />
               <Mapping SourceColumn="KhachDua" DataSetColumn="KhachDua" />
               <Mapping SourceColumn="TraLai" DataSetColumn="TraLai" />
+              <Mapping SourceColumn="GioLapHoaDon" DataSetColumn="GioLapHoaDon" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -51,7 +52,7 @@ WHERE  (HoaDon.MaHoaDon = @mahoadon)</CommandText>
   <xs:element name="DataSetHoaDon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetHoaDon" msprop:Generator_UserDSName="DataSetHoaDon">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ChiTietHoaDon" msprop:Generator_TableClassName="ChiTietHoaDonDataTable" msprop:Generator_TableVarName="tableChiTietHoaDon" msprop:Generator_TablePropName="ChiTietHoaDon" msprop:Generator_RowDeletingName="ChiTietHoaDonRowDeleting" msprop:Generator_RowChangingName="ChiTietHoaDonRowChanging" msprop:Generator_RowEvHandlerName="ChiTietHoaDonRowChangeEventHandler" msprop:Generator_RowDeletedName="ChiTietHoaDonRowDeleted" msprop:Generator_UserTableName="ChiTietHoaDon" msprop:Generator_RowChangedName="ChiTietHoaDonRowChanged" msprop:Generator_RowEvArgName="ChiTietHoaDonRowChangeEvent" msprop:Generator_RowClassName="ChiTietHoaDonRow">
+        <xs:element name="ChiTietHoaDon" msprop:Generator_TableClassName="ChiTietHoaDonDataTable" msprop:Generator_TableVarName="tableChiTietHoaDon" msprop:Generator_RowChangedName="ChiTietHoaDonRowChanged" msprop:Generator_TablePropName="ChiTietHoaDon" msprop:Generator_RowDeletingName="ChiTietHoaDonRowDeleting" msprop:Generator_RowChangingName="ChiTietHoaDonRowChanging" msprop:Generator_RowEvHandlerName="ChiTietHoaDonRowChangeEventHandler" msprop:Generator_RowDeletedName="ChiTietHoaDonRowDeleted" msprop:Generator_RowClassName="ChiTietHoaDonRow" msprop:Generator_UserTableName="ChiTietHoaDon" msprop:Generator_RowEvArgName="ChiTietHoaDonRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ThanhTien" msprop:Generator_ColumnVarNameInTable="columnThanhTien" msprop:Generator_ColumnPropNameInRow="ThanhTien" msprop:Generator_ColumnPropNameInTable="ThanhTienColumn" msprop:Generator_UserColumnName="ThanhTien" type="xs:double" minOccurs="0" />
@@ -99,6 +100,7 @@ WHERE  (HoaDon.MaHoaDon = @mahoadon)</CommandText>
               <xs:element name="TongThanhTien" msprop:Generator_ColumnVarNameInTable="columnTongThanhTien" msprop:Generator_ColumnPropNameInRow="TongThanhTien" msprop:Generator_ColumnPropNameInTable="TongThanhTienColumn" msprop:Generator_UserColumnName="TongThanhTien" type="xs:double" minOccurs="0" />
               <xs:element name="KhachDua" msprop:Generator_ColumnVarNameInTable="columnKhachDua" msprop:Generator_ColumnPropNameInRow="KhachDua" msprop:Generator_ColumnPropNameInTable="KhachDuaColumn" msprop:Generator_UserColumnName="KhachDua" type="xs:double" minOccurs="0" />
               <xs:element name="TraLai" msprop:Generator_ColumnVarNameInTable="columnTraLai" msprop:Generator_ColumnPropNameInRow="TraLai" msprop:Generator_ColumnPropNameInTable="TraLaiColumn" msprop:Generator_UserColumnName="TraLai" type="xs:double" minOccurs="0" />
+              <xs:element name="GioLapHoaDon" msprop:Generator_ColumnVarNameInTable="columnGioLapHoaDon" msprop:Generator_ColumnPropNameInRow="GioLapHoaDon" msprop:Generator_ColumnPropNameInTable="GioLapHoaDonColumn" msprop:Generator_UserColumnName="GioLapHoaDon" type="xs:duration" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

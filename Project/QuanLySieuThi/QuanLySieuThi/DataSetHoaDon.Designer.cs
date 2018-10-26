@@ -309,6 +309,8 @@ namespace QuanLySieuThi {
             
             private global::System.Data.DataColumn columnTraLai;
             
+            private global::System.Data.DataColumn columnGioLapHoaDon;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ChiTietHoaDonDataTable() {
@@ -464,6 +466,14 @@ namespace QuanLySieuThi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GioLapHoaDonColumn {
+                get {
+                    return this.columnGioLapHoaDon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -499,7 +509,23 @@ namespace QuanLySieuThi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ChiTietHoaDonRow AddChiTietHoaDonRow(double ThanhTien, int Soluong, double GiaBan, string TenHangHoa, string MaHoaDon, string Expr1, System.DateTime NgayLapHoaDon, string TenNVLapHoaDon, string TenKhachHang, double TienHang, double PhanTramGiamGia, double GiamGia, double TongThanhTien, double KhachDua, double TraLai) {
+            public ChiTietHoaDonRow AddChiTietHoaDonRow(
+                        double ThanhTien, 
+                        int Soluong, 
+                        double GiaBan, 
+                        string TenHangHoa, 
+                        string MaHoaDon, 
+                        string Expr1, 
+                        System.DateTime NgayLapHoaDon, 
+                        string TenNVLapHoaDon, 
+                        string TenKhachHang, 
+                        double TienHang, 
+                        double PhanTramGiamGia, 
+                        double GiamGia, 
+                        double TongThanhTien, 
+                        double KhachDua, 
+                        double TraLai, 
+                        System.TimeSpan GioLapHoaDon) {
                 ChiTietHoaDonRow rowChiTietHoaDonRow = ((ChiTietHoaDonRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ThanhTien,
@@ -516,7 +542,8 @@ namespace QuanLySieuThi {
                         GiamGia,
                         TongThanhTien,
                         KhachDua,
-                        TraLai};
+                        TraLai,
+                        GioLapHoaDon};
                 rowChiTietHoaDonRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowChiTietHoaDonRow);
                 return rowChiTietHoaDonRow;
@@ -560,6 +587,7 @@ namespace QuanLySieuThi {
                 this.columnTongThanhTien = base.Columns["TongThanhTien"];
                 this.columnKhachDua = base.Columns["KhachDua"];
                 this.columnTraLai = base.Columns["TraLai"];
+                this.columnGioLapHoaDon = base.Columns["GioLapHoaDon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -595,6 +623,8 @@ namespace QuanLySieuThi {
                 base.Columns.Add(this.columnKhachDua);
                 this.columnTraLai = new global::System.Data.DataColumn("TraLai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTraLai);
+                this.columnGioLapHoaDon = new global::System.Data.DataColumn("GioLapHoaDon", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGioLapHoaDon);
                 this.columnTenHangHoa.MaxLength = 50;
                 this.columnMaHoaDon.AllowDBNull = false;
                 this.columnMaHoaDon.MaxLength = 20;
@@ -974,6 +1004,22 @@ namespace QuanLySieuThi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.TimeSpan GioLapHoaDon {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableChiTietHoaDon.GioLapHoaDonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GioLapHoaDon\' in table \'ChiTietHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableChiTietHoaDon.GioLapHoaDonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsThanhTienNull() {
                 return this.IsNull(this.tableChiTietHoaDon.ThanhTienColumn);
             }
@@ -1126,6 +1172,18 @@ namespace QuanLySieuThi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTraLaiNull() {
                 this[this.tableChiTietHoaDon.TraLaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGioLapHoaDonNull() {
+                return this.IsNull(this.tableChiTietHoaDon.GioLapHoaDonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGioLapHoaDonNull() {
+                this[this.tableChiTietHoaDon.GioLapHoaDonColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1303,6 +1361,7 @@ namespace QuanLySieuThi.DataSetHoaDonTableAdapters {
             tableMapping.ColumnMappings.Add("TongThanhTien", "TongThanhTien");
             tableMapping.ColumnMappings.Add("KhachDua", "KhachDua");
             tableMapping.ColumnMappings.Add("TraLai", "TraLai");
+            tableMapping.ColumnMappings.Add("GioLapHoaDon", "GioLapHoaDon");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1320,7 +1379,7 @@ namespace QuanLySieuThi.DataSetHoaDonTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT ChiTietHoaDon.ThanhTien, ChiTietHoaDon.Soluong, ChiTietHoaDon.GiaBan, ChiTietHoaDon.TenHangHoa, HoaDon.MaHoaDon, ChiTietHoaDon.MaHoaDon AS Expr1, HoaDon.NgayLapHoaDon, HoaDon.TenNVLapHoaDon, 
-                  HoaDon.TenKhachHang, HoaDon.TienHang, HoaDon.PhanTramGiamGia, HoaDon.GiamGia, HoaDon.TongThanhTien, HoaDon.KhachDua, HoaDon.TraLai
+                  HoaDon.TenKhachHang, HoaDon.TienHang, HoaDon.PhanTramGiamGia, HoaDon.GiamGia, HoaDon.TongThanhTien, HoaDon.KhachDua, HoaDon.TraLai, HoaDon.GioLapHoaDon
 FROM     ChiTietHoaDon INNER JOIN
                   HoaDon ON ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon
 WHERE  (HoaDon.MaHoaDon = @mahoadon)";
