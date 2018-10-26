@@ -421,7 +421,7 @@ namespace QuanLySieuThi
                 panel.Name = "Thông tin cửa hàng";
                 item.Control = new Control();
                 item.Control = panel;
-                frmThongTinSieuThi f = new frmThongTinSieuThi();
+                frmThongTinSieuThi f = new frmThongTinSieuThi(this.link,this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
@@ -445,7 +445,7 @@ namespace QuanLySieuThi
                         panel.Name = "Thông tin cửa hàng";
                         item.Control = new Control();
                         item.Control = panel;
-                        frmThongTinSieuThi f = new frmThongTinSieuThi();
+                        frmThongTinSieuThi f = new frmThongTinSieuThi(this.link,this.manv);
                         f.TopLevel = false;
                         f.Dock = DockStyle.Fill;
                         item.Control.Controls.Add(f);
