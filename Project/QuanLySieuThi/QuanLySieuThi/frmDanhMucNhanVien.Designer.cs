@@ -328,6 +328,7 @@
             // btnXoa
             // 
             this.btnXoa.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoa.Enabled = false;
             this.btnXoa.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Text = "Xóa";
@@ -336,6 +337,7 @@
             // btnSua
             // 
             this.btnSua.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSua.Enabled = false;
             this.btnSua.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
             this.btnSua.Name = "btnSua";
             this.btnSua.Text = "Sửa";
@@ -344,9 +346,11 @@
             // btnLuu
             // 
             this.btnLuu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnLuu.Enabled = false;
             this.btnLuu.Image = global::QuanLySieuThi.Properties.Resources.save_1;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtMatkhau
             // 

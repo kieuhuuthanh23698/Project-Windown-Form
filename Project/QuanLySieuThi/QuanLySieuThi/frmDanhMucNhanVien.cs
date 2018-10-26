@@ -34,41 +34,8 @@ namespace QuanLySieuThi
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (KTMail(txtMail.Text) == false)
-            {
-                MessageBox.Show("Định dạng mail phải có ký tự @! Vui lòng nhập đúng định dạng tenmail@gmail.com");
-                txtMail.Focus();
-            }
-
-            if (txtMa.Text != "" && txtTen.Text != "" && txtMail.Text != "" && txtCap.Text != "" && txtDiachi.Text != "" && txtLuong.Text != "" && txtUsers.Text
-                != "" && txtMatkhau.Text != "")
-            {
-                if (KtraKhoaChinh(txtMa.Text) == true)
-                {
-                    MessageBox.Show("Đã tồn tại mã");
-                    //ko them
-                }
-                else
-                {
-                    //them
-                    //int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," 
-                    //    + txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + txtCap.Text + "')");
-                    int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," + txtLuong.Text + ",'" + txtMail.Text + "',N'" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "',N'" + txtCap.Text + "')");
-                    //kq = 0 them that bai
-                    if (kq == 0)
-                        MessageBox.Show("Khong them duoc");
-                    else
-                    {
-                        MessageBox.Show("Thêm thành công");
-                        TaoTreeViewNV();
-                    }
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin của nhân viên!");
-            }
+            txtMa.Focus();
+            btnLuu.Enabled = true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -81,9 +48,17 @@ namespace QuanLySieuThi
                 }
                 else
                 {
-                    MessageBox.Show("Sửa thành công!");
-                    TaoTreeViewNV();
-                    frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.kn, manv);
+                    string chuoinv = "update NhanVien set TenNhanVien=N'"+txtTen.Text+"',NgaySinh="+dateTimeNgaySinh.Text+",GioiTinh=N'"+cboxGtinh.Text+"',Luong="+txtLuong.Text+",Email='"+txtMail.Text+"',DiaChi=N'"+txtDiachi.Text+"',Tuoi="+cboxTuoi.Text+",UserName='"+txtUsers.Text+"',Passwords='"+txtMatkhau.Text+"',CapNguoiDung='"+txtCap.Text+"' where MaNhanVien='"+txtMa.Text+"'";
+                    int kq = this.kn.insert(chuoinv);
+                    if (kq != 0)
+                    {
+                        MessageBox.Show("Sửa thành công!");
+                        TaoTreeViewNV();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa thất bại!");
+                    }
                 }
             }
         }
@@ -139,16 +114,29 @@ namespace QuanLySieuThi
             {
                 if (txtMa.Text != "")
                 {
-                    string xoanv = "delete NhanVien from NhanVien where MaNhanVien='" + txtMa.Text + "'";
-                    int kq = kn.insert(xoanv);
+                    string xoathuchi = "delete ThuChi from ThuChi,HoaDon,NhanVien where ThuChi.MaNhanVienThuChi=HoaDon.MaNVLapHoaDon and HoaDon.MaNVLapHoaDon=NhanVien.MaNhanVien and MaNhanVien='"+txtMa.Text+"'";
+                    int kq = this.kn.insert(xoathuchi);
                     if (kq != 0)
                     {
-                        MessageBox.Show("Đã xóa nhân viên");
-                        TaoTreeViewNV();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thất bại");
+                        string xoahoadon = "delete HoaDon from HoaDon,NhanVien where HoaDon.MaNVLapHoaDon=NhanVien.MaNhanVien and MaNhanVien='"+txtMa.Text+"'";
+                        kq = this.kn.insert(xoahoadon);
+                        if (kq != 0)
+                        {
+                            string xoanhanvien = "delete NhanVien from NhanVien where MaNhanVien='" + txtMa.Text + "'";
+                            kq = this.kn.insert(xoanhanvien);
+                            {
+                                if (kq != 0)
+                                {
+                                    MessageBox.Show("Đã xóa nhân viên");
+                                    TreeViewNV.Nodes.Clear();
+                                    TaoTreeViewNV();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Xóa thất bại!");
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -156,6 +144,50 @@ namespace QuanLySieuThi
             {
  
             }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (KTMail(txtMail.Text) == false)
+            {
+                MessageBox.Show("Định dạng mail phải có ký tự @! Vui lòng nhập đúng định dạng tenmail@gmail.com");
+                txtMail.Focus();
+            }
+            //else
+            //{
+                if (txtMa.Text != "" && txtTen.Text != "" && txtMail.Text != "" && txtCap.Text != "" && txtDiachi.Text != "" && txtLuong.Text != "" && txtUsers.Text
+                    != "" && txtMatkhau.Text != "")
+                {
+                    if (KtraKhoaChinh(txtMa.Text) == true)
+                    {
+                        MessageBox.Show("Đã tồn tại mã");
+                        //ko them
+                    }
+                    else
+                    {
+                        //them
+                        string chuoi = "INSERT INTO NhanVien VALUES('"+txtMa.Text+"',N'"+txtTen.Text+"','"+dateTimeNgaySinh.Text+"',N'"+cboxGtinh.SelectedValue.ToString()+"',"+txtLuong.Text+",'"+txtMail+"','"+txtDiachi+"',"+cboxTuoi.Text+",'"+txtUsers.Text+"','"+txtMatkhau.Text+"','"+txtCap.Text+"')";
+                        int kq = this.kn.insert(chuoi);
+                        //int kq = this.kn.insert("INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text + "'," + txtLuong.Text + ",'" + txtMail.Text + "',N'" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "',N'" + txtCap.Text + "')");
+                        //kq = 0 them that bai
+                        if (kq == 0)
+                            MessageBox.Show("Khong them duoc");
+                        else
+                        {
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        //TreeViewNV.Nodes.Clear();
+                        //TaoTreeViewNV();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin của nhân viên!");
+                }
+            //}
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
     }

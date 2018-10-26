@@ -38,7 +38,55 @@ namespace QuanLySieuThi
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            txtMa.Focus();
+            btnLuu.Enabled = true;
+        }
+
+
+        private void btnChinhsua_Click(object sender, EventArgs e)
+        {
+            if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
+            {
+                string chuoisua = "update KhachHang set TenKhachHang=N'"+txtTen.Text+"',SoDienThoai='"+txtSDT.Text+"' where MaKhachHang='"+txtMa.Text+"'";
+                int kq = this.kn.insert(chuoisua);
+                if (kq != 0)
+                {
+                    MessageBox.Show("Đã sửa thành công!");
+                    TaiGridViewKhachHang();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!");
+                }
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
             if (txtMa.Text != "")
+            {
+                string chuoixoahd = "delete HoaDon from HoaDon,KhachHang where HoaDon.MaKhachHang=KhachHang.MaKhachHang and HoaDon.MaKhachHang='"+txtMa.Text+"'";
+                int kq = this.kn.insert(chuoixoahd);
+                if (kq != 0)
+                {
+                    string chuoixoakh = "delete KhachHang from KhachHang where MaKhachHang='"+txtMa.Text+"'";
+                    kq = this.kn.insert(chuoixoakh);
+                    if (kq != 0)
+                    {
+                        MessageBox.Show("Xóa khách hàng thành công!");
+                        TaiGridViewKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
+                }
+            }
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
             {
                 if (KtraKhoaChinh(txtMa.Text) == true)
                 {
@@ -46,22 +94,22 @@ namespace QuanLySieuThi
                 }
                 else
                 {
-                    int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','"+txtSDT.Text+")");
+                    int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + ")");
                     if (kq == 0)
                         MessageBox.Show("Khong them duoc");
                     else
+                    {
                         MessageBox.Show("Thêm thành công");
-
+                        TaiGridViewKhachHang();
+                    }
                 }
             }
+            btnXoa.Enabled = true;
+            btnChinhsua.Enabled = true;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
-                TaiGridViewKhachHang();
-            else
-                MessageBox.Show("Bạn cần nhập đầy đủ thông tin khách hàng!");
-        }   
+
+
+ 
     }
 }
