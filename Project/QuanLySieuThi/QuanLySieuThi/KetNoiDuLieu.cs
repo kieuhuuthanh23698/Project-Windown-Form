@@ -29,7 +29,7 @@ namespace QuanLySieuThi
                     sql.Close();
                 return true; 
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 return false;
             }
@@ -52,7 +52,7 @@ namespace QuanLySieuThi
                     this.sql.Close();
                 return kq.Trim();
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 return "";
             }
@@ -73,7 +73,7 @@ namespace QuanLySieuThi
                     this.sql.Close();
                 return ds;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -91,7 +91,7 @@ namespace QuanLySieuThi
                 
                 return kq;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }

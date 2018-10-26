@@ -31,9 +31,7 @@ namespace QuanLySieuThi
 
         public void taiGridViewHangHoa()
         {
-             dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoLuongTrongKho as N'Số lượng' from KhoHang where SoluongTrongKho > 0","Hang hoa").Tables["Hang hoa"];
-            //DataTable tb = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị' from KhoHang","Hang hoa").Tables["Hang hoa"];
-            //dataGridViewHangHoa.DataSource = tb;
+             dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoLuongTrongKho as N'Số lượng' from KhoHang where SoluongTrongKho > 0","Hang hoa").Tables["Hang hoa"];            
         }
 
         public void taiTreeView()
@@ -226,6 +224,7 @@ namespace QuanLySieuThi
             txtNhanVien.Text = timTenNhanVien(this.manv);
             loadComBoBoxKhachHang();
             dateTimeInput1.Value = DateTime.Now;
+            txtGio.Text = dateTimeInput1.Value.ToShortTimeString();
             /////////
             lstGioHang.Items.Clear();
             txtTienHang.Text = "0";
@@ -386,14 +385,17 @@ namespace QuanLySieuThi
                             string thanhTien = item.SubItems[4].Text;
                             this.link.insert("insert into ChiTietHoaDon values('" + maHoaDon + "','" + maHangHoa + "',N'" + tenHangHoa + "'," + giaBan + "," + soLuong + "," + thanhTien + ")");
                         }
+                        frmReportHoaDon frmHD = new frmReportHoaDon(this.link, maHoaDon);
+                        frmHD.ShowDialog();
                     }
                     else
                         MessageBox.Show("Thanh toán bị lỗi !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     taoHoaDonMoi();
                 }
-                if (Double.Parse(txtTienTraLai.Text) < 0)
-                    MessageBox.Show("Khách chưa đưa đủ tiền !","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
             }
+            else
+                MessageBox.Show("Khách chưa đưa đủ tiền !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void taoHoaDonMoi()

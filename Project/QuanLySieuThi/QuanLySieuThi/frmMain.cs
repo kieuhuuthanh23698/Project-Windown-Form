@@ -49,7 +49,7 @@ namespace QuanLySieuThi
 
         private void changePass(object sender, EventArgs e)
         {
-            frmDoiMatKhau frmChangePass = new frmDoiMatKhau();
+            frmDoiMatKhau frmChangePass = new frmDoiMatKhau(this.manv,this.link);
             frmChangePass.ShowDialog();
         }
 
