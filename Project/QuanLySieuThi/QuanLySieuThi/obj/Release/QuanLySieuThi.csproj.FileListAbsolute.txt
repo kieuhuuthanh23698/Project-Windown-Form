@@ -52,3 +52,6 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\Qua
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.cache
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.compiled
 >>>>>>> 90df93b0449f0bd8cc4279e73144136d3a0f3b2c
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.exe.config
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.cache
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.compiled

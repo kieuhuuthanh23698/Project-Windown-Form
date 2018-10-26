@@ -27,12 +27,12 @@ namespace QuanLySieuThi
                 if (link.Connec() == true)
                 {
                     //đưa kết nối vào form login
-                    //frmLogin frmlogin = new frmLogin(link);
-                    //this.Hide();
-                    //frmlogin.Show();
-                    frmReportHoaDon frm = new frmReportHoaDon(link, "HOADON_1");
+                    frmLogin frmlogin = new frmLogin(link);
                     this.Hide();
-                    frm.Show();
+                    frmlogin.Show();
+                    //frmReportHoaDon frm = new frmReportHoaDon(link, "HOADON_1");
+                    //this.Hide();
+                    //frm.Show();
                 }
                 else
                 {
