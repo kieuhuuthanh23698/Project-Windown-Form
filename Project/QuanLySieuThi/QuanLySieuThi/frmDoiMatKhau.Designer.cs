@@ -67,22 +67,24 @@
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauCu.Location = new System.Drawing.Point(164, 154);
             this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhauCu.MaxLength = 30;
             this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.Size = new System.Drawing.Size(249, 26);
+            this.txtMatKhauCu.PasswordChar = '*';
+            this.txtMatKhauCu.Size = new System.Drawing.Size(249, 27);
             this.txtMatKhauCu.TabIndex = 4;
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoi.Location = new System.Drawing.Point(164, 194);
             this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhauMoi.MaxLength = 30;
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(249, 26);
+            this.txtMatKhauMoi.PasswordChar = '*';
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(249, 27);
             this.txtMatKhauMoi.TabIndex = 6;
             // 
             // label4
@@ -99,12 +101,13 @@
             // 
             // txtMatKhauMoiNhapLai
             // 
-            this.txtMatKhauMoiNhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoiNhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoiNhapLai.Location = new System.Drawing.Point(164, 240);
             this.txtMatKhauMoiNhapLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhauMoiNhapLai.MaxLength = 30;
             this.txtMatKhauMoiNhapLai.Name = "txtMatKhauMoiNhapLai";
-            this.txtMatKhauMoiNhapLai.Size = new System.Drawing.Size(249, 26);
+            this.txtMatKhauMoiNhapLai.PasswordChar = '*';
+            this.txtMatKhauMoiNhapLai.Size = new System.Drawing.Size(249, 27);
             this.txtMatKhauMoiNhapLai.TabIndex = 8;
             // 
             // label5

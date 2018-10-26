@@ -137,7 +137,7 @@
             // 
             // menuStrip2
             // 
-            this.menuStrip2.BackColor = System.Drawing.Color.Aquamarine;
+            this.menuStrip2.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hỆTHỐNGToolStripMenuItem,
             this.hOẠTĐỘNGToolStripMenuItem,

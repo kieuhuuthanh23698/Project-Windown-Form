@@ -33,18 +33,26 @@ namespace QuanLySieuThi
                         string chuoiUpdate = "update NhanVien set Passwords = '" + txtMatKhauMoi.Text + "' where MaNhanVien = '" + this.manv + "'";
                         int kqUpdate = this.link.insert(chuoiUpdate);
                         if (kqUpdate != 0)
+                        {
                             MessageBox.Show("Đổi mật khẩu thành công !");
+                            this.Close();
+                        }
                         else
                             MessageBox.Show("Đổi mật khẩu thất bại !");
                     }
                     else
                     {
                         MessageBox.Show("Mật khẩu cũ nhập sai !");
+                        txtMatKhauCu.Text = "";
+                        txtMatKhauCu.Focus();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Mật khẩu mới và nhập lại không giống nhau !");
+                    txtMatKhauMoi.Text = "";
+                    txtMatKhauMoiNhapLai.Text = "";
+                    txtMatKhauMoi.Focus();
                 }
             }
             else
@@ -61,6 +69,10 @@ namespace QuanLySieuThi
                 {
                     MessageBox.Show("Bạn chưa nhập mật khẩu mới nhập lại !");
                 }
+                txtMatKhauCu.Text = "";
+                txtMatKhauMoi.Text = "";
+                txtMatKhauMoiNhapLai.Text = "";
+                txtMatKhauCu.Focus();
             }
         }
 
