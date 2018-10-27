@@ -168,7 +168,7 @@ namespace QuanLySieuThi
                 taiGridViewHangHoa();
                 tinhTien();
             }
-            }
+       }
 
         public void tinhTien()
         { 
@@ -216,11 +216,25 @@ namespace QuanLySieuThi
             return link.commandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
         }
 
+        public string taoMaHoaDon(int soLuongHoaDon)
+        {
+            int count;
+            do
+            {
+                string chuoiCount = "select COUNT(*) from HoaDon where MaHoaDon = 'HOADON_" + soLuongHoaDon + "'";
+                count = int.Parse(this.link.commandScalar(chuoiCount));
+                if (count == 0)
+                    return "HOADON_" + soLuongHoaDon;
+                soLuongHoaDon++;
+            } while (count != 0);
+            return "HOADON_" + (soLuongHoaDon + 1);
+        }
+
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             string comm = "select count(*) from HoaDon";
             int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
-            txtMaHoaDon.Text = "HOADON_" + (soLuongHoaDon + 1);
+            txtMaHoaDon.Text = taoMaHoaDon(soLuongHoaDon);
             txtNhanVien.Text = timTenNhanVien(this.manv);
             loadComBoBoxKhachHang();
             dateTimeInput1.Value = DateTime.Now;
@@ -403,9 +417,8 @@ namespace QuanLySieuThi
             //Tạo hóa đơn mới
             string comm = "select count(*) from HoaDon";
             int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
-            txtMaHoaDon.Text = "HOADON_" + (soLuongHoaDon + 1);
+            txtMaHoaDon.Text = taoMaHoaDon(soLuongHoaDon);
             txtNhanVien.Text = timTenNhanVien(this.manv);
-            loadComBoBoxKhachHang();
             dateTimeInput1.Value = DateTime.Now;
             lstGioHang.Items.Clear();
             txtTienHang.Text = "0";
