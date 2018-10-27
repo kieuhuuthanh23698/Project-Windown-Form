@@ -56,9 +56,9 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmThongTinSieuThi.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.frmMain.resources
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-=======
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.cache
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\RdlCompile.compiled
 >>>>>>> 196a9938320a6a0cd7f3694c484f919b371b98b8
 >>>>>>> 6c6709a8830b6b965eec236fd87724389f116bfb
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.exe
+C:\Users\Administrator.GMK1KUGNFEEWJKV\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.pdb
