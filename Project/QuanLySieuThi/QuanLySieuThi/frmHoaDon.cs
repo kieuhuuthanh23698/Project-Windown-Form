@@ -216,25 +216,26 @@ namespace QuanLySieuThi
             return link.commandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
         }
 
-        public string taoMaHoaDon(int soLuongHoaDon)
+        public string taoMaHoaDon()
         {
+            int dem = 0;
             int count;
             do
             {
-                string chuoiCount = "select COUNT(*) from HoaDon where MaHoaDon = 'HOADON_" + soLuongHoaDon + "'";
+                string chuoiCount = "select COUNT(*) from HoaDon where MaHoaDon = 'HOADON_" + dem + "'";
                 count = int.Parse(this.link.commandScalar(chuoiCount));
-                if (count == 0)
-                    return "HOADON_" + soLuongHoaDon;
-                soLuongHoaDon++;
+                if (count == 0)//hóa đơn này chưa có trong datatable
+                    return "HOADON_" + dem;
+                dem++;
             } while (count != 0);
-            return "HOADON_" + (soLuongHoaDon + 1);
+            return "HOADON_" + (dem + 1);
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             string comm = "select count(*) from HoaDon";
             int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
-            txtMaHoaDon.Text = taoMaHoaDon(soLuongHoaDon);
+            txtMaHoaDon.Text = taoMaHoaDon();
             txtNhanVien.Text = timTenNhanVien(this.manv);
             loadComBoBoxKhachHang();
             dateTimeInput1.Value = DateTime.Now;
@@ -417,7 +418,7 @@ namespace QuanLySieuThi
             //Tạo hóa đơn mới
             string comm = "select count(*) from HoaDon";
             int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
-            txtMaHoaDon.Text = taoMaHoaDon(soLuongHoaDon);
+            txtMaHoaDon.Text = taoMaHoaDon();
             txtNhanVien.Text = timTenNhanVien(this.manv);
             dateTimeInput1.Value = DateTime.Now;
             lstGioHang.Items.Clear();
