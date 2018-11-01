@@ -365,7 +365,7 @@ namespace QuanLySieuThi
                 panel.Name = "Thống kê hóa đơn";
                 item.Control = new Control();
                 item.Control = panel;
-                frmThongKeHoaDon f = new frmThongKeHoaDon();
+                frmThongKeHoaDon f = new frmThongKeHoaDon(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
@@ -389,7 +389,7 @@ namespace QuanLySieuThi
                         panel.Name = "Thống kê hóa đơn";
                         item.Control = new Control();
                         item.Control = panel;
-                        frmThongKeHoaDon f = new frmThongKeHoaDon();
+                        frmThongKeHoaDon f = new frmThongKeHoaDon(this.link, this.manv);
                         f.TopLevel = false;
                         f.Dock = DockStyle.Fill;
                         item.Control.Controls.Add(f);

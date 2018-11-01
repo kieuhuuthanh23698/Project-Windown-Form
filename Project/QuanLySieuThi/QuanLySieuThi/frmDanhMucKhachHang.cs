@@ -5,15 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLySieuThi
 {
     public partial class frmDanhMucKhachHang : Form
     {
         KetNoiDuLieu kn;
+<<<<<<< HEAD
+        string makh;
+        public frmDanhMucKhachHang( KetNoiDuLieu kn,string makh)
+=======
         //String makh;
 
         public frmDanhMucKhachHang( KetNoiDuLieu kn,String makh)
+>>>>>>> 2ea52b53661347a8ad5cb20f4f6b96e001dd1675
         {
             this.kn = kn;
             //this.makh = makh;
@@ -85,7 +91,11 @@ namespace QuanLySieuThi
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (dataGridViewKhachHang.SelectedRows.Count != 0)
+=======
+            if (dataGridViewKhachHang.SelectedRows.Count!=0)
+>>>>>>> 95b5d0f7c363f12bc383d409ecf6b09ff04b010a
             {
                 //xóa chi tiết hóa đơn có mã hóa đơn
                 //xóa hóa đon có mã khách hàng
@@ -149,6 +159,23 @@ namespace QuanLySieuThi
                 txtTen.Text = item_row.Cells[1].Value.ToString();
                 txtSDT.Text = item_row.Cells[2].Value.ToString();
             }
+        }
+
+        private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
+                dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh,"KhachHang").Tables["KhachHang"];
+                txtMa.DataBindings.Clear();
+                txtMa.DataBindings.Add("text",MaKhachHang,"MaKhachHang");
+                txtTen.DataBindings.Clear();
+                txtTen.DataBindings.Add("text",TenKhachHang,"TenKhachHang");
+                txtSDT.DataBindings.Clear();
+                txtMa.DataBindings.Add("text",SoDienThoai,"SoDienThoai");
+            }
+            catch (Exception)
+            { }
         }
 
 
