@@ -12,13 +12,20 @@ namespace QuanLySieuThi
     public partial class frmDanhMucKhachHang : Form
     {
         KetNoiDuLieu kn;
+<<<<<<< HEAD
         string makh;
         public frmDanhMucKhachHang( KetNoiDuLieu kn,string makh)
+=======
+        //String makh;
+
+        public frmDanhMucKhachHang( KetNoiDuLieu kn,String makh)
+>>>>>>> 2ea52b53661347a8ad5cb20f4f6b96e001dd1675
         {
             this.kn = kn;
-            this.makh = makh;
+            //this.makh = makh;
             InitializeComponent();
             TaiGridViewKhachHang();
+            btnHuyThem.Hide();
         }
 
         public void TaiGridViewKhachHang()
@@ -37,10 +44,30 @@ namespace QuanLySieuThi
             return kq;
         }
 
+        private string taoMaKhachHang()
+        {
+            int dem = 0;
+            string i;
+            do
+            {
+                i = this.kn.commandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
+                if (i == "")
+                    break;//mã khách hàng này chưa có trong data table
+                dem++;
+            } while (i != "");
+            return "KHACHHANG" + dem;
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            txtMa.Focus();
+            txtMa.Text = taoMaKhachHang();
+            txtSDT.Text = txtTen.Text = "";
+            txtTen.Focus();
+
             btnLuu.Enabled = true;
+            btnThem.Enabled = btnXoa.Enabled = btnChinhsua.Enabled = dataGridViewKhachHang.Enabled = false;
+
+            btnHuyThem.Show();      
         }
 
 
@@ -66,6 +93,20 @@ namespace QuanLySieuThi
         {
             if (dataGridViewKhachHang.SelectedRows.Count!=0)
             {
+                //xóa chi tiết hóa đơn có mã hóa đơn
+                //xóa hóa đon có mã khách hàng
+                //xóa khách hàng
+                
+                //delete ChiTietHoaDon
+                //from ChiTietHoaDon,HoaDon, KhachHang
+                //where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = 'KHACHHANG4'
+
+                //delete HoaDon
+                //where HoaDon.MaKhachHang = 'KHACHHANG4'
+
+                //delete KhachHang
+                //where MaKhachHang = 'KHACHHANG4'
+
                 string chuoixoahd = "delete HoaDon from HoaDon,KhachHang where HoaDon.MaKhachHang=KhachHang.MaKhachHang and HoaDon.MaKhachHang='"+txtMa.Text+"'";
                 int kq = this.kn.insert(chuoixoahd);
                 if (kq != 0)
@@ -83,30 +124,49 @@ namespace QuanLySieuThi
                     }
                 }
             }
+            else
+                MessageBox.Show("Xóa thất bại!");
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
+            if (txtTen.Text != "" && txtSDT.Text != "")
             {
-                if (KtraKhoaChinh(txtMa.Text) == true)
-                {
-                    MessageBox.Show("Đã tồn tại mã");
-                }
-                else
-                {
-                    int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + ")");
+                    int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
                     if (kq == 0)
                         MessageBox.Show("Khong them duoc");
                     else
                     {
                         MessageBox.Show("Thêm thành công");
                         TaiGridViewKhachHang();
+                        btnXoa.Enabled = btnChinhsua.Enabled = btnThem.Enabled = true;
+                        btnLuu.Enabled = false;
+                        btnHuyThem.Hide();
+                        txtMa.Text = txtSDT.Text = txtTen.Text = "";
                     }
-                }
             }
+        }
+
+        private void btnHuyThem_Click(object sender, EventArgs e)
+        {
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnChinhsua.Enabled = true;
+            dataGridViewKhachHang.Enabled = true;
+            txtMa.Text = txtSDT.Text = txtTen.Text = "";
+            btnHuyThem.Hide();
+        }
+
+        private void dataGridViewKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewKhachHang.SelectedRows.Count != 0)
+            {
+                DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
+                txtMa.Text = item_row.Cells[0].Value.ToString();
+                txtTen.Text = item_row.Cells[1].Value.ToString();
+                txtSDT.Text = item_row.Cells[2].Value.ToString();
+            }
         }
 
         private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)

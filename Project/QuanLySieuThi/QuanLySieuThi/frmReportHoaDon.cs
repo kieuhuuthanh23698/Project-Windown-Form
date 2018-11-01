@@ -29,7 +29,8 @@ namespace QuanLySieuThi
             dt = this.link.comManTable(chuoiQuery, "ChiTietHoaDon").Tables["ChiTietHoaDon"];
             pbg.SetDataSource(dt);
             crystalReportViewer1.ReportSource = pbg;
-            crystalReportViewer1.Refresh();          
+            crystalReportViewer1.Refresh();
+            MessageBox.Show(Application.StartupPath);
         }
 
         private void btnExportFilePDF_Click(object sender, EventArgs e)
@@ -38,7 +39,8 @@ namespace QuanLySieuThi
             try
             {
                 ReportDocument rd = new ReportDocument();
-                rd.Load(@"C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form\Project\QuanLySieuThi\QuanLySieuThi\Phieubaogia.rpt");
+                //rd.Load(@"C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\Phieubaogia.rpt");
+                rd.Load(Application.StartupPath + "\\Phieubaogia.rpt");
                 rd.SetDataSource(dt);
                 rd.ExportToDisk(ExportFormatType.PortableDocFormat, maHoaDon + ".pdf");
                 MessageBox.Show("Đã export report ra file " + maHoaDon + ".pdf");
