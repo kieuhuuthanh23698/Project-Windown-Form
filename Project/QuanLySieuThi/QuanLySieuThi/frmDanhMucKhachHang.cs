@@ -5,14 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLySieuThi
 {
     public partial class frmDanhMucKhachHang : Form
     {
         KetNoiDuLieu kn;
-        String makh;
-        public frmDanhMucKhachHang( KetNoiDuLieu kn,String makh)
+        string makh;
+        public frmDanhMucKhachHang( KetNoiDuLieu kn,string makh)
         {
             this.kn = kn;
             this.makh = makh;
@@ -63,7 +64,7 @@ namespace QuanLySieuThi
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (txtMa.Text != "")
+            if (dataGridViewKhachHang.SelectedRows.Count!=0)
             {
                 string chuoixoahd = "delete HoaDon from HoaDon,KhachHang where HoaDon.MaKhachHang=KhachHang.MaKhachHang and HoaDon.MaKhachHang='"+txtMa.Text+"'";
                 int kq = this.kn.insert(chuoixoahd);
@@ -106,6 +107,23 @@ namespace QuanLySieuThi
             }
             btnXoa.Enabled = true;
             btnChinhsua.Enabled = true;
+        }
+
+        private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
+                dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh,"KhachHang").Tables["KhachHang"];
+                txtMa.DataBindings.Clear();
+                txtMa.DataBindings.Add("text",MaKhachHang,"MaKhachHang");
+                txtTen.DataBindings.Clear();
+                txtTen.DataBindings.Add("text",TenKhachHang,"TenKhachHang");
+                txtSDT.DataBindings.Clear();
+                txtMa.DataBindings.Add("text",SoDienThoai,"SoDienThoai");
+            }
+            catch (Exception)
+            { }
         }
 
 

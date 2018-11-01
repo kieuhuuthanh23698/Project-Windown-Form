@@ -187,6 +187,7 @@
             this.dataGridViewKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewKhachHang.Size = new System.Drawing.Size(524, 306);
             this.dataGridViewKhachHang.TabIndex = 4;
+            this.dataGridViewKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKhachHang_CellContentClick);
             // 
             // MaKhachHang
             // 
