@@ -375,37 +375,47 @@ namespace QuanLySieuThi
             {
                 if (lstGioHang.Items.Count > 0)
                 {
-                    string maHoaDon = txtMaHoaDon.Text;
-                    string ngayLapHoaDon = dateTimeInput1.Value.ToShortDateString();
-                    string tenNhanVienLapHoaDon = txtNhanVien.Text;
-                    string maNVLapHoaDon = manv;
-                    string tenKhachHang = cbbKhachHang.Text;
-                    string maKhachHang = this.link.commandScalar("select MaKhachHang from KhachHang where TenKhachHang = N'" + tenKhachHang + "'");
-                    string tienHang = txtTienHang.Text;
-                    string phanTramGiamGia = txtPhanTramGiamGia.Text;
-                    string giamGia = txtGiamGia.Text;
-                    string tongThanhTien = txtTongGiaTriGioHang.Text;
-                    string khachDua = cmbTienKhachDua.Text;
-                    string traLai = txtTienTraLai.Text;
-                    string command = "insert into HoaDon values('" + maHoaDon + "','" + ngayLapHoaDon + "',GETDATE(),N'" + tenNhanVienLapHoaDon + "','" + maNVLapHoaDon + "',N'" + tenKhachHang + "','" + maKhachHang + "'," + tienHang + "," + phanTramGiamGia + "," + giamGia + "," + tongThanhTien + "," + khachDua + "," + traLai + ")";
-                    if (this.link.insert(command) != 0)
+                    if (txtPhanTramGiamGia.Text != "")
                     {
-                        MessageBox.Show("Mã hóa đơn :" + maHoaDon + "\n" + "Ngày lập hóa đơn" + ngayLapHoaDon + "\n" + "Tên nhân viên lập hóa đơn :" + tenNhanVienLapHoaDon + "\n" + "Mã nv lập hóa đơn :" + maNVLapHoaDon + "\n" + "Tên khách hàng :" + tenKhachHang + "\n" + "Mã khách hàng :" + maKhachHang + "\n" + "Tiền hàng :" + tienHang + " Đ\n" + "Phần trăm giảm giá :" + phanTramGiamGia + "\n" + "Giảm giá :" + giamGia + " Đ\n" + "Tổng thành tiền :" + tongThanhTien + " Đ\n" + "Khách đưa :" + khachDua + " Đ\n" + "Trả lại :" + traLai + " Đ", "Hóa đơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        foreach (ListViewItem item in lstGioHang.Items)
-                        {//insert các thành phần trong chi tiết hóa đơn
-                            string tenHangHoa = item.SubItems[1].Text;
-                            string maHangHoa = this.link.commandScalar("select MaHangHoa from KhoHang where TenHangHoa = N'" + tenHangHoa + "'");
-                            string giaBan = item.SubItems[2].Text;
-                            string soLuong = item.SubItems[3].Text;
-                            string thanhTien = item.SubItems[4].Text;
-                            this.link.insert("insert into ChiTietHoaDon values('" + maHoaDon + "','" + maHangHoa + "',N'" + tenHangHoa + "'," + giaBan + "," + soLuong + "," + thanhTien + ")");
+                        if (cmbTienKhachDua.Text != "")
+                        {
+                            string maHoaDon = txtMaHoaDon.Text;
+                            string ngayLapHoaDon = dateTimeInput1.Value.ToShortDateString();
+                            string tenNhanVienLapHoaDon = txtNhanVien.Text;
+                            string maNVLapHoaDon = manv;
+                            string tenKhachHang = cbbKhachHang.Text;
+                            string maKhachHang = this.link.commandScalar("select MaKhachHang from KhachHang where TenKhachHang = N'" + tenKhachHang + "'");
+                            string tienHang = txtTienHang.Text;
+                            string phanTramGiamGia = txtPhanTramGiamGia.Text;
+                            string giamGia = txtGiamGia.Text;
+                            string tongThanhTien = txtTongGiaTriGioHang.Text;
+                            string khachDua = cmbTienKhachDua.Text;
+                            string traLai = txtTienTraLai.Text;
+                            string command = "insert into HoaDon values('" + maHoaDon + "','" + ngayLapHoaDon + "',GETDATE(),N'" + tenNhanVienLapHoaDon + "','" + maNVLapHoaDon + "',N'" + tenKhachHang + "','" + maKhachHang + "'," + tienHang + "," + phanTramGiamGia + "," + giamGia + "," + tongThanhTien + "," + khachDua + "," + traLai + ")";
+                            if (this.link.insert(command) != 0)
+                            {
+                                MessageBox.Show("Mã hóa đơn :" + maHoaDon + "\n" + "Ngày lập hóa đơn" + ngayLapHoaDon + "\n" + "Tên nhân viên lập hóa đơn :" + tenNhanVienLapHoaDon + "\n" + "Mã nv lập hóa đơn :" + maNVLapHoaDon + "\n" + "Tên khách hàng :" + tenKhachHang + "\n" + "Mã khách hàng :" + maKhachHang + "\n" + "Tiền hàng :" + tienHang + " Đ\n" + "Phần trăm giảm giá :" + phanTramGiamGia + "\n" + "Giảm giá :" + giamGia + " Đ\n" + "Tổng thành tiền :" + tongThanhTien + " Đ\n" + "Khách đưa :" + khachDua + " Đ\n" + "Trả lại :" + traLai + " Đ", "Hóa đơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                foreach (ListViewItem item in lstGioHang.Items)
+                                {//insert các thành phần trong chi tiết hóa đơn
+                                    string tenHangHoa = item.SubItems[1].Text;
+                                    string maHangHoa = this.link.commandScalar("select MaHangHoa from KhoHang where TenHangHoa = N'" + tenHangHoa + "'");
+                                    string giaBan = item.SubItems[2].Text;
+                                    string soLuong = item.SubItems[3].Text;
+                                    string thanhTien = item.SubItems[4].Text;
+                                    this.link.insert("insert into ChiTietHoaDon values('" + maHoaDon + "','" + maHangHoa + "',N'" + tenHangHoa + "'," + giaBan + "," + soLuong + "," + thanhTien + ")");
+                                }
+                                frmReportHoaDon frmHD = new frmReportHoaDon(this.link, maHoaDon);
+                                frmHD.ShowDialog();
+                            }
+                            else
+                                MessageBox.Show("Thanh toán bị lỗi !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            taoHoaDonMoi();
                         }
-                        frmReportHoaDon frmHD = new frmReportHoaDon(this.link, maHoaDon);
-                        frmHD.ShowDialog();
+                        else
+                            MessageBox.Show("Khách chưa đưa tiền !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Thanh toán bị lỗi !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    taoHoaDonMoi();
+                        MessageBox.Show("Phần trăm giảm giá không được để trống !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -427,8 +437,7 @@ namespace QuanLySieuThi
             txtPhanTramGiamGia.Text = "0";
             txtTongGiaTriGioHang.Text = "0";
             txtTienTraLai.Text = "0";
-        }
-       
+        }       
     }
 
 }

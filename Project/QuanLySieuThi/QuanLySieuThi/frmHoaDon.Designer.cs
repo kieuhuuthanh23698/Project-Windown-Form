@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Tất cả loại hàng hóa");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Tất cả loại hàng hóa");
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGiamSoLuong = new DevComponents.DotNetBar.ButtonX();
             this.btnTangSoLuong = new DevComponents.DotNetBar.ButtonX();
@@ -457,6 +458,7 @@
             // 
             this.txtMaHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaHoaDon.Enabled = false;
             this.txtMaHoaDon.Location = new System.Drawing.Point(956, 60);
             this.txtMaHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
@@ -555,10 +557,13 @@
             // 
             this.dataGridViewHangHoa.AllowUserToAddRows = false;
             this.dataGridViewHangHoa.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridViewHangHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHangHoa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridViewHangHoa.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewHangHoa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -568,7 +573,7 @@
             this.DonVi,
             this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Azure;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -685,13 +690,14 @@
             // 
             // treeView1
             // 
+            this.treeView1.BackColor = System.Drawing.Color.Azure;
             this.treeView1.Location = new System.Drawing.Point(34, 60);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode2.Name = "Node0";
-            treeNode2.Text = "Tất cả loại hàng hóa";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Tất cả loại hàng hóa";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1});
             this.treeView1.Size = new System.Drawing.Size(576, 259);
             this.treeView1.TabIndex = 105;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
@@ -756,6 +762,7 @@
             // txtGio
             // 
             this.txtGio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGio.Enabled = false;
             this.txtGio.Location = new System.Drawing.Point(1318, 109);
             this.txtGio.Margin = new System.Windows.Forms.Padding(2);
             this.txtGio.Name = "txtGio";

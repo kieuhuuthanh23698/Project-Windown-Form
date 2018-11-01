@@ -12,17 +12,10 @@ namespace QuanLySieuThi
     public partial class frmDanhMucKhachHang : Form
     {
         KetNoiDuLieu kn;
-<<<<<<< HEAD
-        string makh;
-        public frmDanhMucKhachHang( KetNoiDuLieu kn,string makh)
-=======
-        //String makh;
 
-        public frmDanhMucKhachHang( KetNoiDuLieu kn,String makh)
->>>>>>> 2ea52b53661347a8ad5cb20f4f6b96e001dd1675
+        public frmDanhMucKhachHang( KetNoiDuLieu kn)
         {
             this.kn = kn;
-            //this.makh = makh;
             InitializeComponent();
             TaiGridViewKhachHang();
             btnHuyThem.Hide();
@@ -70,7 +63,6 @@ namespace QuanLySieuThi
             btnHuyThem.Show();      
         }
 
-
         private void btnChinhsua_Click(object sender, EventArgs e)
         {
             if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
@@ -79,23 +71,19 @@ namespace QuanLySieuThi
                 int kq = this.kn.insert(chuoisua);
                 if (kq != 0)
                 {
-                    MessageBox.Show("Đã sửa thành công!");
+                    MessageBox.Show("Đã sửa thành công!","SỬA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     TaiGridViewKhachHang();
                 }
                 else
                 {
-                    MessageBox.Show("Sửa thất bại!");
+                    MessageBox.Show("Sửa thất bại!", "SỬA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            if (dataGridViewKhachHang.SelectedRows.Count != 0)
-=======
             if (dataGridViewKhachHang.SelectedRows.Count!=0)
->>>>>>> 95b5d0f7c363f12bc383d409ecf6b09ff04b010a
             {
                 //xóa chi tiết hóa đơn có mã hóa đơn
                 //xóa hóa đon có mã khách hàng
@@ -109,33 +97,42 @@ namespace QuanLySieuThi
                 kq = this.kn.insert(chuoixoakh);
                 if (kq != 0)
                 {
-                    MessageBox.Show("Xóa thành công!");
+                    MessageBox.Show("Xóa thành công!","XÓA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    txtMa.Text = txtSDT.Text = txtTen.Text = "";
+                    TaiGridViewKhachHang();
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại!");
+                    MessageBox.Show("Xóa thất bại!", "XÓA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
-                MessageBox.Show("Chưa chọn!");
+                MessageBox.Show("Bạn chưa chọn khách hàng cần xóa!", "XÓA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
             if (txtTen.Text != "" && txtSDT.Text != "")
             {
-                    int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
-                    if (kq == 0)
-                        MessageBox.Show("Khong them duoc");
-                    else
-                    {
-                        MessageBox.Show("Thêm thành công");
-                        TaiGridViewKhachHang();
-                        btnXoa.Enabled = btnChinhsua.Enabled = btnThem.Enabled = true;
-                        btnLuu.Enabled = false;
-                        btnHuyThem.Hide();
-                        txtMa.Text = txtSDT.Text = txtTen.Text = "";
-                    }
+                int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
+                if (kq == 0)
+                    MessageBox.Show("Thêm khách hàng thất bại !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Thêm thành công !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TaiGridViewKhachHang();
+                    btnXoa.Enabled = btnChinhsua.Enabled = btnThem.Enabled = dataGridViewKhachHang.Enabled = true;
+                    btnLuu.Enabled = false;
+                    btnHuyThem.Hide();
+                    txtMa.Text = txtSDT.Text = txtTen.Text = "";
+                }
+            }
+            else
+            {
+                if (txtTen.Text == "")
+                    MessageBox.Show("Bạn chưa nhập tên khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(txtSDT.Text == "")
+                    MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -163,23 +160,21 @@ namespace QuanLySieuThi
 
         private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
-                dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh,"KhachHang").Tables["KhachHang"];
-                txtMa.DataBindings.Clear();
-                txtMa.DataBindings.Add("text",MaKhachHang,"MaKhachHang");
-                txtTen.DataBindings.Clear();
-                txtTen.DataBindings.Add("text",TenKhachHang,"TenKhachHang");
-                txtSDT.DataBindings.Clear();
-                txtMa.DataBindings.Add("text",SoDienThoai,"SoDienThoai");
-            }
-            catch (Exception)
-            { }
+            //try
+            //{
+            //    string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
+            //    dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh, "KhachHang").Tables["KhachHang"];
+            //    txtMa.DataBindings.Clear();
+            //    txtMa.DataBindings.Add("text", MaKhachHang, "MaKhachHang");
+            //    txtTen.DataBindings.Clear();
+            //    txtTen.DataBindings.Add("text", TenKhachHang, "TenKhachHang");
+            //    txtSDT.DataBindings.Clear();
+            //    txtMa.DataBindings.Add("text", SoDienThoai, "SoDienThoai");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
         }
-
-
-
- 
     }
 }

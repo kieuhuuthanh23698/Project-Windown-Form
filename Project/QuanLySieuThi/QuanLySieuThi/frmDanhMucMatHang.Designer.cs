@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btnThemLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnXoaLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
@@ -43,14 +44,14 @@
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.dataGridViewHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.MaHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoluongTrongKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeViewLoaiMatHang)).BeginInit();
@@ -157,7 +158,7 @@
             this.treeViewLoaiMatHang.AllowDrop = true;
             this.treeViewLoaiMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeViewLoaiMatHang.BackColor = System.Drawing.SystemColors.Window;
+            this.treeViewLoaiMatHang.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -196,11 +197,14 @@
             // 
             this.dataGridViewHangHoa.AllowUserToAddRows = false;
             this.dataGridViewHangHoa.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
+            this.dataGridViewHangHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHangHoa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridViewHangHoa.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewHangHoa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -209,14 +213,14 @@
             this.GiaBan,
             this.DonVi,
             this.SoluongTrongKho});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(187)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewHangHoa.Location = new System.Drawing.Point(393, 175);
             this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -228,6 +232,49 @@
             this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 486);
             this.dataGridViewHangHoa.TabIndex = 103;
+            // 
+            // MaHangHoa
+            // 
+            this.MaHangHoa.DataPropertyName = "Mã hàng hóa";
+            this.MaHangHoa.FillWeight = 75F;
+            this.MaHangHoa.HeaderText = "Mã hàng hóa";
+            this.MaHangHoa.Name = "MaHangHoa";
+            this.MaHangHoa.ReadOnly = true;
+            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TenHangHoa
+            // 
+            this.TenHangHoa.DataPropertyName = "Tên hàng hóa";
+            this.TenHangHoa.FillWeight = 225F;
+            this.TenHangHoa.HeaderText = "Tên hàng hóa";
+            this.TenHangHoa.Name = "TenHangHoa";
+            this.TenHangHoa.ReadOnly = true;
+            this.TenHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "Giá bán";
+            this.GiaBan.FillWeight = 50F;
+            this.GiaBan.HeaderText = "GIá bán";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
+            this.GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "Đơn vị";
+            this.DonVi.FillWeight = 50F;
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            // 
+            // SoluongTrongKho
+            // 
+            this.SoluongTrongKho.DataPropertyName = "Số lượng";
+            this.SoluongTrongKho.FillWeight = 50F;
+            this.SoluongTrongKho.HeaderText = "Số lượng";
+            this.SoluongTrongKho.Name = "SoluongTrongKho";
+            this.SoluongTrongKho.ReadOnly = true;
             // 
             // panelEx1
             // 
@@ -282,54 +329,11 @@
             this.labelX1.Text = "DANH MỤC MẶT HÀNG";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // MaHangHoa
-            // 
-            this.MaHangHoa.DataPropertyName = "Mã hàng hóa";
-            this.MaHangHoa.FillWeight = 75F;
-            this.MaHangHoa.HeaderText = "Mã hàng hóa";
-            this.MaHangHoa.Name = "MaHangHoa";
-            this.MaHangHoa.ReadOnly = true;
-            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenHangHoa
-            // 
-            this.TenHangHoa.DataPropertyName = "Tên hàng hóa";
-            this.TenHangHoa.FillWeight = 225F;
-            this.TenHangHoa.HeaderText = "Tên hàng hóa";
-            this.TenHangHoa.Name = "TenHangHoa";
-            this.TenHangHoa.ReadOnly = true;
-            this.TenHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.DataPropertyName = "Giá bán";
-            this.GiaBan.FillWeight = 50F;
-            this.GiaBan.HeaderText = "GIá bán";
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.ReadOnly = true;
-            this.GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // DonVi
-            // 
-            this.DonVi.DataPropertyName = "Đơn vị";
-            this.DonVi.FillWeight = 50F;
-            this.DonVi.HeaderText = "Đơn vị";
-            this.DonVi.Name = "DonVi";
-            this.DonVi.ReadOnly = true;
-            // 
-            // SoluongTrongKho
-            // 
-            this.SoluongTrongKho.DataPropertyName = "Số lượng";
-            this.SoluongTrongKho.FillWeight = 50F;
-            this.SoluongTrongKho.HeaderText = "Số lượng";
-            this.SoluongTrongKho.Name = "SoluongTrongKho";
-            this.SoluongTrongKho.ReadOnly = true;
-            // 
             // frmDanhMucMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(981, 681);

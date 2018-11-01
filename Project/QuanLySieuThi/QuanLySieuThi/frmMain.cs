@@ -194,7 +194,7 @@ namespace QuanLySieuThi
                 panel.Name = "Danh mục khách hàng";
                 item.Control = new Control();
                 item.Control = panel;
-                frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link,this.manv);
+                frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
@@ -218,7 +218,7 @@ namespace QuanLySieuThi
                         panel.Name = "Danh mục khách hàng";
                         item.Control = new Control();
                         item.Control = panel;
-                        frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link,this.manv);
+                        frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link);
                         f.TopLevel = false;
                         f.Dock = DockStyle.Fill;
                         item.Control.Controls.Add(f);
@@ -365,7 +365,7 @@ namespace QuanLySieuThi
                 panel.Name = "Thống kê hóa đơn";
                 item.Control = new Control();
                 item.Control = panel;
-                frmThongKeHoaDon f = new frmThongKeHoaDon(this.link, this.manv);
+                frmThongKeHoaDon f = new frmThongKeHoaDon(this.link);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
@@ -389,7 +389,7 @@ namespace QuanLySieuThi
                         panel.Name = "Thống kê hóa đơn";
                         item.Control = new Control();
                         item.Control = panel;
-                        frmThongKeHoaDon f = new frmThongKeHoaDon(this.link, this.manv);
+                        frmThongKeHoaDon f = new frmThongKeHoaDon(this.link);
                         f.TopLevel = false;
                         f.Dock = DockStyle.Fill;
                         item.Control.Controls.Add(f);
