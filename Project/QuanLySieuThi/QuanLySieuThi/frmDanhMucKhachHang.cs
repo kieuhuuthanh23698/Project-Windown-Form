@@ -85,41 +85,29 @@ namespace QuanLySieuThi
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (txtMa.Text != "")
+            if (dataGridViewKhachHang.SelectedRows.Count != 0)
             {
                 //xóa chi tiết hóa đơn có mã hóa đơn
                 //xóa hóa đon có mã khách hàng
                 //xóa khách hàng
-                
-                //delete ChiTietHoaDon
-                //from ChiTietHoaDon,HoaDon, KhachHang
-                //where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = 'KHACHHANG4'
 
-                //delete HoaDon
-                //where HoaDon.MaKhachHang = 'KHACHHANG4'
-
-                //delete KhachHang
-                //where MaKhachHang = 'KHACHHANG4'
-
-                string chuoixoahd = "delete HoaDon from HoaDon,KhachHang where HoaDon.MaKhachHang=KhachHang.MaKhachHang and HoaDon.MaKhachHang='"+txtMa.Text+"'";
-                int kq = this.kn.insert(chuoixoahd);
+                string chuoixoacthd = "delete ChiTietHoaDon from ChiTietHoaDon,HoaDon, KhachHang where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = '" + txtMa.Text + "'";
+                int kq = this.kn.insert(chuoixoacthd);
+                string chuoixoahd = "delete HoaDon where HoaDon.MaKhachHang = '" + txtMa.Text + "'";
+                kq = this.kn.insert(chuoixoahd);
+                string chuoixoakh = "delete KhachHang where MaKhachHang = '" + txtMa.Text + "'";
+                kq = this.kn.insert(chuoixoakh);
                 if (kq != 0)
                 {
-                    string chuoixoakh = "delete KhachHang from KhachHang where MaKhachHang='"+txtMa.Text+"'";
-                    kq = this.kn.insert(chuoixoakh);
-                    if (kq != 0)
-                    {
-                        MessageBox.Show("Xóa khách hàng thành công!");
-                        TaiGridViewKhachHang();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thất bại!");
-                    }
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
                 }
             }
             else
-                MessageBox.Show("Xóa thất bại!");
+                MessageBox.Show("Chưa chọn!");
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
