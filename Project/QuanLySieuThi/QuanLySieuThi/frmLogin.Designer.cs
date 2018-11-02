@@ -51,9 +51,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(159, 177);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 144);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên đăng nhập :";
             // 
@@ -61,9 +63,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(159, 222);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(119, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mật khẩu :";
             // 
@@ -71,9 +75,11 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(278, 259);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(236, 213);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(142, 21);
+            this.checkBox1.Size = new System.Drawing.Size(144, 22);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ghi nhớ mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -82,9 +88,11 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(278, 296);
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(236, 243);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(155, 21);
+            this.checkBox2.Size = new System.Drawing.Size(153, 22);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "Tự động đăng nhập";
             this.checkBox2.UseVisualStyleBackColor = false;
@@ -92,9 +100,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLySieuThi.Properties.Resources.vinMart;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 172);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 140);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(141, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(106, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -102,9 +111,10 @@
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.Location = new System.Drawing.Point(12, 332);
+            this.line1.Location = new System.Drawing.Point(9, 270);
+            this.line1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(511, 23);
+            this.line1.Size = new System.Drawing.Size(383, 19);
             this.line1.TabIndex = 12;
             this.line1.Text = "line1";
             // 
@@ -112,9 +122,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::QuanLySieuThi.Properties.Resources.labelLogin;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-8, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(568, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(426, 105);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -125,9 +136,11 @@
             // 
             this.txtTenDangNhap.Border.Class = "TextBoxBorder";
             this.txtTenDangNhap.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(278, 177);
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(236, 144);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(253, 22);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(162, 24);
             this.txtTenDangNhap.TabIndex = 1;
             this.txtTenDangNhap.Text = "2001160343";
             this.txtTenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenDangNhap_KeyPress);
@@ -136,10 +149,14 @@
             // btnDangNhap
             // 
             this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDangNhap.Location = new System.Drawing.Point(278, 378);
+            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Location = new System.Drawing.Point(190, 293);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(91, 33);
             this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng nhập";
@@ -152,10 +169,12 @@
             // 
             this.txtMatKhau.Border.Class = "TextBoxBorder";
             this.txtMatKhau.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMatKhau.Location = new System.Drawing.Point(278, 217);
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(236, 176);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(253, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(162, 24);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.Text = "23061998";
             this.txtMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhau_KeyPress);
@@ -164,10 +183,14 @@
             // btnThoat
             // 
             this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThoat.Location = new System.Drawing.Point(430, 378);
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(304, 293);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(91, 33);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
@@ -180,12 +203,13 @@
             // frmLogin
             // 
             this.AcceptButton = this.btnDangNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_4;
-            this.ClientSize = new System.Drawing.Size(561, 417);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(421, 339);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.btnDangNhap);
@@ -197,8 +221,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

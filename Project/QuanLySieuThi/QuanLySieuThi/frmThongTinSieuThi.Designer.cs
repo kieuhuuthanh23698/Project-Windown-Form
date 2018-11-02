@@ -172,6 +172,7 @@
             // 
             this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(339, 222);
             this.btnThoat.Name = "btnThoat";

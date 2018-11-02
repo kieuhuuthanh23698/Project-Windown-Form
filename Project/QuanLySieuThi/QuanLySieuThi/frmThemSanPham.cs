@@ -63,6 +63,11 @@ namespace QuanLySieuThi
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
             if (txtTen.Text != "" && txtDonvi.Text != "" && txtGiaban.Text != "" && txtGiamua.Text != "")
             {
                 string chuoiThem = "INSERT INTO KhoHang VALUES('" + txtMa.Text.Trim() + "',N'" + txtTen.Text.Trim() + "',N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'," + txtGiaban.Text.Trim() + "," + txtGiamua.Text.Trim() + ",N'" + txtDonvi.Text.Trim() + "',0)";
