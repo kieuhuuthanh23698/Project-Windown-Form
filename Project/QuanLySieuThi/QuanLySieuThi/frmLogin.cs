@@ -31,8 +31,9 @@ namespace QuanLySieuThi
                 string chuoiCommand = "select MaNhanVien from NhanVien where UserName = '" + username + "' and Passwords = '" + password + "'";
                 return this.link.comMandScalar(chuoiCommand);
             }
-            catch
+            catch(Exception ex)
             {
+                MessageBox.Show(ex.ToString(),"EXCEPTION",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 MessageBox.Show("Không thể kết nối vào DATABASE !", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return "";
@@ -41,7 +42,7 @@ namespace QuanLySieuThi
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             //xét các ràng buộc csdl
-            if (txtTenDangNhap.Text != "" && txtTenDangNhap.Text.Length < 30 && txtMatKhau.Text != "" && txtMatKhau.Text.Length < 30)
+            if (txtTenDangNhap.Text != "" && txtMatKhau.Text != "")
             {
                 if (xacNhanTaiKhoan(txtTenDangNhap.Text, txtMatKhau.Text).Equals("") == false)
                 {
@@ -53,26 +54,18 @@ namespace QuanLySieuThi
                 else
                     MessageBox.Show("Tài khoảng không đúng !\nVui lòng nhập lại !", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //nếu các text vi phạm ràng buộc thì cảnh báo
-            if (txtTenDangNhap.Text == "")
-                this.errorProvider1.SetError(txtTenDangNhap, "Bạn không được để trống tên đăng nhập !");
             else
-                this.errorProvider1.Clear();
-            
-            if (txtTenDangNhap.Text.Length > 30)
-                this.errorProvider1.SetError(txtTenDangNhap, "Tên đang nhập không quá 30 ký tự !");
-            else
-                this.errorProvider1.Clear();
-
-            if (txtMatKhau.Text == "")
-                this.errorProvider1.SetError(txtMatKhau, "Bạn không được để trống mật khẩu !");
-            else
-                this.errorProvider1.Clear();
-            
-            if (txtMatKhau.Text.Length > 30)
-                this.errorProvider1.SetError(txtMatKhau, "Mật khẩu không quá 30 ký tự !");
-            else
-                this.errorProvider1.Clear();
+            {
+                //nếu các text vi phạm ràng buộc thì cảnh báo
+                if (txtTenDangNhap.Text == "")
+                    this.errorProvider1.SetError(txtTenDangNhap, "Bạn không được để trống tên đăng nhập !");
+                else
+                    this.errorProvider1.Clear();
+                if (txtMatKhau.Text == "")
+                    this.errorProvider1.SetError(txtMatKhau, "Bạn không được để trống mật khẩu !");
+                else
+                    this.errorProvider1.Clear();
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

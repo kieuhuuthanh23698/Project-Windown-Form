@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -25,12 +26,6 @@ namespace QuanLySieuThi
             txtTen.Text = this.tenMatHang;
         }
 
-        private void txtGiaban_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar) == false && Char.IsControl(e.KeyChar) == false)
-                e.Handled = true;
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -40,16 +35,48 @@ namespace QuanLySieuThi
         {
             if (txtSoLuongThem.Text.Length > 0)
             {
-                int soLuongThem = int.Parse(txtSoLuongThem.Text);
-                int soLuongTrongKho = int.Parse(row.Cells["SoluongTrongKho"].Value.ToString().Trim());
-                string chuoiThem = "update KhoHang set SoluongTrongKho = '" + (soLuongThem + soLuongTrongKho) + "' where MaHangHoa = '" + this.maHangHoa + "'";
-                int kqThem = this.link.query(chuoiThem);
-                if (kqThem != 0)
-                    MessageBox.Show("Nhập hàng hóa thành công !", "NHẬP HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
+                try
+                {
+                    int soLuongThem = int.Parse(txtSoLuongThem.Text);
+                    int soLuongTrongKho = int.Parse(row.Cells["SoluongTrongKho"].Value.ToString().Trim());
+
+                    SqlConnection sql = this.link.getSql();
+                    string queryKhohang = "select * from KhoHang";
+                    SqlDataAdapter daKhoHang = new SqlDataAdapter(queryKhohang, sql);
+                    DataTable tbKhoHang = new DataTable("KhoHang");
+                    daKhoHang.Fill(tbKhoHang);
+
+                    int n = tbKhoHang.Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (tbKhoHang.Rows[i]["MaHangHoa"].ToString().Trim() == maHangHoa.Trim())
+                        {
+                            tbKhoHang.Rows[i]["SoLuongTrongKho"] = (soLuongThem + soLuongTrongKho).ToString();
+                            SqlCommandBuilder scb = new SqlCommandBuilder(daKhoHang);
+                            scb.GetUpdateCommand();
+                            daKhoHang.Update(tbKhoHang);
+                            MessageBox.Show("Nhập hàng hóa thành công !", "NHẬP HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                            return;
+                        }
+                    }
                     MessageBox.Show("Nhập hàng hóa thất bại !", "NHẬP HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+
+                    MessageBox.Show("Nhập hàng hóa thất bại !", "NHẬP HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString(), "EXCEPTION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
             }
+        }
+
+        private void txtSoLuongThem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) == false && Char.IsControl(e.KeyChar) == false)
+                e.Handled = true;
         }
     }
 }

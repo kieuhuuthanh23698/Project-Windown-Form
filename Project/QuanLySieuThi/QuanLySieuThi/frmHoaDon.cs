@@ -70,7 +70,7 @@ namespace QuanLySieuThi
             if (autoCompleteTextTenHangHoa.Text.Trim().Equals("") == true)
                 taiGridViewHangHoa();
             else
-                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị'from KhoHang where TenHangHoa like N'" + autoCompleteTextTenHangHoa.Text + "%'", "Hang hoa").Tables["Hang hoa"];
+                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoLuongTrongKho as N'Số lượng' from KhoHang where SoLuongTrongKho > 0 and TenHangHoa like N'" + autoCompleteTextTenHangHoa.Text + "%'", "Hang hoa").Tables["Hang hoa"];
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -78,7 +78,7 @@ namespace QuanLySieuThi
             if (e.Node.Text.Equals("Tất cả loại hàng hóa") == true)
                 taiGridViewHangHoa();
             else
-                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng'  from KhoHang, LoaiHangHoa where LoaiHangHoa.TenLoaiHangHoa LIKE N'" + e.Node.Text + "%' and KhoHang.MaLoaiHangHoa = LoaiHangHoa.MaLoaiHangHoa", "Loai hang hoa").Tables["Loai hang hoa"];
+                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng'  from KhoHang, LoaiHangHoa where SoLuongTrongKho > 0 and LoaiHangHoa.TenLoaiHangHoa LIKE N'" + e.Node.Text + "%' and KhoHang.MaLoaiHangHoa = LoaiHangHoa.MaLoaiHangHoa", "Loai hang hoa").Tables["Loai hang hoa"];
         }
 
         public void capNhatKhoHangKhiThem(string tenHangHoa, int soluongThem)

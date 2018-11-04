@@ -21,3 +21,4 @@ C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\bin\Release\QuanLySieuThi.pdb
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.exe
 C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.pdb
+C:\Users\ACER-PC\Documents\GitHub\Project-Windown-Form-Phan-mem-quan-ly-sieu-thi\Project\QuanLySieuThi\QuanLySieuThi\obj\Release\QuanLySieuThi.csprojResolveAssemblyReference.cache

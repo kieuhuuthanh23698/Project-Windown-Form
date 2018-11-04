@@ -29,15 +29,24 @@ namespace QuanLySieuThi
                 cbbNhomMatHang.Items.Add(rd["TenLoaiHangHoa"].ToString());
             }
             rd.Close();
-            if (this.link.state() == ConnectionState.Open)
-                this.link.closeConnection();
+            this.link.closeConnection();
             cbbNhomMatHang.SelectedIndex = 0;
         }
 
         public void taoMaHangHoa() // ok
         {
             string maLoaiHangHoa = this.link.comMandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'");
-            txtMa.Text = maLoaiHangHoa + (int.Parse(this.link.comMandScalar("select count(*) from KhoHang where LoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'")) + 1);
+            int count;
+            int i = 0;
+            do
+            {
+                count = int.Parse(this.link.comMandScalar("select count(*) from KhoHang where MaLoaiHangHoa = '" + maLoaiHangHoa + i +"'"));
+                if(count != 0)
+                    i++;
+            }
+            while (count != 0);
+            txtMaNhomMatHang.Text = maLoaiHangHoa;
+            txtMa.Text = maLoaiHangHoa + i + "";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -63,20 +72,49 @@ namespace QuanLySieuThi
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnLuu_Click_1(object sender, EventArgs e)
-        {
             if (txtTen.Text != "" && txtDonvi.Text != "" && txtGiaban.Text != "" && txtGiamua.Text != "")
             {
-                string chuoiThem = "INSERT INTO KhoHang VALUES('" + txtMa.Text.Trim() + "',N'" + txtTen.Text.Trim() + "',N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'," + txtGiaban.Text.Trim() + "," + txtGiamua.Text.Trim() + ",N'" + txtDonvi.Text.Trim() + "',0)";
-                int kqThem = this.link.query(chuoiThem);
-                if (kqThem != 0)
+                try
+                {
+                    SqlConnection sql = this.link.getSql();
+                    string queryKhoHang = "select * from KhoHang";
+                    SqlDataAdapter daKhoHang = new SqlDataAdapter(queryKhoHang, sql);
+                    DataTable tbKhoHang = new DataTable("KhoHang");
+                    daKhoHang.Fill(tbKhoHang);
+
+                    DataRow newRow = tbKhoHang.NewRow();
+                    newRow[0] = txtMa.Text;
+                    newRow[1] = txtTen.Text;
+                    newRow[2] = txtMaNhomMatHang.Text;
+                    newRow[3] = txtGiaban.Text;
+                    newRow[4] = txtGiamua.Text;
+                    newRow[5] = "0";
+
+                    tbKhoHang.Rows.Add(newRow);
+
+                    SqlCommandBuilder scb = new SqlCommandBuilder(daKhoHang);
+                    scb.GetInsertCommand();
+                    daKhoHang.Update(tbKhoHang);
                     MessageBox.Show("Thêm hàng hóa thành công !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
                     MessageBox.Show("Thêm hàng hóa thất bại !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                    MessageBox.Show(ex.ToString(), "EXCEPTION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
+            }
+            else
+            {
+                if (txtTen.Text == "")
+                    MessageBox.Show("Bạn chưa nhập tên hàng hóa !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (txtDonvi.Text == "")
+                    MessageBox.Show("Bạn chưa nhập đơn vị của hàng hóa !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (txtGiaban.Text == "")
+                    MessageBox.Show("Bạn chưa nhập giá bán !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (txtGiamua.Text == "")
+                    MessageBox.Show("Bạn chưa nhập giá mua !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

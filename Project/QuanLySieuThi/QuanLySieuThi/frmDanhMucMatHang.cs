@@ -283,14 +283,44 @@ namespace QuanLySieuThi
             //cho số lượng hàng hóa đó = 0
             if (dataGridViewHangHoa.SelectedRows.Count > 0)
             {
+                try
+                {
                 DataGridViewRow row = dataGridViewHangHoa.SelectedRows[0];
                 string maHangHoa = row.Cells["MaHangHoa"].Value.ToString().Trim();
-                int i = this.link.query("update KhoHang set SoluongTrongKho = 0 where MaHangHoa = '" + maHangHoa + "'");
-                if (i != 0)
-                    MessageBox.Show("Xóa hàng hóa thành công !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Xóa hàng hóa thất bại !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                SqlConnection sql = this.link.getSql();
+                string queryKhoHang = "select * from KhoHang";
+                SqlDataAdapter daKhoHang = new SqlDataAdapter(queryKhoHang, sql);
+                DataSet dsKhoHang = new DataSet();
+                daKhoHang.Fill(dsKhoHang, "KhoHang");
+                DataTable dtKhoHang = dsKhoHang.Tables["KhoHang"];
+
+                //xóa hàng hóa có mã hàng hóa này
+                int n = dtKhoHang.Rows.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    if (dtKhoHang.Rows[i]["MaHangHoa"].ToString().Trim() == maHangHoa)
+                    {
+                        //xóa tất cả những chi tiết hóa đơn có mã loại hàng hóa này
+                        xoaChiTietHoaDon(dtKhoHang.Rows[i]["TenHangHoa"].ToString().Trim());
+                        MessageBox.Show("Hàng hóa : " + dtKhoHang.Rows[i]["TenHangHoa"].ToString().Trim() + " thuộc nhóm " + dtKhoHang.Rows[i]["MaLoaiHangHoa"].ToString().Trim() + " trong kho hàng đã bị xóa !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dtKhoHang.Rows[i].Delete();
+                        break;
+                    }
+                }
+
+                //cập nhật dữ liệu từ bộ nhớ xuống csdl
+                SqlCommandBuilder scb = new SqlCommandBuilder(daKhoHang);
+                scb.GetDeleteCommand();
+                daKhoHang.Update(dsKhoHang, "KhoHang");
                 taiGridViewHangHoa();
+                MessageBox.Show("Xóa hàng hóa thành công !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "EXCEPTION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Xóa hàng hóa thất bại !", "XÓA HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

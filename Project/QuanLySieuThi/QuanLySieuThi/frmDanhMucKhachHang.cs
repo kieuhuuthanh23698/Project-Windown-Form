@@ -18,7 +18,31 @@ namespace QuanLySieuThi
             this.kn = kn;
             InitializeComponent();
             TaiGridViewKhachHang();
+            loadAutoCompleteTextTimKiemNhanVien();
             btnHuyThem.Hide();
+        }
+
+        public void loadAutoCompleteTextTimKiemNhanVien()
+        {
+            SqlDataReader dr = this.kn.comManReader("select TenKhachHang from KhachHang", "TenKhachHang");
+            while (dr.Read())
+            {
+                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+            }
+            dr.Close();
+            dr = this.kn.comManReader("select MaKhachHang from KhachHang", "MaKhangHang");
+            while (dr.Read())
+            {
+                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+            }
+            dr.Close();
+            dr = this.kn.comManReader("select SoDienThoai from KhachHang", "MaKhangHang");
+            while (dr.Read())
+            {
+                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+            }
+            dr.Close();
+            this.kn.closeConnection();
         }
 
         public void TaiGridViewKhachHang()
@@ -40,10 +64,17 @@ namespace QuanLySieuThi
         private string taoMaKhachHang()
         {
             int dem = 0;
-            string i;
+            string i = "";
             do
             {
-                i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
+                try
+                {
+                    i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
                 if (i == "")
                     break;//mã khách hàng này chưa có trong data table
                 dem++;
@@ -67,16 +98,23 @@ namespace QuanLySieuThi
         {
             if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
             {
-                string chuoisua = "update KhachHang set TenKhachHang=N'"+txtTen.Text+"',SoDienThoai='"+txtSDT.Text+"' where MaKhachHang='"+txtMa.Text+"'";
-                int kq = this.kn.query(chuoisua);
-                if (kq != 0)
+                try
                 {
-                    MessageBox.Show("Đã sửa thành công!","SỬA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    TaiGridViewKhachHang();
+                    string chuoisua = "update KhachHang set TenKhachHang=N'" + txtTen.Text + "',SoDienThoai='" + txtSDT.Text + "' where MaKhachHang='" + txtMa.Text + "'";
+                    int kq = this.kn.query(chuoisua);
+                    if (kq != 0)
+                    {
+                        MessageBox.Show("Đã sửa thành công!", "SỬA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TaiGridViewKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa thất bại!", "SỬA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Sửa thất bại!", "SỬA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
@@ -89,21 +127,28 @@ namespace QuanLySieuThi
                 //xóa hóa đon có mã khách hàng
                 //xóa khách hàng
 
-                string chuoixoacthd = "delete ChiTietHoaDon from ChiTietHoaDon,HoaDon, KhachHang where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = '" + txtMa.Text + "'";
-                int kq = this.kn.query(chuoixoacthd);
-                string chuoixoahd = "delete HoaDon where HoaDon.MaKhachHang = '" + txtMa.Text + "'";
-                kq = this.kn.query(chuoixoahd);
-                string chuoixoakh = "delete KhachHang where MaKhachHang = '" + txtMa.Text + "'";
-                kq = this.kn.query(chuoixoakh);
-                if (kq != 0)
+                try
                 {
-                    MessageBox.Show("Xóa thành công!","XÓA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    txtMa.Text = txtSDT.Text = txtTen.Text = "";
-                    TaiGridViewKhachHang();
+                    string chuoixoacthd = "delete ChiTietHoaDon from ChiTietHoaDon,HoaDon, KhachHang where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = '" + txtMa.Text + "'";
+                    int kq = this.kn.query(chuoixoacthd);
+                    string chuoixoahd = "delete HoaDon where HoaDon.MaKhachHang = '" + txtMa.Text + "'";
+                    kq = this.kn.query(chuoixoahd);
+                    string chuoixoakh = "delete KhachHang where MaKhachHang = '" + txtMa.Text + "'";
+                    kq = this.kn.query(chuoixoakh);
+                    if (kq != 0)
+                    {
+                        MessageBox.Show("Xóa thành công!", "XÓA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtMa.Text = txtSDT.Text = txtTen.Text = "";
+                        TaiGridViewKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!", "XÓA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa thất bại!", "XÓA KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString());
                 }
             }
             else
@@ -149,32 +194,40 @@ namespace QuanLySieuThi
 
         private void dataGridViewKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (dataGridViewKhachHang.SelectedRows.Count != 0)
-            //{
-            //    DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
-            //    txtMa.Text = item_row.Cells[0].Value.ToString();
-            //    txtTen.Text = item_row.Cells[1].Value.ToString();
-            //    txtSDT.Text = item_row.Cells[2].Value.ToString();
-            //}
+            if (dataGridViewKhachHang.SelectedRows.Count != 0)
+            {
+                DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
+                txtMa.Text = item_row.Cells[0].Value.ToString();
+                txtTen.Text = item_row.Cells[1].Value.ToString();
+                txtSDT.Text = item_row.Cells[2].Value.ToString();
+            }
         }
 
         private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
-                dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh, "KhachHang").Tables["KhachHang"];
-                //txtMa.DataBindings.Clear();
-                txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.MaKhachHang");
-                //txtTen.DataBindings.Clear();
-                txtTen.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.TenKhachHang");
-                //txtSDT.DataBindings.Clear();
-                txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.SoDienThoai");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            //try
+            //{
+            //    string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
+            //    dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh, "KhachHang").Tables["KhachHang"];
+            //    //txtMa.DataBindings.Clear();
+            //    txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.MaKhachHang");
+            //    //txtTen.DataBindings.Clear();
+            //    txtTen.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.TenKhachHang");
+            //    //txtSDT.DataBindings.Clear();
+            //    txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.SoDienThoai");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "")
+                TaiGridViewKhachHang();
+            else
+                dataGridViewKhachHang.DataSource = this.kn.comManTable("select * from KhachHang where MaKhachHang = '" + txtTimKiem.Text + "' or TenKhachHang = N'" + txtTimKiem.Text + "' or SoDienThoai = '" + txtTimKiem.Text + "'","KhachHang").Tables["KhachHang"];
         }
 
     }

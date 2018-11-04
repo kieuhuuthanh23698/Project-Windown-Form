@@ -30,16 +30,6 @@ namespace QuanLySieuThi
                     frmLogin frmlogin = new frmLogin(link);
                     this.Hide();
                     frmlogin.Show();
-
-                    //frmReportHoaDon frm = new frmReportHoaDon(link, "HOADON_1");
-                    //this.Hide();
-                    //frm.Show();
-
-                    //
-                    //frmReportHoaDon frm = new frmReportHoaDon(link, "HOADON_13");
-                    //this.Hide();
-                    //frm.ShowDialog();
-
                 }
                 else
                 {

@@ -126,10 +126,11 @@
             this.txtSoLuongThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongThem.Location = new System.Drawing.Point(170, 196);
             this.txtSoLuongThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSoLuongThem.MaxLength = 10;
+            this.txtSoLuongThem.MaxLength = 9;
             this.txtSoLuongThem.Name = "txtSoLuongThem";
             this.txtSoLuongThem.Size = new System.Drawing.Size(294, 29);
             this.txtSoLuongThem.TabIndex = 45;
+            this.txtSoLuongThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongThem_KeyPress);
             // 
             // label6
             // 
@@ -144,6 +145,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.Enabled = false;
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(170, 133);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
