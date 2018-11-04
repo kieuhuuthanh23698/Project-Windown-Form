@@ -298,7 +298,7 @@ namespace QuanLySieuThi
             do
             {
                 string chuoiCount = "select COUNT(*) from NhanVien where MaNhanVien = '200116022" + dem + "'";
-                count = int.Parse(this.kn.commandScalar(chuoiCount));
+                count = int.Parse(this.kn.comMandScalar(chuoiCount));
                 if (count == 0)
                     return "200116022" + dem;
                 dem++;

@@ -156,27 +156,24 @@
             this.danhMụcKháchHàngToolStripMenuItem.Name = "danhMụcKháchHàngToolStripMenuItem";
             this.danhMụcKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
             this.danhMụcKháchHàngToolStripMenuItem.Text = "Danh mục khách hàng";
-<<<<<<< HEAD
             this.danhMụcKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.openDanhMucKhachHang);
-=======
             // 
             // kHOHÀNGToolStripMenuItem
             // 
-            this.kHOHÀNGToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kHOHÀNGToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dANHMỤCKHOHÀNGToolStripMenuItem});
-            this.kHOHÀNGToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.kHOHÀNGToolStripMenuItem.Name = "kHOHÀNGToolStripMenuItem";
-            this.kHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
-            this.kHOHÀNGToolStripMenuItem.Text = "KHO HÀNG";
+            //this.kHOHÀNGToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            //this.kHOHÀNGToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            //this.dANHMỤCKHOHÀNGToolStripMenuItem});
+            //this.kHOHÀNGToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            //this.kHOHÀNGToolStripMenuItem.Name = "kHOHÀNGToolStripMenuItem";
+            //this.kHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            //this.kHOHÀNGToolStripMenuItem.Text = "KHO HÀNG";
             // 
             // dANHMỤCKHOHÀNGToolStripMenuItem
             // 
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Name = "dANHMỤCKHOHÀNGToolStripMenuItem";
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Text = "DANH MỤC KHO HÀNG";
->>>>>>> e05fd12d339e7db4b7c200079c0c1fc5c3fe99f9
+            //this.dANHMỤCKHOHÀNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
+            //this.dANHMỤCKHOHÀNGToolStripMenuItem.Name = "dANHMỤCKHOHÀNGToolStripMenuItem";
+            //this.dANHMỤCKHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            //this.dANHMỤCKHOHÀNGToolStripMenuItem.Text = "DANH MỤC KHO HÀNG";
             // 
             // nHÂNSỰToolStripMenuItem
             // 
@@ -242,18 +239,18 @@
             // 
             // toolBox
             // 
-<<<<<<< HEAD
+
             this.toolBox.AntiAlias = true;
             this.toolBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolBox.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-=======
+
             this.bar1.AntiAlias = true;
             this.bar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bar1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
->>>>>>> e05fd12d339e7db4b7c200079c0c1fc5c3fe99f9
+
             this.btnHoaDon,
             this.btnDanhMucMatHang,
             this.btnDanhMucKhachHang,
@@ -261,7 +258,7 @@
             this.btnThongKeHoaDon,
             this.btnThongTinCuaHang,
             this.btnThoat});
-<<<<<<< HEAD
+
             this.toolBox.Location = new System.Drawing.Point(0, 28);
             this.toolBox.Name = "toolBox";
             this.toolBox.Size = new System.Drawing.Size(1389, 33);
@@ -270,7 +267,7 @@
             this.toolBox.TabIndex = 39;
             this.toolBox.TabStop = false;
             this.toolBox.Text = "bar1";
-=======
+
             this.bar1.Location = new System.Drawing.Point(0, 28);
             this.bar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bar1.Name = "bar1";
@@ -280,7 +277,6 @@
             this.bar1.TabIndex = 39;
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
->>>>>>> e05fd12d339e7db4b7c200079c0c1fc5c3fe99f9
             // 
             // btnHoaDon
             // 
@@ -416,11 +412,10 @@
             this.dockSite9.Controls.Add(this.tab);
             this.dockSite9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockSite9.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-<<<<<<< HEAD
+
             ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.tab, 1389, 585)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
-=======
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1028, 464)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
->>>>>>> e05fd12d339e7db4b7c200079c0c1fc5c3fe99f9
+
+
             this.dockSite9.Location = new System.Drawing.Point(0, 61);
             this.dockSite9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dockSite9.Name = "dockSite9";
@@ -428,7 +423,7 @@
             this.dockSite9.TabIndex = 49;
             this.dockSite9.TabStop = false;
             // 
-<<<<<<< HEAD
+
             // tab
             // 
             this.tab.AccessibleDescription = "DotNetBar Bar (bar2)";
@@ -460,7 +455,7 @@
             this.tab.TabNavigation = true;
             this.tab.TabStop = false;
             this.tab.DockTabClosed += new DevComponents.DotNetBar.DockTabClosingEventHandler(this.bar2_DockTabClosed);
-=======
+
             // bar2
             // 
             this.bar2.AccessibleDescription = "DotNetBar Bar (bar2)";
@@ -493,7 +488,7 @@
             this.bar2.TabNavigation = true;
             this.bar2.TabStop = false;
             this.bar2.DockTabClosed += new DevComponents.DotNetBar.DockTabClosingEventHandler(this.bar2_DockTabClosed);
->>>>>>> e05fd12d339e7db4b7c200079c0c1fc5c3fe99f9
+
             // 
             // panelDockContainer1
             // 
@@ -634,8 +629,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tab)).EndInit();
             this.tab.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
-
+            this.PerformLayout();}
+        
         }
 
         #endregion
