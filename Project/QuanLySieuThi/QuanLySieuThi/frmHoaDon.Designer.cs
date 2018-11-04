@@ -724,6 +724,7 @@
             // 
             this.cbbKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbKhachHang.FormattingEnabled = true;
             this.cbbKhachHang.Location = new System.Drawing.Point(956, 168);
             this.cbbKhachHang.Margin = new System.Windows.Forms.Padding(2);
