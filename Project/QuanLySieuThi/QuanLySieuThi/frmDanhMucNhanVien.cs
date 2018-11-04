@@ -19,7 +19,8 @@ namespace QuanLySieuThi
             this.kn = kn;
             this.manv = manv;
             InitializeComponent();
-            TaoTreeViewNV();
+            TaiNV();
+            taiAutoCompleteText();
             if (kTraAdmin("",manv) == false)
             {
                 txtMatkhau.PasswordChar = '*';
@@ -30,15 +31,9 @@ namespace QuanLySieuThi
             btnHuyThem.Hide();
         }
 
-        public void TaoTreeViewNV()
+        public void TaiNV()
         {
-            SqlDataReader rd = kn.comManReader("select TenNhanVien from NhanVien", "Nhan Vien");
-            while (rd.Read())
-            {
-                DevComponents.AdvTree.Node node = new DevComponents.AdvTree.Node(rd["TenNhanVien"].ToString());
-                TreeViewNV.Nodes.Add(node);
-            }
-            this.kn.closeConnection();
+            dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien as N'Mã nhân viên',TenNhanVien as N'Tên nhân viên' from NhanVien", "Nhan Vien").Tables["Nhan Vien"];
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -50,7 +45,7 @@ namespace QuanLySieuThi
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-            TreeViewNV.Enabled = false;
+            dataGridView_Nhanvien.Enabled = false;
             txtMa.Enabled = true;
 
             //reset các text box thông tin
@@ -74,7 +69,7 @@ namespace QuanLySieuThi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (TreeViewNV.SelectedNode != null)
+            if (dataGridView_Nhanvien.SelectedRows.Count!=0)
             {
                 if (txtTen.Text != "" && cboxGtinh.Text != "" && dateTimeNgaySinh.Text != "" && cboxTuoi.Text != "" && KTMail(txtMail.Text) == true && txtDiachi.Text != "" && txtLuong.Text != "" && cbbCap.Text != "" && txtUsers.Text != "" && txtMatkhau.Text != "")
                 {
@@ -91,7 +86,7 @@ namespace QuanLySieuThi
                     }
                 }
                 else
-                    MessageBox.Show("Bạn phải điền đầy đủ thông tin thì mới cập nhật thông tin được !","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Bạn chọn nhân viên trong danh sách và sửa lại thì mới cập nhật thông tin được !","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
@@ -129,12 +124,17 @@ namespace QuanLySieuThi
             }
         }
 
-        private void TreeViewNV_Click(object sender, EventArgs e)
+        private void dataGridViewX1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (TreeViewNV.SelectedNode != null)
+            
+        }
+
+        private void dataGridView_Nhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView_Nhanvien.SelectedRows.Count != 0)
             {
                 //hiển thị thông tin của nhân viên lên textbox
-                SqlDataReader dr = this.kn.comManReader("select * from NhanVien where TenNhanVien = N'" + TreeViewNV.SelectedNode.Text.Trim() + "'", "NhanVien");
+                SqlDataReader dr = this.kn.comManReader("select * from NhanVien where MaNhanVien = N'" + dataGridView_Nhanvien.CurrentRow.Cells[0].Value.ToString() + "'", "NhanVien");
                 dr.Read();
                 txtMa.Text = dr["MaNhanVien"].ToString().Trim();
                 txtTen.Text = dr["TenNhanVien"].ToString().Trim();
@@ -148,6 +148,7 @@ namespace QuanLySieuThi
                 txtUsers.Text = dr["UserName"].ToString().Trim();
                 txtMatkhau.Text = dr["PassWords"].ToString().Trim();
                 dr.Close();
+
             }
         }
 
@@ -164,27 +165,29 @@ namespace QuanLySieuThi
         {
             try
             {
-                if (TreeViewNV.SelectedNode != null)
+                int r = dataGridView_Nhanvien.CurrentCell.RowIndex;
+
+                string maNV = dataGridView_Nhanvien.Rows[r].Cells[0].Value.ToString(); 
+                if (dataGridView_Nhanvien.SelectedRows.Count!=0)
                 {
                     //lưu ý : ko thể xóa tài khoảng đang đăng nhập, ko thể xóa tài khoảng admin
-                    if (kTraAdmin(TreeViewNV.SelectedNode.Text, "") == false)
+                    if (kTraAdmin(maNV, "") == false)
                     {
                         if (this.manv != txtMa.Text)
                         {
                             //xóa các bảng liên quan đến nhân viên này
-                            string xoathuchi = "delete ThuChi from ThuChi,HoaDon,NhanVien where ThuChi.MaNhanVienThuChi=HoaDon.MaNVLapHoaDon and HoaDon.MaNVLapHoaDon=NhanVien.MaNhanVien and MaNhanVien='" + txtMa.Text + "'";
+                            //string xoathuchi = "delete ThuChi from ThuChi,HoaDon,NhanVien where ThuChi.MaNhanVienThuChi=HoaDon.MaNVLapHoaDon and HoaDon.MaNVLapHoaDon=NhanVien.MaNhanVien and MaNhanVien='" + txtMa.Text + "'";
                             string xoaChiTietHoaDon = "delete ChiTietHoaDon from ChiTietHoaDon, HoaDon , NhanVien where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and NhanVien.MaNhanVien = HoaDon.MaNVLapHoaDon and MaNhanVien = '" + txtMa.Text + "'";
                             string xoaHoaDon = "delete HoaDon from HoaDon, NhanVien where HoaDon.MaNVLapHoaDon = NhanVien.MaNhanVien and NhanVien.MaNhanVien = '" + txtMa.Text + "'";
                             string xoaNhanVien = "delete NhanVien where MaNhanVien = '" + txtMa.Text + "'";
-                            int kq = this.kn.query(xoathuchi);
-                            kq = this.kn.query(xoaChiTietHoaDon);
+                            //int kq = this.kn.query(xoathuchi);
+                            int kq = this.kn.query(xoaChiTietHoaDon);
                             kq = this.kn.query(xoaHoaDon);
                             kq = this.kn.query(xoaNhanVien);
                             if (kq != 0)
                             {
                                 MessageBox.Show("Đã xóa nhân viên","XÓA NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                                TreeViewNV.Nodes.Clear();
-                                TaoTreeViewNV();
+                                TaiNV();
                                 //reset lại các text box vì nó vẫn còn chứa các thông tin của nhân viên vừa xóa
                                 txtMa.Text = "";
                                 txtTen.Text = "";
@@ -229,7 +232,7 @@ namespace QuanLySieuThi
                     {
                         //thêm nhân vien
                         string chuoi = "INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text+ "'," + 
-                            txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + cbbCap.Text + "')";
+                            txtLuong.Text + ",'" + txtMail.Text + "',N'" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + cbbCap.Text + "')";
                         int kq = this.kn.query(chuoi);
                         //kq = 0 them that bai
                         if (kq == 0)
@@ -238,8 +241,7 @@ namespace QuanLySieuThi
                         {
                             MessageBox.Show("Thêm nhân viên thành công !","THÊM NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Information);
                             //update lại treeview
-                            TreeViewNV.Nodes.Clear();
-                            TaoTreeViewNV();
+                            TaiNV();
 
                             //reset các txt box thông tin
                             txtMa.Text = "";
@@ -255,7 +257,7 @@ namespace QuanLySieuThi
                             btnThem.Enabled = true;
                             btnSua.Enabled = true;
                             btnXoa.Enabled = true;
-                            TreeViewNV.Enabled = true;
+                            dataGridView_Nhanvien.Enabled = true;
                         }
                     }
                 }
@@ -278,7 +280,7 @@ namespace QuanLySieuThi
             txtMatkhau.Text = "";
 
             btnHuyThem.Hide();
-            TreeViewNV.Enabled = true;
+            dataGridView_Nhanvien.Enabled = true;
             btnLuu.Enabled = false;
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
@@ -305,5 +307,28 @@ namespace QuanLySieuThi
             } while (count != 0);
             return "200116022" + (dem + 1);
         }
+
+        public void taiAutoCompleteText()
+        {
+            SqlDataReader rd = this.kn.comManReader("select TenNhanVien from NhanVien", "TenNhanVien");
+
+            while (rd.Read())
+            {
+                txtTimtenNv.AutoCompleteCustomSource.Add(rd["TenNhanVien"].ToString());
+            }
+            rd.Close();
+
+            this.kn.closeConnection();
+        }
+
+        private void txtTimtenNv_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimtenNv.Text.Trim().Equals("") == true)
+                TaiNV();
+            else
+                dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien,TenNhanVien from NhanVien where TenNhanVien like N'" + txtTimtenNv.Text + "%'", "Nhan Vien").Tables["Nhan Vien"];
+        }
+
+       
     }
 }
