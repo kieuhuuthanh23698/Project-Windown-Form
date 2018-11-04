@@ -54,7 +54,7 @@ namespace QuanLySieuThi
             txtMa.Enabled = true;
 
             //reset các text box thông tin
-            txtMa.Text = "";
+            txtMa.Text = taoMaNhanVien();
             txtTen.Text = "";
             dateTimeNgaySinh.Text = "";
             cboxGtinh.Text = "";
@@ -63,7 +63,7 @@ namespace QuanLySieuThi
             txtDiachi.Text = "";
             txtLuong.Text = "";
             cbbCap.Text = "";
-            txtUsers.Text = "";
+            txtUsers.Text = taoMaNhanVien();
             txtMatkhau.Text = "";
 
             dateTimeNgaySinh.Value = DateTime.Now;
@@ -291,5 +291,19 @@ namespace QuanLySieuThi
                 e.Handled = true;
         }
 
+        public string taoMaNhanVien()
+        {
+            int dem = 0;
+            int count;
+            do
+            {
+                string chuoiCount = "select COUNT(*) from NhanVien where MaNhanVien = '200116022" + dem + "'";
+                count = int.Parse(this.kn.commandScalar(chuoiCount));
+                if (count == 0)
+                    return "200116022" + dem;
+                dem++;
+            } while (count != 0);
+            return "200116022" + (dem + 1);
+        }
     }
 }

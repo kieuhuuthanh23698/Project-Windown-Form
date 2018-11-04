@@ -149,32 +149,33 @@ namespace QuanLySieuThi
 
         private void dataGridViewKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewKhachHang.SelectedRows.Count != 0)
-            {
-                DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
-                txtMa.Text = item_row.Cells[0].Value.ToString();
-                txtTen.Text = item_row.Cells[1].Value.ToString();
-                txtSDT.Text = item_row.Cells[2].Value.ToString();
-            }
+            //if (dataGridViewKhachHang.SelectedRows.Count != 0)
+            //{
+            //    DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
+            //    txtMa.Text = item_row.Cells[0].Value.ToString();
+            //    txtTen.Text = item_row.Cells[1].Value.ToString();
+            //    txtSDT.Text = item_row.Cells[2].Value.ToString();
+            //}
         }
 
         private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //    string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
-            //    dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh, "KhachHang").Tables["KhachHang"];
-            //    txtMa.DataBindings.Clear();
-            //    txtMa.DataBindings.Add("text", MaKhachHang, "MaKhachHang");
-            //    txtTen.DataBindings.Clear();
-            //    txtTen.DataBindings.Add("text", TenKhachHang, "TenKhachHang");
-            //    txtSDT.DataBindings.Clear();
-            //    txtMa.DataBindings.Add("text", SoDienThoai, "SoDienThoai");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString());
-            //}
+            try
+            {
+                string chuoikh = " select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang";
+                dataGridViewKhachHang.DataSource = this.kn.comManTable(chuoikh, "KhachHang").Tables["KhachHang"];
+                //txtMa.DataBindings.Clear();
+                txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.MaKhachHang");
+                //txtTen.DataBindings.Clear();
+                txtTen.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.TenKhachHang");
+                //txtSDT.DataBindings.Clear();
+                txtMa.DataBindings.Add("text", dataGridViewKhachHang.DataSource, "KhachHang.SoDienThoai");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
+
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btnThemLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnXoaLoaiMatHang = new DevComponents.DotNetBar.ButtonItem();
@@ -62,15 +62,15 @@
             // bar1
             // 
             this.bar1.AntiAlias = true;
-            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThemLoaiMatHang,
             this.btnXoaLoaiMatHang,
             this.btnSuaLoaiMatHang});
-            this.bar1.Location = new System.Drawing.Point(12, 105);
-            this.bar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bar1.Location = new System.Drawing.Point(9, 85);
+            this.bar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(307, 41);
+            this.bar1.Size = new System.Drawing.Size(230, 41);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 6;
@@ -80,6 +80,8 @@
             // btnThemLoaiMatHang
             // 
             this.btnThemLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemLoaiMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnThemLoaiMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
             this.btnThemLoaiMatHang.Name = "btnThemLoaiMatHang";
             this.btnThemLoaiMatHang.Text = "Thêm";
@@ -88,6 +90,8 @@
             // btnXoaLoaiMatHang
             // 
             this.btnXoaLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoaLoaiMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnXoaLoaiMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
             this.btnXoaLoaiMatHang.Name = "btnXoaLoaiMatHang";
             this.btnXoaLoaiMatHang.Text = "Xóa";
@@ -96,6 +100,8 @@
             // btnSuaLoaiMatHang
             // 
             this.btnSuaLoaiMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSuaLoaiMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnSuaLoaiMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaLoaiMatHang.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
             this.btnSuaLoaiMatHang.Name = "btnSuaLoaiMatHang";
             this.btnSuaLoaiMatHang.Text = "Sửa";
@@ -104,16 +110,16 @@
             // bar2
             // 
             this.bar2.AntiAlias = true;
-            this.bar2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThemMatHang,
             this.btnXoaMatHang,
             this.btnSuaMatHang,
             this.btnThemHangVaoKho});
-            this.bar2.Location = new System.Drawing.Point(393, 105);
-            this.bar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bar2.Location = new System.Drawing.Point(295, 85);
+            this.bar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bar2.Name = "bar2";
-            this.bar2.Size = new System.Drawing.Size(576, 41);
+            this.bar2.Size = new System.Drawing.Size(432, 41);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar2.TabIndex = 7;
@@ -123,6 +129,8 @@
             // btnThemMatHang
             // 
             this.btnThemMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnThemMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemMatHang.Image = global::QuanLySieuThi.Properties.Resources.them_icon;
             this.btnThemMatHang.Name = "btnThemMatHang";
             this.btnThemMatHang.Text = "Thêm";
@@ -131,6 +139,8 @@
             // btnXoaMatHang
             // 
             this.btnXoaMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXoaMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnXoaMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaMatHang.Image = global::QuanLySieuThi.Properties.Resources.xoa_icon;
             this.btnXoaMatHang.Name = "btnXoaMatHang";
             this.btnXoaMatHang.Text = "Xóa";
@@ -139,6 +149,8 @@
             // btnSuaMatHang
             // 
             this.btnSuaMatHang.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSuaMatHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnSuaMatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaMatHang.Image = global::QuanLySieuThi.Properties.Resources.sua_icon;
             this.btnSuaMatHang.Name = "btnSuaMatHang";
             this.btnSuaMatHang.Text = "Sửa";
@@ -147,6 +159,8 @@
             // btnThemHangVaoKho
             // 
             this.btnThemHangVaoKho.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnThemHangVaoKho.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnThemHangVaoKho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemHangVaoKho.Image = global::QuanLySieuThi.Properties.Resources.themHangVaoKho2_icon;
             this.btnThemHangVaoKho.Name = "btnThemHangVaoKho";
             this.btnThemHangVaoKho.Text = "Thêm hàng vào kho";
@@ -164,15 +178,15 @@
             // 
             this.treeViewLoaiMatHang.BackgroundStyle.Class = "TreeBorderKey";
             this.treeViewLoaiMatHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(17, 175);
-            this.treeViewLoaiMatHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.treeViewLoaiMatHang.Location = new System.Drawing.Point(13, 142);
+            this.treeViewLoaiMatHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeViewLoaiMatHang.Name = "treeViewLoaiMatHang";
             this.treeViewLoaiMatHang.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
             this.node1});
             this.treeViewLoaiMatHang.NodesConnector = this.nodeConnector1;
             this.treeViewLoaiMatHang.NodeStyle = this.elementStyle1;
             this.treeViewLoaiMatHang.PathSeparator = ";";
-            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(307, 486);
+            this.treeViewLoaiMatHang.Size = new System.Drawing.Size(230, 395);
             this.treeViewLoaiMatHang.Styles.Add(this.elementStyle1);
             this.treeViewLoaiMatHang.TabIndex = 8;
             this.treeViewLoaiMatHang.Text = "advTree1";
@@ -197,8 +211,8 @@
             // 
             this.dataGridViewHangHoa.AllowUserToAddRows = false;
             this.dataGridViewHangHoa.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.dataGridViewHangHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridViewHangHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHangHoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -213,24 +227,24 @@
             this.GiaBan,
             this.DonVi,
             this.SoluongTrongKho});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(187)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHangHoa.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewHangHoa.Location = new System.Drawing.Point(393, 175);
-            this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(295, 142);
+            this.dataGridViewHangHoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
             this.dataGridViewHangHoa.ReadOnly = true;
             this.dataGridViewHangHoa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewHangHoa.RowHeadersVisible = false;
             this.dataGridViewHangHoa.RowTemplate.Height = 24;
             this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHangHoa.Size = new System.Drawing.Size(576, 486);
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(432, 395);
             this.dataGridViewHangHoa.TabIndex = 103;
             // 
             // MaHangHoa
@@ -284,10 +298,9 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.labelX2);
             this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.Location = new System.Drawing.Point(16, 0);
-            this.panelEx1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelEx1.Location = new System.Drawing.Point(12, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(953, 87);
+            this.panelEx1.Size = new System.Drawing.Size(715, 71);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -305,10 +318,9 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(4, 4);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelX2.Location = new System.Drawing.Point(3, 3);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(121, 84);
+            this.labelX2.Size = new System.Drawing.Size(91, 68);
             this.labelX2.TabIndex = 1;
             // 
             // labelX1
@@ -321,22 +333,21 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelX1.Location = new System.Drawing.Point(295, 23);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelX1.Location = new System.Drawing.Point(221, 19);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(331, 47);
+            this.labelX1.Size = new System.Drawing.Size(248, 38);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "DANH MỤC MẶT HÀNG";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // frmDanhMucMatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::QuanLySieuThi.Properties.Resources.bg_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(981, 681);
+            this.ClientSize = new System.Drawing.Size(736, 553);
             this.ControlBox = false;
             this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.dataGridViewHangHoa);
@@ -344,7 +355,7 @@
             this.Controls.Add(this.bar2);
             this.Controls.Add(this.bar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDanhMucMatHang";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
