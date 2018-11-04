@@ -29,7 +29,7 @@ namespace QuanLySieuThi
             try
             {
                 string chuoiCommand = "select MaNhanVien from NhanVien where UserName = '" + username + "' and Passwords = '" + password + "'";
-                return this.link.commandScalar(chuoiCommand);
+                return this.link.comMandScalar(chuoiCommand);
             }
             catch
             {

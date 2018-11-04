@@ -30,14 +30,14 @@ namespace QuanLySieuThi
             }
             rd.Close();
             if (this.link.state() == ConnectionState.Open)
-                this.link.sql.Close();
+                this.link.closeConnection();
             cbbNhomMatHang.SelectedIndex = 0;
         }
 
         public void taoMaHangHoa() // ok
         {
-            string maLoaiHangHoa = this.link.commandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'");
-            txtMa.Text = maLoaiHangHoa + (int.Parse(this.link.commandScalar("select count(*) from KhoHang where LoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'")) + 1);
+            string maLoaiHangHoa = this.link.comMandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'");
+            txtMa.Text = maLoaiHangHoa + (int.Parse(this.link.comMandScalar("select count(*) from KhoHang where LoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'")) + 1);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace QuanLySieuThi
             if (txtTen.Text != "" && txtDonvi.Text != "" && txtGiaban.Text != "" && txtGiamua.Text != "")
             {
                 string chuoiThem = "INSERT INTO KhoHang VALUES('" + txtMa.Text.Trim() + "',N'" + txtTen.Text.Trim() + "',N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'," + txtGiaban.Text.Trim() + "," + txtGiamua.Text.Trim() + ",N'" + txtDonvi.Text.Trim() + "',0)";
-                int kqThem = this.link.insert(chuoiThem);
+                int kqThem = this.link.query(chuoiThem);
                 if (kqThem != 0)
                     MessageBox.Show("Thêm hàng hóa thành công !", "THÊM HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else

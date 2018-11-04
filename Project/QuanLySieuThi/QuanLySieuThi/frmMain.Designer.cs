@@ -38,8 +38,6 @@
             this.hOẠTĐỘNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kHOHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dANHMỤCKHOHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nHÂNSỰToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,12 +45,11 @@
             this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHÔNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.toolBox = new DevComponents.DotNetBar.Bar();
             this.btnHoaDon = new DevComponents.DotNetBar.ButtonItem();
             this.btnDanhMucMatHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnDanhMucKhachHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnDanhMucNhanVien = new DevComponents.DotNetBar.ButtonItem();
-            this.btnThongKeThuChi = new DevComponents.DotNetBar.ButtonItem();
             this.btnThongKeHoaDon = new DevComponents.DotNetBar.ButtonItem();
             this.btnThongTinCuaHang = new DevComponents.DotNetBar.ButtonItem();
             this.btnThoat = new DevComponents.DotNetBar.ButtonItem();
@@ -62,7 +59,7 @@
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite9 = new DevComponents.DotNetBar.DockSite();
-            this.bar2 = new DevComponents.DotNetBar.Bar();
+            this.tab = new DevComponents.DotNetBar.Bar();
             this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
             this.dockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -74,10 +71,10 @@
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolBox)).BeginInit();
             this.dockSite9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
-            this.bar2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tab)).BeginInit();
+            this.tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -86,7 +83,6 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hỆTHỐNGToolStripMenuItem,
             this.hOẠTĐỘNGToolStripMenuItem,
-            this.kHOHÀNGToolStripMenuItem,
             this.nHÂNSỰToolStripMenuItem,
             this.bÁOCÁOToolStripMenuItem,
             this.tRỢGIÚPToolStripMenuItem});
@@ -147,7 +143,7 @@
             this.daToolStripMenuItem.Name = "daToolStripMenuItem";
             this.daToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
             this.daToolStripMenuItem.Text = "Danh mục mặt hàng";
-            this.daToolStripMenuItem.Click += new System.EventHandler(this.danhMucMatHang);
+            this.daToolStripMenuItem.Click += new System.EventHandler(this.openDanhMucMatHang);
             // 
             // danhMụcKháchHàngToolStripMenuItem
             // 
@@ -155,21 +151,7 @@
             this.danhMụcKháchHàngToolStripMenuItem.Name = "danhMụcKháchHàngToolStripMenuItem";
             this.danhMụcKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
             this.danhMụcKháchHàngToolStripMenuItem.Text = "Danh mục khách hàng";
-            // 
-            // kHOHÀNGToolStripMenuItem
-            // 
-            this.kHOHÀNGToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dANHMỤCKHOHÀNGToolStripMenuItem});
-            this.kHOHÀNGToolStripMenuItem.Name = "kHOHÀNGToolStripMenuItem";
-            this.kHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
-            this.kHOHÀNGToolStripMenuItem.Text = "KHO HÀNG";
-            // 
-            // dANHMỤCKHOHÀNGToolStripMenuItem
-            // 
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Image = global::QuanLySieuThi.Properties.Resources.hang_hoa;
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Name = "dANHMỤCKHOHÀNGToolStripMenuItem";
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
-            this.dANHMỤCKHOHÀNGToolStripMenuItem.Text = "DANH MỤC KHO HÀNG";
+            this.danhMụcKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.openDanhMucKhachHang);
             // 
             // nHÂNSỰToolStripMenuItem
             // 
@@ -185,6 +167,7 @@
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Name = "dANHMỤCNHÂNVIÊNToolStripMenuItem";
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
             this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Text = "DANH MỤC NHÂN VIÊN";
+            this.dANHMỤCNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.openDanhMucNhanVien);
             // 
             // bÁOCÁOToolStripMenuItem
             // 
@@ -200,6 +183,7 @@
             this.bÁOCÁOQUỸToolStripMenuItem.Name = "bÁOCÁOQUỸToolStripMenuItem";
             this.bÁOCÁOQUỸToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
             this.bÁOCÁOQUỸToolStripMenuItem.Text = "THỐNG KÊ HÓA ĐƠN";
+            this.bÁOCÁOQUỸToolStripMenuItem.Click += new System.EventHandler(this.openThongKeHoaDon);
             // 
             // tRỢGIÚPToolStripMenuItem
             // 
@@ -223,29 +207,29 @@
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Name = "tHÔNGTINCỬAHÀNGToolStripMenuItem";
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
             this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Text = "THÔNG TIN CỬA HÀNG";
+            this.tHÔNGTINCỬAHÀNGToolStripMenuItem.Click += new System.EventHandler(this.openThongTinCuaHang);
             // 
-            // bar1
+            // toolBox
             // 
-            this.bar1.AntiAlias = true;
-            this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.toolBox.AntiAlias = true;
+            this.toolBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toolBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolBox.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnHoaDon,
             this.btnDanhMucMatHang,
             this.btnDanhMucKhachHang,
             this.btnDanhMucNhanVien,
-            this.btnThongKeThuChi,
             this.btnThongKeHoaDon,
             this.btnThongTinCuaHang,
             this.btnThoat});
-            this.bar1.Location = new System.Drawing.Point(0, 28);
-            this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(1389, 33);
-            this.bar1.Stretch = true;
-            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bar1.TabIndex = 39;
-            this.bar1.TabStop = false;
-            this.bar1.Text = "bar1";
+            this.toolBox.Location = new System.Drawing.Point(0, 28);
+            this.toolBox.Name = "toolBox";
+            this.toolBox.Size = new System.Drawing.Size(1389, 33);
+            this.toolBox.Stretch = true;
+            this.toolBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.toolBox.TabIndex = 39;
+            this.toolBox.TabStop = false;
+            this.toolBox.Text = "bar1";
             // 
             // btnHoaDon
             // 
@@ -278,14 +262,6 @@
             this.btnDanhMucNhanVien.Name = "btnDanhMucNhanVien";
             this.btnDanhMucNhanVien.Text = "Danh mục nhân viên";
             this.btnDanhMucNhanVien.Click += new System.EventHandler(this.openDanhMucNhanVien);
-            // 
-            // btnThongKeThuChi
-            // 
-            this.btnThongKeThuChi.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnThongKeThuChi.Image = global::QuanLySieuThi.Properties.Resources.chart_icon;
-            this.btnThongKeThuChi.Name = "btnThongKeThuChi";
-            this.btnThongKeThuChi.Text = "Thống kê thu chi";
-            this.btnThongKeThuChi.Click += new System.EventHandler(this.openThongKeThuChi);
             // 
             // btnThongKeHoaDon
             // 
@@ -384,47 +360,47 @@
             // dockSite9
             // 
             this.dockSite9.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite9.Controls.Add(this.bar2);
+            this.dockSite9.Controls.Add(this.tab);
             this.dockSite9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockSite9.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1389, 585)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.tab, 1389, 585)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite9.Location = new System.Drawing.Point(0, 61);
             this.dockSite9.Name = "dockSite9";
             this.dockSite9.Size = new System.Drawing.Size(1389, 585);
             this.dockSite9.TabIndex = 49;
             this.dockSite9.TabStop = false;
             // 
-            // bar2
+            // tab
             // 
-            this.bar2.AccessibleDescription = "DotNetBar Bar (bar2)";
-            this.bar2.AccessibleName = "DotNetBar Bar";
-            this.bar2.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
-            this.bar2.AlwaysDisplayDockTab = true;
-            this.bar2.CanCustomize = false;
-            this.bar2.CanDockBottom = false;
-            this.bar2.CanDockDocument = true;
-            this.bar2.CanDockLeft = false;
-            this.bar2.CanDockRight = false;
-            this.bar2.CanDockTop = false;
-            this.bar2.CanHide = true;
-            this.bar2.CanUndock = false;
-            this.bar2.Controls.Add(this.panelDockContainer1);
-            this.bar2.DockTabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top;
-            this.bar2.DockTabCloseButtonVisible = true;
-            this.bar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.tab.AccessibleDescription = "DotNetBar Bar (bar2)";
+            this.tab.AccessibleName = "DotNetBar Bar";
+            this.tab.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.tab.AlwaysDisplayDockTab = true;
+            this.tab.CanCustomize = false;
+            this.tab.CanDockBottom = false;
+            this.tab.CanDockDocument = true;
+            this.tab.CanDockLeft = false;
+            this.tab.CanDockRight = false;
+            this.tab.CanDockTop = false;
+            this.tab.CanHide = true;
+            this.tab.CanUndock = false;
+            this.tab.Controls.Add(this.panelDockContainer1);
+            this.tab.DockTabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top;
+            this.tab.DockTabCloseButtonVisible = true;
+            this.tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
-            this.bar2.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
-            this.bar2.Location = new System.Drawing.Point(0, 0);
-            this.bar2.Name = "bar2";
-            this.bar2.SelectedDockTab = 0;
-            this.bar2.Size = new System.Drawing.Size(1389, 585);
-            this.bar2.Stretch = true;
-            this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.bar2.TabIndex = 0;
-            this.bar2.TabNavigation = true;
-            this.bar2.TabStop = false;
-            this.bar2.DockTabClosed += new DevComponents.DotNetBar.DockTabClosingEventHandler(this.bar2_DockTabClosed);
+            this.tab.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
+            this.tab.Location = new System.Drawing.Point(0, 0);
+            this.tab.Name = "tab";
+            this.tab.SelectedDockTab = 0;
+            this.tab.Size = new System.Drawing.Size(1389, 585);
+            this.tab.Stretch = true;
+            this.tab.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.tab.TabIndex = 0;
+            this.tab.TabNavigation = true;
+            this.tab.TabStop = false;
+            this.tab.DockTabClosed += new DevComponents.DotNetBar.DockTabClosingEventHandler(this.bar2_DockTabClosed);
             // 
             // panelDockContainer1
             // 
@@ -533,7 +509,7 @@
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.metroStatusBar1);
-            this.Controls.Add(this.bar1);
+            this.Controls.Add(this.toolBox);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.dockSite3);
             this.Controls.Add(this.dockSite4);
@@ -551,10 +527,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolBox)).EndInit();
             this.dockSite9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bar2)).EndInit();
-            this.bar2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tab)).EndInit();
+            this.tab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,8 +546,6 @@
         private System.Windows.Forms.ToolStripMenuItem hOẠTĐỘNGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem daToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcKháchHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kHOHÀNGToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dANHMỤCKHOHÀNGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nHÂNSỰToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dANHMỤCNHÂNVIÊNToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bÁOCÁOToolStripMenuItem;
@@ -579,13 +553,13 @@
         private System.Windows.Forms.ToolStripMenuItem tRỢGIÚPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tHÔNGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tHÔNGTINCỬAHÀNGToolStripMenuItem;
-        private DevComponents.DotNetBar.Bar bar1;
+        private DevComponents.DotNetBar.Bar toolBox;
         private DevComponents.DotNetBar.Metro.MetroStatusBar metroStatusBar1;
         private DevComponents.DotNetBar.LabelItem lblTenNhanVien;
         private DevComponents.DotNetBar.DotNetBarManager dotNetBarManager1;
         private DevComponents.DotNetBar.DockSite dockSite4;
         private DevComponents.DotNetBar.DockSite dockSite9;
-        private DevComponents.DotNetBar.Bar bar2;
+        private DevComponents.DotNetBar.Bar tab;
         private DevComponents.DotNetBar.PanelDockContainer panelDockContainer1;
         private DevComponents.DotNetBar.DockContainerItem dockContainerItem1;
         private DevComponents.DotNetBar.DockSite dockSite1;
@@ -599,7 +573,6 @@
         private DevComponents.DotNetBar.ButtonItem btnDanhMucMatHang;
         private DevComponents.DotNetBar.ButtonItem btnDanhMucKhachHang;
         private DevComponents.DotNetBar.ButtonItem btnDanhMucNhanVien;
-        private DevComponents.DotNetBar.ButtonItem btnThongKeThuChi;
         private DevComponents.DotNetBar.ButtonItem btnThongKeHoaDon;
         private DevComponents.DotNetBar.ButtonItem btnThongTinCuaHang;
         private DevComponents.DotNetBar.ButtonItem btnThoat;

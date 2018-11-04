@@ -34,12 +34,12 @@ namespace QuanLySieuThi
             }
             rd.Close();
             if (this.kn.state() == ConnectionState.Open)
-                this.kn.sql.Close();
+                this.kn.closeConnection();
         }
 
         private int KtraTTST(string tenst, string dchi, string sdt, string tenchu, float cq)
         {
-            int cmd = this.kn.insert("update ThongTinSieuThi set TenSieuThi=N'"+tenst+"', DiaChiSieuThi=N'"+dchi+"',SoDT='"+sdt+"',TenChuSieuThi=N'"+tenchu+"',CongQuy="+cq+"");
+            int cmd = this.kn.query("update ThongTinSieuThi set TenSieuThi=N'"+tenst+"', DiaChiSieuThi=N'"+dchi+"',SoDT='"+sdt+"',TenChuSieuThi=N'"+tenchu+"',CongQuy="+cq+"");
             if (cmd != 0)
                 return 1;
             else

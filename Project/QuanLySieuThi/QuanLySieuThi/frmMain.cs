@@ -11,14 +11,13 @@ namespace QuanLySieuThi
 {
     public partial class frmMain : Form
     {
+        KetNoiDuLieu link;
+        string manv;
 
         public string timTenNhanVien(string manv)
         {
-            return link.commandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
+            return link.comMandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
         }
-
-        KetNoiDuLieu link;
-        string manv;
 
         public frmMain(KetNoiDuLieu link, string manv)
         {
@@ -52,27 +51,23 @@ namespace QuanLySieuThi
             frmDoiMatKhau frmChangePass = new frmDoiMatKhau(this.manv,this.link);
             frmChangePass.ShowDialog();
         }
-
-        private void danhMucMatHang(object sender, EventArgs e)
-        {
-        }
         
         private void openHoaDon(object sender, EventArgs e)
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Hóa đơn") == true)
+            for (int i = 0; i < tab.Items.Count; i++)
+            {
+                if (tab.Items[i].ToString() == "Hóa đơn")
                 {
                     tonTai = true;
                     break;
                 }
-
-            //nếu chưa có thì tạo và thêm vô
-            if (tonTai == false)
+            }
+            if (tonTai == false)//nếu chưa có thì mở tab này lên
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Hóa đơn", "Hóa đơn");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
                 item.Image = a;
                 item.Selected = true;
@@ -80,37 +75,29 @@ namespace QuanLySieuThi
                 panel.Name = "Hóa đơn";
                 item.Control = new Control();
                 item.Control = panel;
-                frmHoaDon f = new frmHoaDon(this.link,this.manv);
+                frmHoaDon f = new frmHoaDon(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Hóa đơn") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Hóa đơn", "Hóa đơn");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Hóa đơn";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmHoaDon f = new frmHoaDon(this.link,this.manv);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                        break;
-                    }
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Hóa đơn", "Hóa đơn");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
+                item.Image = a;
+                item.Selected = true;
+                DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
+                panel.Name = "Hóa đơn";
+                item.Control = new Control();
+                item.Control = panel;
+                frmHoaDon f = new frmHoaDon(this.link, this.manv);
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                item.Control.Controls.Add(f);
+                f.Show();
             }
         }
 
@@ -118,8 +105,8 @@ namespace QuanLySieuThi
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Danh mục mặt hàng") == true)
+            for(int i = 0; i < tab.Items.Count; i++)
+                if (tab.Items[i].ToString() == "Danh mục mặt hàng")
                 {
                     tonTai = true;
                     break;
@@ -129,7 +116,7 @@ namespace QuanLySieuThi
             if (tonTai == false)
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục mặt hàng", "Danh mục mặt hàng");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.hang_hoa;
                 item.Image = a;
                 item.Selected = true;
@@ -137,37 +124,29 @@ namespace QuanLySieuThi
                 panel.Name = "Danh mục mặt hàng";
                 item.Control = new Control();
                 item.Control = panel;
-                frmDanhMucMatHang f = new frmDanhMucMatHang(this.link,this.manv);
+                frmDanhMucMatHang f = new frmDanhMucMatHang(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Danh mục mặt hàng") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục mặt hàng", "Danh mục mặt hàng");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Danh mục mặt hàng";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmDanhMucMatHang f = new frmDanhMucMatHang(this.link,this.manv);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                        break;
-                    }
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục mặt hàng", "Danh mục mặt hàng");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.hang_hoa;
+                item.Image = a;
+                item.Selected = true;
+                DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
+                panel.Name = "Danh mục mặt hàng";
+                item.Control = new Control();
+                item.Control = panel;
+                frmDanhMucMatHang f = new frmDanhMucMatHang(this.link, this.manv);
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                item.Control.Controls.Add(f);
+                f.Show();
             }
         }
 
@@ -175,8 +154,8 @@ namespace QuanLySieuThi
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Danh mục khách hàng") == true)
+            for(int i = 0; i < tab.Items.Count; i++)
+                if (tab.Items[i].ToString() == "Danh mục khách hàng")
                 {
                     tonTai = true;
                     break;
@@ -186,7 +165,7 @@ namespace QuanLySieuThi
             if (tonTai == false)
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("", "Danh mục khách hàng");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
                 item.Image = a;
                 item.Selected = true;
@@ -200,31 +179,23 @@ namespace QuanLySieuThi
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Danh mục khách hàng") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục khách hàng", "Danh mục khách hàng");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Danh mục khách hàng";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                        break;
-                    }
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("", "Danh mục khách hàng");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.khach_hang_2;
+                item.Image = a;
+                item.Selected = true;
+                DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
+                panel.Name = "Danh mục khách hàng";
+                item.Control = new Control();
+                item.Control = panel;
+                frmDanhMucKhachHang f = new frmDanhMucKhachHang(this.link);
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                item.Control.Controls.Add(f);
+                f.Show();
             }
         }
 
@@ -232,8 +203,8 @@ namespace QuanLySieuThi
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Danh mục nhân viên") == true)
+            for(int i = 0; i < tab.Items.Count; i++)
+                if (tab.Items[i].ToString() == "Danh mục nhân viên")
                 {
                     tonTai = true;
                     break;
@@ -243,7 +214,7 @@ namespace QuanLySieuThi
             if (tonTai == false)
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục nhân viên", "Danh mục nhân viên");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.nhan_vien;
                 item.Image = a;
                 item.Selected = true;
@@ -251,94 +222,29 @@ namespace QuanLySieuThi
                 panel.Name = "Danh mục nhân viên";
                 item.Control = new Control();
                 item.Control = panel;
-                frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.link,this.manv);
+                frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Danh mục nhân viên") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục nhân viên", "Danh mục nhân viên");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.nhan_vien;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Danh mục nhân viên";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.link,this.manv);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                        break;
-                    }
-            }
-        }
-
-        private void openThongKeThuChi(object sender, EventArgs e)
-        {
-            //kiểm tra xem đã có tab này chưa
-            bool tonTai = false;
-                for (int i = 0; i < bar2.Items.Count; i++ )
-                    if (bar2.Items[i].Text.Equals("Thống kê thu chi") == true)
-                    {
-                        tonTai = true;
-                        break;
-                    }
-
-            //nếu chưa có thì tạo và thêm vô
-            if (tonTai == false)
-            {
-                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thống kê thu chi", "Thống kê thu chi");
-                bar2.Items.Add(item);
-                Image a = global::QuanLySieuThi.Properties.Resources.chart_icon;
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Danh mục nhân viên", "Danh mục nhân viên");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.nhan_vien;
                 item.Image = a;
                 item.Selected = true;
                 DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                panel.Name = "Thống kê thu chi";
+                panel.Name = "Danh mục nhân viên";
                 item.Control = new Control();
                 item.Control = panel;
-                frmThongKeThuChi f = new frmThongKeThuChi();
+                frmDanhMucNhanVien f = new frmDanhMucNhanVien(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
                 f.Show();
-            }
-            //đã có tab này
-            else
-            {
-                //for(int i = 0; i < bar2.Items.Count; i++)
-                    for (int i = 0; i < bar2.Items.Count; i++ )
-                        if (bar2.Items[i].Text.Equals("Thống kê thu chi") == true)
-                        {
-                            //mở tab này nếu nó đang đóng
-                            bar2.Items.Clear();
-                            
-                            DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thống kê thu chi", "Thống kê thu chi");
-                            bar2.Items.Add(item);
-                            Image a = global::QuanLySieuThi.Properties.Resources.chart_icon;
-                            item.Image = a;
-                            item.Selected = true;
-                            DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                            panel.Name = "Thống kê thu chi";
-                            item.Control = new Control();
-                            item.Control = panel;
-                            frmThongKeThuChi f = new frmThongKeThuChi();
-                            f.TopLevel = false;
-                            f.Dock = DockStyle.Fill;
-                            item.Control.Controls.Add(f);
-                            f.Show();
-                        }
             }
         }
 
@@ -346,8 +252,8 @@ namespace QuanLySieuThi
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Thống kê hóa đơn") == true)
+            for(int i = 0; i < tab.Items.Count; i++)
+                if (tab.Items[i].ToString() == "Thống kê hóa đơn")
                 {
                     tonTai = true;
                     break;
@@ -357,7 +263,7 @@ namespace QuanLySieuThi
             if (tonTai == false)
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thống kê hóa đơn", "Thống kê hóa đơn");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
                 item.Image = a;
                 item.Selected = true;
@@ -371,30 +277,23 @@ namespace QuanLySieuThi
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Thống kê hóa đơn") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thống kê hóa đơn", "Thống kê hóa đơn");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Thống kê hóa đơn";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmThongKeHoaDon f = new frmThongKeHoaDon(this.link);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                    }
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thống kê hóa đơn", "Thống kê hóa đơn");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.thongkeHoaDon;
+                item.Image = a;
+                item.Selected = true;
+                DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
+                panel.Name = "Thống kê hóa đơn";
+                item.Control = new Control();
+                item.Control = panel;
+                frmThongKeHoaDon f = new frmThongKeHoaDon(this.link);
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                item.Control.Controls.Add(f);
+                f.Show();
             }
         }
 
@@ -402,8 +301,8 @@ namespace QuanLySieuThi
         {
             //kiểm tra xem đã có tab này chưa
             bool tonTai = false;
-            for(int i = 0; i < bar2.Items.Count; i++)
-                if (bar2.Items[i].Equals("Thông tin cửa hàng") == true)
+            for(int i = 0; i < tab.Items.Count; i++)
+                if (tab.Items[i].ToString() == "Thông tin cửa hàng")
                 {
                     tonTai = true;
                     break;
@@ -413,7 +312,7 @@ namespace QuanLySieuThi
             if (tonTai == false)
             {
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thông tin cửa hàng", "Thông tin cửa hàng");
-                bar2.Items.Add(item);
+                tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.store_icon;
                 item.Image = a;
                 item.Selected = true;
@@ -421,42 +320,37 @@ namespace QuanLySieuThi
                 panel.Name = "Thông tin cửa hàng";
                 item.Control = new Control();
                 item.Control = panel;
-                frmThongTinSieuThi f = new frmThongTinSieuThi(this.link,this.manv);
+                frmThongTinSieuThi f = new frmThongTinSieuThi(this.link, this.manv);
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 item.Control.Controls.Add(f);
                 f.Show();
             }
-            //đã có tab này
             else
             {
-                for(int i = 0; i < bar2.Items.Count; i++)
-                    if (bar2.Items[i].Equals("Thông tin cửa hàng") == true)
-                    {
-                        //mở tab này nếu nó đang đóng
-                        bar2.Items.Clear();
-                        
-                        DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thông tin cửa hàng", "Thông tin cửa hàng");
-                        bar2.Items.Add(item);
-                        Image a = global::QuanLySieuThi.Properties.Resources.store_icon;
-                        item.Image = a;
-                        item.Selected = true;
-                        DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
-                        panel.Name = "Thông tin cửa hàng";
-                        item.Control = new Control();
-                        item.Control = panel;
-                        frmThongTinSieuThi f = new frmThongTinSieuThi(this.link,this.manv);
-                        f.TopLevel = false;
-                        f.Dock = DockStyle.Fill;
-                        item.Control.Controls.Add(f);
-                        f.Show();
-                    }
+                tab.Items.Clear();
+                DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Thông tin cửa hàng", "Thông tin cửa hàng");
+                tab.Items.Add(item);
+                Image a = global::QuanLySieuThi.Properties.Resources.store_icon;
+                item.Image = a;
+                item.Selected = true;
+                DevComponents.DotNetBar.PanelDockContainer panel = new DevComponents.DotNetBar.PanelDockContainer();
+                panel.Name = "Thông tin cửa hàng";
+                item.Control = new Control();
+                item.Control = panel;
+                frmThongTinSieuThi f = new frmThongTinSieuThi(this.link, this.manv);
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                item.Control.Controls.Add(f);
+                f.Show();
             }
         }
 
         private void bar2_DockTabClosed(object sender, DevComponents.DotNetBar.DockTabClosingEventArgs e)
         {
-            bar2.Show();
+            if (tab.Items.Count == 1)
+                tab.Items.Clear();
+            tab.Show();
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)

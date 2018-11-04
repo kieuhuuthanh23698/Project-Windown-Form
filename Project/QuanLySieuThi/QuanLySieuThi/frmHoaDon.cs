@@ -48,8 +48,7 @@ namespace QuanLySieuThi
 
             rd.Close();
 
-            if (this.link.state() == ConnectionState.Open)
-                this.link.sql.Close();
+            this.link.closeConnection();
             treeView1.ExpandAll();
         }
 
@@ -63,8 +62,7 @@ namespace QuanLySieuThi
             }
             rd.Close();
 
-            if (this.link.state() == ConnectionState.Open)
-                this.link.sql.Close();
+            this.link.closeConnection();
         }
 
         private void autoCompleteTextTenHangHoa_TextChanged(object sender, EventArgs e)
@@ -73,8 +71,6 @@ namespace QuanLySieuThi
                 taiGridViewHangHoa();
             else
                 dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị'from KhoHang where TenHangHoa like N'" + autoCompleteTextTenHangHoa.Text + "%'", "Hang hoa").Tables["Hang hoa"];
-            if (link.state() == ConnectionState.Open)
-                this.link.sql.Close();
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -82,21 +78,19 @@ namespace QuanLySieuThi
             if (e.Node.Text.Equals("Tất cả loại hàng hóa") == true)
                 taiGridViewHangHoa();
             else
-                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng' from KhoHang where SoluongTrongKho > 0 AND LoaiHangHoa like N'" + e.Node.Text + "%'", "Loai hang hoa").Tables["Loai hang hoa"];
-            if (link.state() == ConnectionState.Open)
-                this.link.sql.Close();
+                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng'  from KhoHang, LoaiHangHoa where LoaiHangHoa.TenLoaiHangHoa LIKE N'" + e.Node.Text + "%' and KhoHang.MaLoaiHangHoa = LoaiHangHoa.MaLoaiHangHoa", "Loai hang hoa").Tables["Loai hang hoa"];
         }
 
         public void capNhatKhoHangKhiThem(string tenHangHoa, int soluongThem)
         {
-            int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+            int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
             int i = 0;
             if (soluongThem >= soLuongHangHoaNayTrongKho)
-                i = this.link.insert("update KhoHang set SoluongTrongKho = 0 where TenHangHoa = N'" + tenHangHoa + "'");
+                i = this.link.query("update KhoHang set SoluongTrongKho = 0 where TenHangHoa = N'" + tenHangHoa + "'");
             else
             { //so luong thêm < số lượng hàng hóa này trong kho
                 int capNhatSoLuongHangHoa = soLuongHangHoaNayTrongKho - soluongThem;
-                i = this.link.insert("update KhoHang set SoluongTrongKho = " + capNhatSoLuongHangHoa + " where TenHangHoa = N'" + tenHangHoa + "'");
+                i = this.link.query("update KhoHang set SoluongTrongKho = " + capNhatSoLuongHangHoa + " where TenHangHoa = N'" + tenHangHoa + "'");
             }
         }
 
@@ -112,7 +106,7 @@ namespace QuanLySieuThi
                 //còn nếu bé hơn thì thêm và cập nhật lại số lượng hàng hóa đó còn trong kho với giá trị mới = số lượng trong kho - số lượng thêm
                 int viTri = timViTriMonHangTrongGio(tenHangHoa);
                 int timKiem = hangHoaNayCoTrongGioChua(tenHangHoa);//trả về số lượng hàng hóa nếu có trong giỏ
-                int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+                int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
                 int soluong;
                 if ((int)Int64.Parse(numericThem.Value.ToString()) >= soLuongHangHoaNayTrongKho)
                     soluong = soLuongHangHoaNayTrongKho + timKiem;
@@ -213,7 +207,7 @@ namespace QuanLySieuThi
 
         public string timTenNhanVien(string manv)
         {
-            return link.commandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
+            return link.comMandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
         }
 
         public string taoMaHoaDon()
@@ -223,7 +217,7 @@ namespace QuanLySieuThi
             do
             {
                 string chuoiCount = "select COUNT(*) from HoaDon where MaHoaDon = 'HOADON_" + dem + "'";
-                count = int.Parse(this.link.commandScalar(chuoiCount));
+                count = int.Parse(this.link.comMandScalar(chuoiCount));
                 if (count == 0)//hóa đơn này chưa có trong datatable
                     return "HOADON_" + dem;
                 dem++;
@@ -234,7 +228,7 @@ namespace QuanLySieuThi
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             string comm = "select count(*) from HoaDon";
-            int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
+            int soLuongHoaDon = (int)Int64.Parse(this.link.comMandScalar(comm));
             txtMaHoaDon.Text = taoMaHoaDon();
             txtNhanVien.Text = timTenNhanVien(this.manv);
             loadComBoBoxKhachHang();
@@ -251,17 +245,16 @@ namespace QuanLySieuThi
 
         public void loadComBoBoxKhachHang() 
         {
-            SqlDataReader SDR = this.link.comManReader("select TenKhachHang from KhachHang", "TenKhachHang");
+            SqlDataReader dataReader = this.link.comManReader("select TenKhachHang from KhachHang", "TenKhachHang");
             
-            while (SDR.Read())
+            while (dataReader.Read())
             {
-                cbbKhachHang.Items.Add(SDR["TenKhachHang"].ToString());
+                cbbKhachHang.Items.Add(dataReader["TenKhachHang"].ToString());
             }
 
-            SDR.Close();
+            dataReader.Close();
 
-            if (this.link.state() == ConnectionState.Open)
-                this.link.sql.Close();
+            this.link.closeConnection();
             cbbKhachHang.SelectedIndex = 0;
         }
 
@@ -304,9 +297,9 @@ namespace QuanLySieuThi
             foreach (ListViewItem i in lstGioHang.SelectedItems)
             {
                 string tenHangHoa = i.SubItems[1].Text;
-                int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+                int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
                 int soLuongNew = soLuongHangHoaNayTrongKho + int.Parse(i.SubItems[3].Text);
-                int kq = this.link.insert("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
+                int kq = this.link.query("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
                 lstGioHang.Items.Remove(i);
             }
             taiGridViewHangHoa();
@@ -320,7 +313,7 @@ namespace QuanLySieuThi
             {
                 i = lstGioHang.Items.IndexOf(lstGioHang.SelectedItems[0]);
                 string tenHangHoa = lstGioHang.Items[i].SubItems[1].Text;
-                int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+                int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
                 if (int.Parse(numericTang.Value.ToString()) >= soLuongHangHoaNayTrongKho)
                     lstGioHang.Items[i].SubItems[3].Text = (int.Parse(lstGioHang.Items[i].SubItems[3].Text) + soLuongHangHoaNayTrongKho) + "";
                 else
@@ -343,17 +336,17 @@ namespace QuanLySieuThi
                 // nếu số lượng giảm của numberic lớn hơn hoặc băng số lượng hàng hóa đó thì xóa hàng đó ra khỏi giỏ
                 if (int.Parse(numericGiam.Value.ToString()) >= int.Parse(lstGioHang.Items[i].SubItems[3].Text))
                 {
-                    int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+                    int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
                     int soLuongNew = soLuongHangHoaNayTrongKho + int.Parse(lstGioHang.Items[i].SubItems[3].Text);
-                    int k = this.link.insert("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
+                    int k = this.link.query("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
                     lstGioHang.Items.Remove(lstGioHang.Items[i]);
                 }
                 //ngược lại thì giảm số lượng và tinh lại tiền hàng
                 else
                 {
-                    int soLuongHangHoaNayTrongKho = int.Parse(this.link.commandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
+                    int soLuongHangHoaNayTrongKho = int.Parse(this.link.comMandScalar("select SoluongTrongKho from KhoHang where TenHangHoa = N'" + tenHangHoa + "'"));
                     int soLuongNew = soLuongHangHoaNayTrongKho + int.Parse(numericGiam.Value.ToString());
-                    int kq = this.link.insert("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
+                    int kq = this.link.query("update KhoHang set SoluongTrongKho = " + soLuongNew + " where TenHangHoa = N'" + tenHangHoa + "'");
                     lstGioHang.Items[i].SubItems[3].Text = (int.Parse(lstGioHang.Items[i].SubItems[3].Text) - int.Parse(numericGiam.Value.ToString())) + "";
                     lstGioHang.Items[i].SubItems[4].Text = (int.Parse(lstGioHang.Items[i].SubItems[3].Text) * Double.Parse(lstGioHang.Items[i].SubItems[2].Text)) + "";
                 }
@@ -384,7 +377,7 @@ namespace QuanLySieuThi
                             string tenNhanVienLapHoaDon = txtNhanVien.Text;
                             string maNVLapHoaDon = manv;
                             string tenKhachHang = cbbKhachHang.Text;
-                            string maKhachHang = this.link.commandScalar("select MaKhachHang from KhachHang where TenKhachHang = N'" + tenKhachHang + "'");
+                            string maKhachHang = this.link.comMandScalar("select MaKhachHang from KhachHang where TenKhachHang = N'" + tenKhachHang + "'");
                             string tienHang = txtTienHang.Text;
                             string phanTramGiamGia = txtPhanTramGiamGia.Text;
                             string giamGia = txtGiamGia.Text;
@@ -392,17 +385,17 @@ namespace QuanLySieuThi
                             string khachDua = cmbTienKhachDua.Text;
                             string traLai = txtTienTraLai.Text;
                             string command = "insert into HoaDon values('" + maHoaDon + "','" + ngayLapHoaDon + "',GETDATE(),N'" + tenNhanVienLapHoaDon + "','" + maNVLapHoaDon + "',N'" + tenKhachHang + "','" + maKhachHang + "'," + tienHang + "," + phanTramGiamGia + "," + giamGia + "," + tongThanhTien + "," + khachDua + "," + traLai + ")";
-                            if (this.link.insert(command) != 0)
+                            if (this.link.query(command) != 0)
                             {
                                 MessageBox.Show("Mã hóa đơn :" + maHoaDon + "\n" + "Ngày lập hóa đơn" + ngayLapHoaDon + "\n" + "Tên nhân viên lập hóa đơn :" + tenNhanVienLapHoaDon + "\n" + "Mã nv lập hóa đơn :" + maNVLapHoaDon + "\n" + "Tên khách hàng :" + tenKhachHang + "\n" + "Mã khách hàng :" + maKhachHang + "\n" + "Tiền hàng :" + tienHang + " Đ\n" + "Phần trăm giảm giá :" + phanTramGiamGia + "\n" + "Giảm giá :" + giamGia + " Đ\n" + "Tổng thành tiền :" + tongThanhTien + " Đ\n" + "Khách đưa :" + khachDua + " Đ\n" + "Trả lại :" + traLai + " Đ", "Hóa đơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 foreach (ListViewItem item in lstGioHang.Items)
                                 {//insert các thành phần trong chi tiết hóa đơn
                                     string tenHangHoa = item.SubItems[1].Text;
-                                    string maHangHoa = this.link.commandScalar("select MaHangHoa from KhoHang where TenHangHoa = N'" + tenHangHoa + "'");
+                                    string maHangHoa = this.link.comMandScalar("select MaHangHoa from KhoHang where TenHangHoa = N'" + tenHangHoa + "'");
                                     string giaBan = item.SubItems[2].Text;
                                     string soLuong = item.SubItems[3].Text;
                                     string thanhTien = item.SubItems[4].Text;
-                                    this.link.insert("insert into ChiTietHoaDon values('" + maHoaDon + "','" + maHangHoa + "',N'" + tenHangHoa + "'," + giaBan + "," + soLuong + "," + thanhTien + ")");
+                                    this.link.query("insert into ChiTietHoaDon values('" + maHoaDon + "','" + maHangHoa + "',N'" + tenHangHoa + "'," + giaBan + "," + soLuong + "," + thanhTien + ")");
                                 }
                                 frmReportHoaDon frmHD = new frmReportHoaDon(this.link, maHoaDon);
                                 frmHD.ShowDialog();
@@ -427,7 +420,7 @@ namespace QuanLySieuThi
         {
             //Tạo hóa đơn mới
             string comm = "select count(*) from HoaDon";
-            int soLuongHoaDon = (int)Int64.Parse(this.link.commandScalar(comm));
+            int soLuongHoaDon = (int)Int64.Parse(this.link.comMandScalar(comm));
             txtMaHoaDon.Text = taoMaHoaDon();
             txtNhanVien.Text = timTenNhanVien(this.manv);
             dateTimeInput1.Value = DateTime.Now;

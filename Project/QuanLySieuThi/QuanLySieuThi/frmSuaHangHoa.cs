@@ -36,7 +36,7 @@ namespace QuanLySieuThi
             {
                 //sửa đổi
                 String maHang = this.row.Cells["MaHangHoa"].Value.ToString();
-                int i = this.kn.insert("update KhoHang set TenHangHoa = N'" + txtTen.Text.Trim() + "', GiaBan = '" + txtGiaban.Text.Trim() + "', DonVi = N'" + txtDonvi.Text.Trim() + "' where MaHangHoa = '" + maHang + "'");
+                int i = this.kn.query("update KhoHang set TenHangHoa = N'" + txtTen.Text.Trim() + "', GiaBan = '" + txtGiaban.Text.Trim() + "', DonVi = N'" + txtDonvi.Text.Trim() + "' where MaHangHoa = '" + maHang + "'");
                 if (i != 0)
                     MessageBox.Show("Sửa thông tin hàng hóa thành công !", "SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else

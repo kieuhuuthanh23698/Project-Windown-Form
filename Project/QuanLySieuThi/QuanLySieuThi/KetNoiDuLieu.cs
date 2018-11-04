@@ -9,8 +9,25 @@ namespace QuanLySieuThi
 {
     public class KetNoiDuLieu
     {
-        public string chuoiKetNoi;
-        public SqlConnection sql;
+        private string chuoiKetNoi;
+        private SqlConnection sql;
+
+        public void openConnection()
+        {
+            if (this.sql.State == ConnectionState.Closed)
+                sql.Open();
+        }
+
+        public void closeConnection()
+        {
+            if (this.sql.State == ConnectionState.Open)
+                sql.Close();
+        }
+
+        public SqlConnection getSql()
+        {
+            return this.sql;
+        }
 
         public KetNoiDuLieu(string chuoiKetNoi)
         {
@@ -19,14 +36,12 @@ namespace QuanLySieuThi
             this.chuoiKetNoi = chuoiKetNoi;
         }
 
-        public bool Connec() 
+        public bool Connec() // có thể kết nối vào sever
         {
             try
             {
-                if(this.sql.State == ConnectionState.Closed)
-                    sql.Open();
-                if(this.sql.State == ConnectionState.Open)
-                    sql.Close();
+                openConnection();
+                closeConnection();
                 return true; 
             }
             catch(Exception)
@@ -40,7 +55,7 @@ namespace QuanLySieuThi
             return this.sql.State;
         }
 
-        public string commandScalar(string chuoiCommand)
+        public string comMandScalar(string chuoiCommand)
         {
             try
             {
@@ -62,15 +77,13 @@ namespace QuanLySieuThi
         {
             try
             {
-                if (this.sql.State == ConnectionState.Closed)
-                    this.sql.Open();
+                openConnection();
 
                 DataSet ds = new DataSet();
                 SqlDataAdapter sda = new SqlDataAdapter(chuoiComMand, this.sql);
                 sda.Fill(ds, srcTable);
-                
-                if (this.sql.State == ConnectionState.Open)
-                    this.sql.Close();
+
+                closeConnection();
                 return ds;
             }
             catch (Exception)
@@ -97,16 +110,14 @@ namespace QuanLySieuThi
             }
         }
 
-        public int insert(string chuoiComMand)
+        public int query(string chuoiComMand)
         {
-            if (this.sql.State == ConnectionState.Closed)
-                this.sql.Open();
+            openConnection();
             
             SqlCommand com = new SqlCommand(chuoiComMand, this.sql);
             int kq = com.ExecuteNonQuery();
-            
-            if (this.sql.State == ConnectionState.Open)
-                this.sql.Close();
+
+            closeConnection();
             return kq;
         }
         

@@ -27,11 +27,11 @@ namespace QuanLySieuThi
                 if (txtMatKhauMoi.Text == txtMatKhauMoiNhapLai.Text)
                 {
                     string chuoiQuery = "select Passwords from NhanVien where MaNhanVien = '" + this.manv + "'";
-                    string matKhauNV = this.link.commandScalar(chuoiQuery).Trim();
+                    string matKhauNV = this.link.comMandScalar(chuoiQuery).Trim();
                     if (txtMatKhauCu.Text == matKhauNV)
                     {
                         string chuoiUpdate = "update NhanVien set Passwords = '" + txtMatKhauMoi.Text + "' where MaNhanVien = '" + this.manv + "'";
-                        int kqUpdate = this.link.insert(chuoiUpdate);
+                        int kqUpdate = this.link.query(chuoiUpdate);
                         if (kqUpdate != 0)
                         {
                             MessageBox.Show("Đổi mật khẩu thành công !");

@@ -29,7 +29,7 @@ namespace QuanLySieuThi
         private bool KtraKhoaChinh(string s)
         {
             bool kq = true;
-            string i = this.kn.commandScalar("select MaKhachHang from KhachHang where MaKhachHang='" + s + "'").Trim();
+            string i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='" + s + "'").Trim();
             if (i == "")
             {
                 return false;
@@ -43,7 +43,7 @@ namespace QuanLySieuThi
             string i;
             do
             {
-                i = this.kn.commandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
+                i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
                 if (i == "")
                     break;//mã khách hàng này chưa có trong data table
                 dem++;
@@ -68,7 +68,7 @@ namespace QuanLySieuThi
             if (txtMa.Text != "" && txtTen.Text != "" && txtSDT.Text != "")
             {
                 string chuoisua = "update KhachHang set TenKhachHang=N'"+txtTen.Text+"',SoDienThoai='"+txtSDT.Text+"' where MaKhachHang='"+txtMa.Text+"'";
-                int kq = this.kn.insert(chuoisua);
+                int kq = this.kn.query(chuoisua);
                 if (kq != 0)
                 {
                     MessageBox.Show("Đã sửa thành công!","SỬA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -90,11 +90,11 @@ namespace QuanLySieuThi
                 //xóa khách hàng
 
                 string chuoixoacthd = "delete ChiTietHoaDon from ChiTietHoaDon,HoaDon, KhachHang where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and HoaDon.MaKhachHang = KhachHang.MaKhachHang and KhachHang.MaKhachHang = '" + txtMa.Text + "'";
-                int kq = this.kn.insert(chuoixoacthd);
+                int kq = this.kn.query(chuoixoacthd);
                 string chuoixoahd = "delete HoaDon where HoaDon.MaKhachHang = '" + txtMa.Text + "'";
-                kq = this.kn.insert(chuoixoahd);
+                kq = this.kn.query(chuoixoahd);
                 string chuoixoakh = "delete KhachHang where MaKhachHang = '" + txtMa.Text + "'";
-                kq = this.kn.insert(chuoixoakh);
+                kq = this.kn.query(chuoixoakh);
                 if (kq != 0)
                 {
                     MessageBox.Show("Xóa thành công!","XÓA KHÁCH HÀNG",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -114,7 +114,7 @@ namespace QuanLySieuThi
         {
             if (txtTen.Text != "" && txtSDT.Text != "")
             {
-                int kq = this.kn.insert("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
+                int kq = this.kn.query("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
                 if (kq == 0)
                     MessageBox.Show("Thêm khách hàng thất bại !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else

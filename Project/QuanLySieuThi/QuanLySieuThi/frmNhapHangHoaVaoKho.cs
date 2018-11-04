@@ -43,7 +43,7 @@ namespace QuanLySieuThi
                 int soLuongThem = int.Parse(txtSoLuongThem.Text);
                 int soLuongTrongKho = int.Parse(row.Cells["SoluongTrongKho"].Value.ToString().Trim());
                 string chuoiThem = "update KhoHang set SoluongTrongKho = '" + (soLuongThem + soLuongTrongKho) + "' where MaHangHoa = '" + this.maHangHoa + "'";
-                int kqThem = this.link.insert(chuoiThem);
+                int kqThem = this.link.query(chuoiThem);
                 if (kqThem != 0)
                     MessageBox.Show("Nhập hàng hóa thành công !", "NHẬP HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else

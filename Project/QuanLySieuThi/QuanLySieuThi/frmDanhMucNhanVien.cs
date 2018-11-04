@@ -38,7 +38,7 @@ namespace QuanLySieuThi
                 DevComponents.AdvTree.Node node = new DevComponents.AdvTree.Node(rd["TenNhanVien"].ToString());
                 TreeViewNV.Nodes.Add(node);
             }
-            this.kn.sql.Close();
+            this.kn.closeConnection();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace QuanLySieuThi
                 {
                     string chuoinv = "update NhanVien set TenNhanVien=N'" + txtTen.Text + "',NgaySinh='" + dateTimeNgaySinh.Text + "',GioiTinh=N'" + cboxGtinh.Text + "',Luong=" + txtLuong.Text + ",Email='" +
                         txtMail.Text + "',DiaChi=N'" + txtDiachi.Text + "',Tuoi=" + cboxTuoi.Text + ",UserName='" + txtUsers.Text + "',Passwords='" + txtMatkhau.Text + "',CapNguoiDung='" + cbbCap.Text + "' where MaNhanVien='" + txtMa.Text + "'";
-                    int kq = this.kn.insert(chuoinv);
+                    int kq = this.kn.query(chuoinv);
                     if (kq != 0)
                     {
                         MessageBox.Show("Cập nhật thông tin nhân viên thành công!","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -98,7 +98,7 @@ namespace QuanLySieuThi
         private bool KtraKhoaChinh(string s)
         {
             bool kq = true;
-            string i = this.kn.commandScalar("select MaNhanVien from NhanVien where MaNhanVien='" + s + "'").Trim();
+            string i = this.kn.comMandScalar("select MaNhanVien from NhanVien where MaNhanVien='" + s + "'").Trim();
             if (i == "")
             {
                 return false;
@@ -154,7 +154,7 @@ namespace QuanLySieuThi
         public bool kTraAdmin(string tenNhanVien, string maNhanVien)
         {
             string chuoiQuery = "select CapNguoiDung from NhanVien where TenNhanVien = N'" + tenNhanVien + "' or MaNhanVien = '" + maNhanVien + "'";
-            string capNguoiDung = this.kn.commandScalar(chuoiQuery).Trim();
+            string capNguoiDung = this.kn.comMandScalar(chuoiQuery).Trim();
             if (capNguoiDung == "Admin")
                 return true;
             return false;
@@ -176,10 +176,10 @@ namespace QuanLySieuThi
                             string xoaChiTietHoaDon = "delete ChiTietHoaDon from ChiTietHoaDon, HoaDon , NhanVien where ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon and NhanVien.MaNhanVien = HoaDon.MaNVLapHoaDon and MaNhanVien = '" + txtMa.Text + "'";
                             string xoaHoaDon = "delete HoaDon from HoaDon, NhanVien where HoaDon.MaNVLapHoaDon = NhanVien.MaNhanVien and NhanVien.MaNhanVien = '" + txtMa.Text + "'";
                             string xoaNhanVien = "delete NhanVien where MaNhanVien = '" + txtMa.Text + "'";
-                            int kq = this.kn.insert(xoathuchi);
-                            kq = this.kn.insert(xoaChiTietHoaDon);
-                            kq = this.kn.insert(xoaHoaDon);
-                            kq = this.kn.insert(xoaNhanVien);
+                            int kq = this.kn.query(xoathuchi);
+                            kq = this.kn.query(xoaChiTietHoaDon);
+                            kq = this.kn.query(xoaHoaDon);
+                            kq = this.kn.query(xoaNhanVien);
                             if (kq != 0)
                             {
                                 MessageBox.Show("Đã xóa nhân viên","XÓA NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -230,7 +230,7 @@ namespace QuanLySieuThi
                         //thêm nhân vien
                         string chuoi = "INSERT INTO NhanVien VALUES('" + txtMa.Text + "',N'" + txtTen.Text + "','" + dateTimeNgaySinh.Text + "',N'" + cboxGtinh.Text+ "'," + 
                             txtLuong.Text + ",'" + txtMail.Text + "','" + txtDiachi.Text + "'," + cboxTuoi.Text + ",'" + txtUsers.Text + "','" + txtMatkhau.Text + "','" + cbbCap.Text + "')";
-                        int kq = this.kn.insert(chuoi);
+                        int kq = this.kn.query(chuoi);
                         //kq = 0 them that bai
                         if (kq == 0)
                             MessageBox.Show("Không thêm nhân viên được !","THÊM NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Error);
