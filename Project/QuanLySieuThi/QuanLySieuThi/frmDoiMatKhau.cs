@@ -22,57 +22,64 @@ namespace QuanLySieuThi
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMatKhauCu.Text != "" && txtMatKhauMoi.Text != "" && txtMatKhauMoiNhapLai.Text != "")
+            try
             {
-                if (txtMatKhauMoi.Text == txtMatKhauMoiNhapLai.Text)
+                if (txtMatKhauCu.Text != "" && txtMatKhauMoi.Text != "" && txtMatKhauMoiNhapLai.Text != "")
                 {
-                    string chuoiQuery = "select Passwords from NhanVien where MaNhanVien = '" + this.manv + "'";
-                    string matKhauNV = this.link.comMandScalar(chuoiQuery).Trim();
-                    if (txtMatKhauCu.Text == matKhauNV)
+                    if (txtMatKhauMoi.Text == txtMatKhauMoiNhapLai.Text)
                     {
-                        string chuoiUpdate = "update NhanVien set Passwords = '" + txtMatKhauMoi.Text + "' where MaNhanVien = '" + this.manv + "'";
-                        int kqUpdate = this.link.query(chuoiUpdate);
-                        if (kqUpdate != 0)
+                        string chuoiQuery = "select Passwords from NhanVien where MaNhanVien = '" + this.manv + "'";
+                        string matKhauNV = this.link.comMandScalar(chuoiQuery).Trim();
+                        if (txtMatKhauCu.Text == matKhauNV)
                         {
-                            MessageBox.Show("Đổi mật khẩu thành công !");
-                            this.Close();
+                            string chuoiUpdate = "update NhanVien set Passwords = '" + txtMatKhauMoi.Text + "' where MaNhanVien = '" + this.manv + "'";
+                            int kqUpdate = this.link.query(chuoiUpdate);
+                            if (kqUpdate != 0)
+                            {
+                                MessageBox.Show("Đổi mật khẩu thành công !");
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Đổi mật khẩu thất bại !");
                         }
                         else
-                            MessageBox.Show("Đổi mật khẩu thất bại !");
+                        {
+                            MessageBox.Show("Mật khẩu cũ nhập sai !");
+                            txtMatKhauCu.Text = "";
+                            txtMatKhauCu.Focus();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Mật khẩu cũ nhập sai !");
-                        txtMatKhauCu.Text = "";
-                        txtMatKhauCu.Focus();
+                        MessageBox.Show("Mật khẩu mới và nhập lại không giống nhau !");
+                        txtMatKhauMoi.Text = "";
+                        txtMatKhauMoiNhapLai.Text = "";
+                        txtMatKhauMoi.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Mật khẩu mới và nhập lại không giống nhau !");
+                    if (txtMatKhauCu.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập mật khẩu cũ !");
+                    }
+                    if (txtMatKhauMoi.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập mật khẩu mới !");
+                    }
+                    if (txtMatKhauMoiNhapLai.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập mật khẩu mới nhập lại !");
+                    }
+                    txtMatKhauCu.Text = "";
                     txtMatKhauMoi.Text = "";
                     txtMatKhauMoiNhapLai.Text = "";
-                    txtMatKhauMoi.Focus();
+                    txtMatKhauCu.Focus();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (txtMatKhauCu.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mật khẩu cũ !");
-                }
-                if (txtMatKhauMoi.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mật khẩu mới !");
-                }
-                if (txtMatKhauMoiNhapLai.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mật khẩu mới nhập lại !");
-                }
-                txtMatKhauCu.Text = "";
-                txtMatKhauMoi.Text = "";
-                txtMatKhauMoiNhapLai.Text = "";
-                txtMatKhauCu.Focus();
+                MessageBox.Show(ex.ToString());
             }
         }
 

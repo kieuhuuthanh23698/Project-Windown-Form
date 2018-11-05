@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportDocument1 = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btnExportFilePDF = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
@@ -77,7 +76,6 @@
 
         #endregion
 
-        private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private DevComponents.DotNetBar.ButtonX btnExportFilePDF;
     }

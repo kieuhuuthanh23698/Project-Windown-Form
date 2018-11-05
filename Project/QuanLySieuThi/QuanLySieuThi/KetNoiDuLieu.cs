@@ -112,13 +112,20 @@ namespace QuanLySieuThi
 
         public int query(string chuoiComMand)
         {
-            openConnection();
-            
-            SqlCommand com = new SqlCommand(chuoiComMand, this.sql);
-            int kq = com.ExecuteNonQuery();
+            try
+            {
+                openConnection();
 
-            closeConnection();
-            return kq;
+                SqlCommand com = new SqlCommand(chuoiComMand, this.sql);
+                int kq = com.ExecuteNonQuery();
+
+                closeConnection();
+                return kq;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
         
     }

@@ -17,17 +17,24 @@ namespace QuanLySieuThi
 
         public frmSuaHangHoa(KetNoiDuLieu kn, DataGridViewRow row)
         {
-            this.row = row;
-            this.kn = kn;
-            InitializeComponent();
+            try
+            {
+                this.row = row;
+                this.kn = kn;
+                InitializeComponent();
 
-            txtTen.Text = row.Cells["TenHangHoa"].Value.ToString();
-            txtGiaban.Text = row.Cells["GiaBan"].Value.ToString();
-            txtDonvi.Text = row.Cells["DonVi"].Value.ToString();
+                txtTen.Text = row.Cells["TenHangHoa"].Value.ToString();
+                txtGiaban.Text = row.Cells["GiaBan"].Value.ToString();
+                txtDonvi.Text = row.Cells["DonVi"].Value.ToString();
 
-            ten = txtTen.Text;
-            giaban = txtGiaban.Text;
-            donvi = txtDonvi.Text;
+                ten = txtTen.Text;
+                giaban = txtGiaban.Text;
+                donvi = txtDonvi.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -81,6 +88,7 @@ namespace QuanLySieuThi
                 if (txtGiaban.Text == "")
                     MessageBox.Show("Bạn chưa nhập giá bán của hàng hóa !", "SỬA THÔNG TIN HÀNG HÓA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            this.Close();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

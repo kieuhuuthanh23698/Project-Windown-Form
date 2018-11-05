@@ -28,41 +28,62 @@ namespace QuanLySieuThi
 
         public void taiGridViewHangHoa()
         {
-            dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng' from KhoHang", "Hang hoa").Tables["Hang hoa"];
+            try
+            {
+                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng' from KhoHang", "Hang hoa").Tables["Hang hoa"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public void taiTreeViewNhomMatHang()
         {
-            if (treeViewLoaiMatHang.Nodes[0].Nodes.Count != 0)//xóa những nhóm mặt hàng hiện có trong treeview để cập nhật mới
-                treeViewLoaiMatHang.Nodes[0].Nodes.Clear();
-            treeViewLoaiMatHang.ImageList = im;
-            SqlDataReader rd = this.link.comManReader("select TenLoaiHangHoa from LoaiHangHoa", "LoaiHangHoa");
-            treeViewLoaiMatHang.Nodes[0].ImageIndex = 0;
-            int i = 0;
-            while (rd.Read())
+            try
             {
-                
-                DevComponents.AdvTree.Node node = new DevComponents.AdvTree.Node(rd["TenLoaiHangHoa"].ToString());
-                treeViewLoaiMatHang.Nodes[0].Nodes.Add(node);
-                treeViewLoaiMatHang.Nodes[0].Nodes[i].ImageIndex = 1;
-                i++;
+                if (treeViewLoaiMatHang.Nodes[0].Nodes.Count != 0)//xóa những nhóm mặt hàng hiện có trong treeview để cập nhật mới
+                    treeViewLoaiMatHang.Nodes[0].Nodes.Clear();
+                treeViewLoaiMatHang.ImageList = im;
+                SqlDataReader rd = this.link.comManReader("select TenLoaiHangHoa from LoaiHangHoa", "LoaiHangHoa");
+                treeViewLoaiMatHang.Nodes[0].ImageIndex = 0;
+                int i = 0;
+                while (rd.Read())
+                {
+
+                    DevComponents.AdvTree.Node node = new DevComponents.AdvTree.Node(rd["TenLoaiHangHoa"].ToString());
+                    treeViewLoaiMatHang.Nodes[0].Nodes.Add(node);
+                    treeViewLoaiMatHang.Nodes[0].Nodes[i].ImageIndex = 1;
+                    i++;
+                }
+
+                rd.Close();
+
+                if (this.link.state() == ConnectionState.Open)
+                    this.link.closeConnection();
+                treeViewLoaiMatHang.ExpandAll();
             }
-
-            rd.Close();
-
-            if (this.link.state() == ConnectionState.Open)
-                this.link.closeConnection();
-            treeViewLoaiMatHang.ExpandAll();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void treeViewLoaiMatHang_NodeClick(object sender, DevComponents.AdvTree.TreeNodeMouseEventArgs e)
         {
-            if (e.Node.Text.Equals("Tất cả loại hàng hóa") == true)
-                taiGridViewHangHoa();
-            else
-                dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng' from KhoHang, LoaiHangHoa where TenLoaiHangHoa like N'" + e.Node.Text + "' AND KhoHang.MaLoaiHangHoa = LoaiHangHoa.MaLoaiHangHoa ", "Loai hang hoa").Tables["Loai hang hoa"];
-            if (link.state() == ConnectionState.Open)
-                this.link.closeConnection();
+            try
+            {
+                if (e.Node.Text.Equals("Tất cả loại hàng hóa") == true)
+                    taiGridViewHangHoa();
+                else
+                    dataGridViewHangHoa.DataSource = this.link.comManTable("select MaHangHoa as N'Mã hàng hóa', TenHangHoa as N'Tên hàng hóa', GiaBan as N'Giá bán', DonVi as N'Đơn vị', SoluongTrongKho  as N'Số lượng' from KhoHang, LoaiHangHoa where TenLoaiHangHoa like N'" + e.Node.Text + "' AND KhoHang.MaLoaiHangHoa = LoaiHangHoa.MaLoaiHangHoa ", "Loai hang hoa").Tables["Loai hang hoa"];
+                if (link.state() == ConnectionState.Open)
+                    this.link.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         
         // thao tác với loại thông tin loại mặt hàng

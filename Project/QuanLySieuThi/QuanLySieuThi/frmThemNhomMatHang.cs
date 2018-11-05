@@ -21,12 +21,19 @@ namespace QuanLySieuThi
 
         public bool ktraKhoaChinh(string maLoaiMatHang, DataTable tbLoaiMatHang)
         {
-            int n = tbLoaiMatHang.Rows.Count;
-            for (int i = 0; i < n; i++)
+            try
             {
-                string s = tbLoaiMatHang.Rows[i]["MaLoaiHangHoa"].ToString().Trim();
-                if (maLoaiMatHang == tbLoaiMatHang.Rows[i]["MaLoaiHangHoa"].ToString().Trim())
-                    return true;
+                int n = tbLoaiMatHang.Rows.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    string s = tbLoaiMatHang.Rows[i]["MaLoaiHangHoa"].ToString().Trim();
+                    if (maLoaiMatHang == tbLoaiMatHang.Rows[i]["MaLoaiHangHoa"].ToString().Trim())
+                        return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return false;
         }
@@ -36,45 +43,52 @@ namespace QuanLySieuThi
             //string command;
             //lấy 2 chuỗi mã và tên, thực hiện insert vào csdl, trước khi thêm phải kiểm tra xem loại hàng hóa này đã có chưa
             //tên và mã của loại hàng hóa ko dc trùng 
-            if (txtMaNhomMatHang.Text != "" && txtTenNhomMatHang.Text != "")
+            try
             {
-                //thêm loại mặt hàng bằng command
-
-                //if (this.link.commandScalar("select MaLoaiHangHoa from LoaiHangHoa where MaLoaiHangHoa = '" + txtMaNhomMatHang.Text + "'").Trim() == "" && this.link.commandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + txtTenNhomMatHang.Text + "'").Trim() == "")
-                //{
-                //    command = "insert into LoaiHangHoa values('" + txtMaNhomMatHang.Text.ToUpper() + "',N'" + txtTenNhomMatHang.Text.ToUpper() + "')";
-                //    int i = this.link.insert(command);
-                //    if (i != 0)
-                //        MessageBox.Show("Thêm thành công !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    else
-                //        MessageBox.Show("Thêm thất bại !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    this.Close();
-                //}
-                //else
-                //    MessageBox.Show("Đã có nhóm mặt hàng này !","Thêm nhóm mặt hàng",MessageBoxButtons.OK,MessageBoxIcon.Error);
-
-
-                //--------------------------------------thêm loại mặt hàng bằng data set---------------------------------------------
-                SqlConnection sql = this.link.getSql();
-                string queryLoaiHangHoa = "select * from LoaiHangHoa";
-                SqlDataAdapter dataAdapter_LoaiHangHoa = new SqlDataAdapter(queryLoaiHangHoa,sql);
-                DataSet dataSet_LoaiHangHoa = new DataSet();
-                dataAdapter_LoaiHangHoa.Fill(dataSet_LoaiHangHoa,"LoaiHangHoa");
-                DataTable dataTable_LoaiMatHang = dataSet_LoaiHangHoa.Tables["LoaiHangHoa"];
-                if (ktraKhoaChinh(txtMaNhomMatHang.Text, dataTable_LoaiMatHang) == false)//không trùng khóa chính
+                if (txtMaNhomMatHang.Text != "" && txtTenNhomMatHang.Text != "")
                 {
-                    DataRow newRow = dataTable_LoaiMatHang.NewRow();
-                    newRow[0] = txtMaNhomMatHang.Text;
-                    newRow[1] = txtTenNhomMatHang.Text;
-                    dataTable_LoaiMatHang.Rows.Add(newRow);
-                    SqlCommandBuilder commandBuilderLoaiHangHoa = new SqlCommandBuilder(dataAdapter_LoaiHangHoa);
-                    commandBuilderLoaiHangHoa.GetInsertCommand();//chú ý : khi insert thì phải getInsertCommand()
-                    dataAdapter_LoaiHangHoa.Update(dataTable_LoaiMatHang); 
-                    MessageBox.Show("Thêm thành công !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    //-----------------------------------thêm loại mặt hàng bằng command-----------------------------------------------
+
+                    //if (this.link.commandScalar("select MaLoaiHangHoa from LoaiHangHoa where MaLoaiHangHoa = '" + txtMaNhomMatHang.Text + "'").Trim() == "" && this.link.commandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + txtTenNhomMatHang.Text + "'").Trim() == "")
+                    //{
+                    //    command = "insert into LoaiHangHoa values('" + txtMaNhomMatHang.Text.ToUpper() + "',N'" + txtTenNhomMatHang.Text.ToUpper() + "')";
+                    //    int i = this.link.insert(command);
+                    //    if (i != 0)
+                    //        MessageBox.Show("Thêm thành công !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    else
+                    //        MessageBox.Show("Thêm thất bại !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    this.Close();
+                    //}
+                    //else
+                    //    MessageBox.Show("Đã có nhóm mặt hàng này !","Thêm nhóm mặt hàng",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+
+                    //--------------------------------------thêm loại mặt hàng bằng data set---------------------------------------------
+                    SqlConnection sql = this.link.getSql();
+                    string queryLoaiHangHoa = "select * from LoaiHangHoa";
+                    SqlDataAdapter dataAdapter_LoaiHangHoa = new SqlDataAdapter(queryLoaiHangHoa, sql);
+                    DataSet dataSet_LoaiHangHoa = new DataSet();
+                    dataAdapter_LoaiHangHoa.Fill(dataSet_LoaiHangHoa, "LoaiHangHoa");
+                    DataTable dataTable_LoaiMatHang = dataSet_LoaiHangHoa.Tables["LoaiHangHoa"];
+                    if (ktraKhoaChinh(txtMaNhomMatHang.Text, dataTable_LoaiMatHang) == false)//không trùng khóa chính
+                    {
+                        DataRow newRow = dataTable_LoaiMatHang.NewRow();
+                        newRow[0] = txtMaNhomMatHang.Text;
+                        newRow[1] = txtTenNhomMatHang.Text;
+                        dataTable_LoaiMatHang.Rows.Add(newRow);
+                        SqlCommandBuilder commandBuilderLoaiHangHoa = new SqlCommandBuilder(dataAdapter_LoaiHangHoa);
+                        commandBuilderLoaiHangHoa.GetInsertCommand();//chú ý : khi insert thì phải getInsertCommand()
+                        dataAdapter_LoaiHangHoa.Update(dataTable_LoaiMatHang);
+                        MessageBox.Show("Thêm thành công !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Đã có nhóm mặt hàng này !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("Đã có nhóm mặt hàng này !", "Thêm nhóm mặt hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -87,7 +101,6 @@ namespace QuanLySieuThi
         {
             //kiểm tra độ dài tên nhóm mặt hàng, nếu quá 50 kí tự thì ko cho nhập, đồng thời báo lỗi qua error provider
             if (txtTenNhomMatHang.Text.Length > 50)
-            //                errorProvider1.SetError(txtTenNhomMatHang,"Tên nhóm mặt hàng không được dài quá 50 kí tự")
             {
                 balloonTip1.SetBalloonText(txtTenNhomMatHang, "Tên nhóm mặt hàng không được dài quá 50 kí tự");
                 balloonTip1.ShowBalloon(txtTenNhomMatHang);

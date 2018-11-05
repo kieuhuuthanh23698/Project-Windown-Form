@@ -19,18 +19,24 @@ namespace QuanLySieuThi
    
         public frmReportHoaDon(KetNoiDuLieu link,string maHoaDon)
         {
-            this.link = link;
-            this.maHoaDon = maHoaDon;
-            InitializeComponent();
-            crystalReportViewer1.RefreshReport();
-            //
-            Phieubaogia pbg = new Phieubaogia();
-            string chuoiQuery = "select * from ChiTietHoaDon, HoaDon where HoaDon.MaHoaDon = '" + maHoaDon + "' and ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon";
-            dt = this.link.comManTable(chuoiQuery, "ChiTietHoaDon").Tables["ChiTietHoaDon"];
-            pbg.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = pbg;
-            crystalReportViewer1.Refresh();
-            MessageBox.Show(Application.StartupPath);
+            try
+            {
+                this.link = link;
+                this.maHoaDon = maHoaDon;
+                InitializeComponent();
+                crystalReportViewer1.RefreshReport();
+                //
+                Phieubaogia pbg = new Phieubaogia();
+                string chuoiQuery = "select * from ChiTietHoaDon, HoaDon where HoaDon.MaHoaDon = '" + maHoaDon + "' and ChiTietHoaDon.MaHoaDon = HoaDon.MaHoaDon";
+                dt = this.link.comManTable(chuoiQuery, "ChiTietHoaDon").Tables["ChiTietHoaDon"];
+                pbg.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = pbg;
+                crystalReportViewer1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnExportFilePDF_Click(object sender, EventArgs e)

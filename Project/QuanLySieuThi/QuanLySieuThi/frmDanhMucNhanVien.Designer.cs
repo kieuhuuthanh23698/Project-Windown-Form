@@ -601,7 +601,6 @@
             this.dataGridView_Nhanvien.Size = new System.Drawing.Size(527, 338);
             this.dataGridView_Nhanvien.TabIndex = 51;
             this.dataGridView_Nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Nhanvien_CellClick);
-            this.dataGridView_Nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellContentClick);
             // 
             // MaNhanVien
             // 

@@ -21,32 +21,49 @@ namespace QuanLySieuThi
             taoMaHangHoa();
         }
 
-        public void taiComBBNhomMathang() // ok
+        public void taiComBBNhomMathang()
         {
-            SqlDataReader rd = this.link.comManReader("select TenLoaiHangHoa from LoaiHangHoa", "LoaiHangHoa");
-            while (rd.Read())
+            try
             {
-                cbbNhomMatHang.Items.Add(rd["TenLoaiHangHoa"].ToString());
+                SqlDataReader rd = this.link.comManReader("select TenLoaiHangHoa from LoaiHangHoa", "LoaiHangHoa");
+                while (rd.Read())
+                {
+                    cbbNhomMatHang.Items.Add(rd["TenLoaiHangHoa"].ToString());
+                }
+                rd.Close();
+                this.link.closeConnection();
+                cbbNhomMatHang.SelectedIndex = 0;
             }
-            rd.Close();
-            this.link.closeConnection();
-            cbbNhomMatHang.SelectedIndex = 0;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        public void taoMaHangHoa() // ok
+        public void taoMaHangHoa()
         {
-            string maLoaiHangHoa = this.link.comMandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'");
-            int count;
-            int i = 0;
-            do
+            try
             {
-                count = int.Parse(this.link.comMandScalar("select count(*) from KhoHang where MaLoaiHangHoa = '" + maLoaiHangHoa + i +"'"));
-                if(count != 0)
+                string maLoaiHangHoa = this.link.comMandScalar("select MaLoaiHangHoa from LoaiHangHoa where TenLoaiHangHoa = N'" + cbbNhomMatHang.SelectedItem.ToString().Trim() + "'");
+                txtMaNhomMatHang.Text = maLoaiHangHoa;
+                int count;
+                int i = 0;
+                do
+                {
+                    count = int.Parse(this.link.comMandScalar("select count(*) from KhoHang where MaHangHoa = '" + maLoaiHangHoa + i + "'"));
+                    if (count == 0)
+                    {
+                        txtMa.Text = maLoaiHangHoa + i;
+                        break;
+                    }
                     i++;
+                }
+                while (count != 0);
             }
-            while (count != 0);
-            txtMaNhomMatHang.Text = maLoaiHangHoa;
-            txtMa.Text = maLoaiHangHoa + i + "";
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -88,7 +105,8 @@ namespace QuanLySieuThi
                     newRow[2] = txtMaNhomMatHang.Text;
                     newRow[3] = txtGiaban.Text;
                     newRow[4] = txtGiamua.Text;
-                    newRow[5] = "0";
+                    newRow[5] = txtDonvi.Text;
+                    newRow[6] = 0;
 
                     tbKhoHang.Rows.Add(newRow);
 

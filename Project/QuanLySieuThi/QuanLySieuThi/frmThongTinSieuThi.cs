@@ -13,6 +13,7 @@ namespace QuanLySieuThi
     {
         KetNoiDuLieu kn;
         string ttst;
+
         public frmThongTinSieuThi(KetNoiDuLieu kn, string ttst)
         {
             this.kn = kn;
@@ -23,27 +24,42 @@ namespace QuanLySieuThi
 
         public void TaiLenTextbox()
         {
-            SqlDataReader rd  = this.kn.comManReader("select TenSieuThi,DiaChiSieuThi,SoDT,TenChuSieuThi,CongQuy from ThongTinSieuThi","ThongTinSieuThi");
-            while (rd.Read())
+            try
             {
-                txtTenst.Text = rd[0].ToString();
-                txtDiachi.Text = rd[1].ToString();
-                txtSdt.Text = rd[2].ToString();
-                txtTenchu.Text = rd[3].ToString();
-                txtThunhap.Text = rd[4].ToString();
+                SqlDataReader rd = this.kn.comManReader("select TenSieuThi,DiaChiSieuThi,SoDT,TenChuSieuThi,CongQuy from ThongTinSieuThi", "ThongTinSieuThi");
+                while (rd.Read())
+                {
+                    txtTenst.Text = rd[0].ToString();
+                    txtDiachi.Text = rd[1].ToString();
+                    txtSdt.Text = rd[2].ToString();
+                    txtTenchu.Text = rd[3].ToString();
+                    txtThunhap.Text = rd[4].ToString();
+                }
+                rd.Close();
+                if (this.kn.state() == ConnectionState.Open)
+                    this.kn.closeConnection();
             }
-            rd.Close();
-            if (this.kn.state() == ConnectionState.Open)
-                this.kn.closeConnection();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private int KtraTTST(string tenst, string dchi, string sdt, string tenchu, float cq)
         {
-            int cmd = this.kn.query("update ThongTinSieuThi set TenSieuThi=N'"+tenst+"', DiaChiSieuThi=N'"+dchi+"',SoDT='"+sdt+"',TenChuSieuThi=N'"+tenchu+"',CongQuy="+cq+"");
-            if (cmd != 0)
-                return 1;
-            else
+            try
+            {
+                int cmd = this.kn.query("update ThongTinSieuThi set TenSieuThi=N'" + tenst + "', DiaChiSieuThi=N'" + dchi + "',SoDT='" + sdt + "',TenChuSieuThi=N'" + tenchu + "',CongQuy=" + cq + "");
+                if (cmd != 0)
+                    return 1;
+                else
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
                 return 0;
+            }
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)

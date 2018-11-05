@@ -24,61 +24,90 @@ namespace QuanLySieuThi
 
         public void loadAutoCompleteTextTimKiemNhanVien()
         {
-            SqlDataReader dr = this.kn.comManReader("select TenKhachHang from KhachHang", "TenKhachHang");
-            while (dr.Read())
+            try
             {
-                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+                SqlDataReader dr = this.kn.comManReader("select TenKhachHang from KhachHang", "TenKhachHang");
+                while (dr.Read())
+                {
+                    txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+                }
+                dr.Close();
+                dr = this.kn.comManReader("select MaKhachHang from KhachHang", "MaKhangHang");
+                while (dr.Read())
+                {
+                    txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+                }
+                dr.Close();
+                dr = this.kn.comManReader("select SoDienThoai from KhachHang", "MaKhangHang");
+                while (dr.Read())
+                {
+                    txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+                }
+                dr.Close();
+                this.kn.closeConnection();
             }
-            dr.Close();
-            dr = this.kn.comManReader("select MaKhachHang from KhachHang", "MaKhangHang");
-            while (dr.Read())
+            catch (Exception ex)
             {
-                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
+                MessageBox.Show(ex.ToString());
             }
-            dr.Close();
-            dr = this.kn.comManReader("select SoDienThoai from KhachHang", "MaKhangHang");
-            while (dr.Read())
-            {
-                txtTimKiem.AutoCompleteCustomSource.Add(dr[0].ToString().Trim());
-            }
-            dr.Close();
-            this.kn.closeConnection();
         }
 
         public void TaiGridViewKhachHang()
         {
-            dataGridViewKhachHang.DataSource = this.kn.comManTable("select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang","Khach Hang").Tables["Khach Hang"];
+            try
+            {
+                dataGridViewKhachHang.DataSource = this.kn.comManTable("select MaKhachHang,TenKhachHang,SoDienThoai from KhachHang", "Khach Hang").Tables["Khach Hang"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private bool KtraKhoaChinh(string s)
         {
-            bool kq = true;
-            string i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='" + s + "'").Trim();
-            if (i == "")
+            try
             {
-                return false;
+                bool kq = true;
+                string i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='" + s + "'").Trim();
+                if (i == "")
+                {
+                    return false;
+                }
+                return kq;
             }
-            return kq;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return false;
         }
 
         private string taoMaKhachHang()
         {
             int dem = 0;
             string i = "";
-            do
+            try
             {
-                try
+                do
                 {
-                    i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-                if (i == "")
-                    break;//mã khách hàng này chưa có trong data table
-                dem++;
-            } while (i != "");
+                    try
+                    {
+                        i = this.kn.comMandScalar("select MaKhachHang from KhachHang where MaKhachHang='KHACHHANG" + dem + "'").Trim();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    if (i == "")
+                        break;//mã khách hàng này chưa có trong data table
+                    dem++;
+                } while (i != "");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             return "KHACHHANG" + dem;
         }
 
@@ -157,27 +186,34 @@ namespace QuanLySieuThi
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if (txtTen.Text != "" && txtSDT.Text != "")
+            try
             {
-                int kq = this.kn.query("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
-                if (kq == 0)
-                    MessageBox.Show("Thêm khách hàng thất bại !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txtTen.Text != "" && txtSDT.Text != "")
+                {
+                    int kq = this.kn.query("insert into KhachHang values('" + txtMa.Text + "',N'" + txtTen.Text + "','" + txtSDT.Text + "')");
+                    if (kq == 0)
+                        MessageBox.Show("Thêm khách hàng thất bại !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Thêm thành công !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TaiGridViewKhachHang();
+                        btnXoa.Enabled = btnChinhsua.Enabled = btnThem.Enabled = dataGridViewKhachHang.Enabled = true;
+                        btnLuu.Enabled = false;
+                        btnHuyThem.Hide();
+                        txtMa.Text = txtSDT.Text = txtTen.Text = "";
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("Thêm thành công !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TaiGridViewKhachHang();
-                    btnXoa.Enabled = btnChinhsua.Enabled = btnThem.Enabled = dataGridViewKhachHang.Enabled = true;
-                    btnLuu.Enabled = false;
-                    btnHuyThem.Hide();
-                    txtMa.Text = txtSDT.Text = txtTen.Text = "";
+                    if (txtTen.Text == "")
+                        MessageBox.Show("Bạn chưa nhập tên khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (txtSDT.Text == "")
+                        MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (txtTen.Text == "")
-                    MessageBox.Show("Bạn chưa nhập tên khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if(txtSDT.Text == "")
-                    MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng !", "THÊM KHÁCH HÀNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -197,9 +233,9 @@ namespace QuanLySieuThi
             if (dataGridViewKhachHang.SelectedRows.Count != 0)
             {
                 DataGridViewRow item_row = dataGridViewKhachHang.SelectedRows[0];
-                txtMa.Text = item_row.Cells[0].Value.ToString();
-                txtTen.Text = item_row.Cells[1].Value.ToString();
-                txtSDT.Text = item_row.Cells[2].Value.ToString();
+                txtMa.Text = item_row.Cells[0].Value.ToString().Trim();
+                txtTen.Text = item_row.Cells[1].Value.ToString().Trim();
+                txtSDT.Text = item_row.Cells[2].Value.ToString().Trim();
             }
         }
 
@@ -224,10 +260,17 @@ namespace QuanLySieuThi
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            if (txtTimKiem.Text == "")
-                TaiGridViewKhachHang();
-            else
-                dataGridViewKhachHang.DataSource = this.kn.comManTable("select * from KhachHang where MaKhachHang = '" + txtTimKiem.Text + "' or TenKhachHang = N'" + txtTimKiem.Text + "' or SoDienThoai = '" + txtTimKiem.Text + "'","KhachHang").Tables["KhachHang"];
+            try
+            {
+                if (txtTimKiem.Text == "")
+                    TaiGridViewKhachHang();
+                else
+                    dataGridViewKhachHang.DataSource = this.kn.comManTable("select * from KhachHang where MaKhachHang = '" + txtTimKiem.Text + "' or TenKhachHang = N'" + txtTimKiem.Text + "' or SoDienThoai = '" + txtTimKiem.Text + "'", "KhachHang").Tables["KhachHang"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
     }

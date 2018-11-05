@@ -33,7 +33,14 @@ namespace QuanLySieuThi
 
         public void TaiNV()
         {
-            dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien as N'Mã nhân viên',TenNhanVien as N'Tên nhân viên' from NhanVien", "Nhan Vien").Tables["Nhan Vien"];
+            try
+            {
+                dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien as N'Mã nhân viên',TenNhanVien as N'Tên nhân viên' from NhanVien", "Nhan Vien").Tables["Nhan Vien"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -46,7 +53,6 @@ namespace QuanLySieuThi
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             dataGridView_Nhanvien.Enabled = false;
-            txtMa.Enabled = true;
 
             //reset các text box thông tin
             txtMa.Text = taoMaNhanVien();
@@ -69,36 +75,51 @@ namespace QuanLySieuThi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (dataGridView_Nhanvien.SelectedRows.Count!=0)
+            try
             {
-                if (txtTen.Text != "" && cboxGtinh.Text != "" && dateTimeNgaySinh.Text != "" && cboxTuoi.Text != "" && KTMail(txtMail.Text) == true && txtDiachi.Text != "" && txtLuong.Text != "" && cbbCap.Text != "" && txtUsers.Text != "" && txtMatkhau.Text != "")
+                if (dataGridView_Nhanvien.SelectedRows.Count != 0)
                 {
-                    string chuoinv = "update NhanVien set TenNhanVien=N'" + txtTen.Text + "',NgaySinh='" + dateTimeNgaySinh.Text + "',GioiTinh=N'" + cboxGtinh.Text + "',Luong=" + txtLuong.Text + ",Email='" +
-                        txtMail.Text + "',DiaChi=N'" + txtDiachi.Text + "',Tuoi=" + cboxTuoi.Text + ",UserName='" + txtUsers.Text + "',Passwords='" + txtMatkhau.Text + "',CapNguoiDung='" + cbbCap.Text + "' where MaNhanVien='" + txtMa.Text + "'";
-                    int kq = this.kn.query(chuoinv);
-                    if (kq != 0)
+                    if (txtTen.Text != "" && cboxGtinh.Text != "" && dateTimeNgaySinh.Text != "" && cboxTuoi.Text != "" && KTMail(txtMail.Text) == true && txtDiachi.Text != "" && txtLuong.Text != "" && cbbCap.SelectedItem.ToString() != "" && txtUsers.Text != "" && txtMatkhau.Text != "")
                     {
-                        MessageBox.Show("Cập nhật thông tin nhân viên thành công!","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        string chuoinv = "update NhanVien set TenNhanVien=N'" + txtTen.Text + "',NgaySinh='" + dateTimeNgaySinh.Text + "',GioiTinh=N'" + cboxGtinh.Text + "',Luong=" + txtLuong.Text + ",Email='" +
+                            txtMail.Text + "',DiaChi=N'" + txtDiachi.Text + "',Tuoi=" + cboxTuoi.Text + ",UserName='" + txtUsers.Text + "',Passwords='" + txtMatkhau.Text + "',CapNguoiDung='" + cbbCap.Text + "' where MaNhanVien='" + txtMa.Text + "'";
+                        int kq = this.kn.query(chuoinv);
+                        if (kq != 0)
+                        {
+                            MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "CẬP NHẬT THÔNG TIN NHÂN VIÊN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thông tin thất bại!", "CẬP NHẬT THÔNG TIN NHÂN VIÊN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
-                    {
-                        MessageBox.Show("Cập nhật thông tin thất bại!","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    }
+                        MessageBox.Show("Bạn chọn nhân viên trong danh sách và sửa lại thì mới cập nhật thông tin được !", "CẬP NHẬT THÔNG TIN NHÂN VIÊN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else
-                    MessageBox.Show("Bạn chọn nhân viên trong danh sách và sửa lại thì mới cập nhật thông tin được !","CẬP NHẬT THÔNG TIN NHÂN VIÊN",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private bool KtraKhoaChinh(string s)
         {
-            bool kq = true;
-            string i = this.kn.comMandScalar("select MaNhanVien from NhanVien where MaNhanVien='" + s + "'").Trim();
-            if (i == "")
+            try
             {
-                return false;
+                bool kq = true;
+                string i = this.kn.comMandScalar("select MaNhanVien from NhanVien where MaNhanVien='" + s + "'").Trim();
+                if (i == "")
+                {
+                    return false;
+                }
+                return kq;
             }
-            return kq;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return false;
         }
 
         private bool KTMail(string s)
@@ -124,40 +145,49 @@ namespace QuanLySieuThi
             }
         }
 
-        private void dataGridViewX1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void dataGridView_Nhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView_Nhanvien.SelectedRows.Count != 0)
+            try
             {
-                //hiển thị thông tin của nhân viên lên textbox
-                SqlDataReader dr = this.kn.comManReader("select * from NhanVien where MaNhanVien = N'" + dataGridView_Nhanvien.CurrentRow.Cells[0].Value.ToString() + "'", "NhanVien");
-                dr.Read();
-                txtMa.Text = dr["MaNhanVien"].ToString().Trim();
-                txtTen.Text = dr["TenNhanVien"].ToString().Trim();
-                dateTimeNgaySinh.Text = dr["NgaySinh"].ToString().Trim();
-                cboxGtinh.Text = dr["GioiTinh"].ToString().Trim();
-                cboxTuoi.Text = dr["Tuoi"].ToString().Trim();
-                txtMail.Text = dr["Email"].ToString().Trim();
-                txtDiachi.Text = dr["DiaChi"].ToString().Trim();
-                txtLuong.Text = dr["Luong"].ToString().Trim();
-                cbbCap.Text = dr["CapNguoiDung"].ToString().Trim();
-                txtUsers.Text = dr["UserName"].ToString().Trim();
-                txtMatkhau.Text = dr["PassWords"].ToString().Trim();
-                dr.Close();
+                if (dataGridView_Nhanvien.SelectedRows.Count != 0)
+                {
+                    //hiển thị thông tin của nhân viên lên textbox
+                    SqlDataReader dr = this.kn.comManReader("select * from NhanVien where MaNhanVien = N'" + dataGridView_Nhanvien.CurrentRow.Cells[0].Value.ToString() + "'", "NhanVien");
+                    dr.Read();
+                    txtMa.Text = dr["MaNhanVien"].ToString().Trim();
+                    txtTen.Text = dr["TenNhanVien"].ToString().Trim();
+                    dateTimeNgaySinh.Text = dr["NgaySinh"].ToString().Trim();
+                    cboxGtinh.Text = dr["GioiTinh"].ToString().Trim();
+                    cboxTuoi.Text = dr["Tuoi"].ToString().Trim();
+                    txtMail.Text = dr["Email"].ToString().Trim();
+                    txtDiachi.Text = dr["DiaChi"].ToString().Trim();
+                    txtLuong.Text = dr["Luong"].ToString().Trim();
+                    cbbCap.Text = dr["CapNguoiDung"].ToString().Trim();
+                    txtUsers.Text = dr["UserName"].ToString().Trim();
+                    txtMatkhau.Text = dr["PassWords"].ToString().Trim();
+                    dr.Close();
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public bool kTraAdmin(string tenNhanVien, string maNhanVien)
         {
-            string chuoiQuery = "select CapNguoiDung from NhanVien where TenNhanVien = N'" + tenNhanVien + "' or MaNhanVien = '" + maNhanVien + "'";
-            string capNguoiDung = this.kn.comMandScalar(chuoiQuery).Trim();
-            if (capNguoiDung == "Admin")
-                return true;
+            try
+            {
+                string chuoiQuery = "select CapNguoiDung from NhanVien where TenNhanVien = N'" + tenNhanVien + "' or MaNhanVien = '" + maNhanVien + "'";
+                string capNguoiDung = this.kn.comMandScalar(chuoiQuery).Trim();
+                if (capNguoiDung == "Admin")
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             return false;
         }
 
@@ -220,8 +250,8 @@ namespace QuanLySieuThi
             }
             else
             {
-                if (txtMa.Text != "" && txtTen.Text != "" && txtMail.Text != "" && cbbCap.Text != "" && txtDiachi.Text != "" && txtLuong.Text != "" && txtUsers.Text
-                    != "" && txtMatkhau.Text != "")
+                if (txtTen.Text != "" && txtMail.Text != "" && cbbCap.SelectedItem.ToString() != "" && txtDiachi.Text != "" && txtLuong.Text != "" && txtUsers.Text
+                    != "" && txtMatkhau.Text != "" && dateTimeNgaySinh.Text != "" && cboxTuoi.Text != "")
                 {
                     if (KtraKhoaChinh(txtMa.Text) == true)
                     {
@@ -295,40 +325,61 @@ namespace QuanLySieuThi
 
         public string taoMaNhanVien()
         {
+
             int dem = 0;
             int count;
-            do
+            try
             {
-                string chuoiCount = "select COUNT(*) from NhanVien where MaNhanVien = '200116022" + dem + "'";
-                count = int.Parse(this.kn.comMandScalar(chuoiCount));
-                if (count == 0)
-                    return "200116022" + dem;
-                dem++;
-            } while (count != 0);
-            return "200116022" + (dem + 1);
+                do
+                {
+                    string chuoiCount = "select COUNT(*) from NhanVien where MaNhanVien = 'NHANVIEN" + dem + "'";
+                    count = int.Parse(this.kn.comMandScalar(chuoiCount));
+                    if (count == 0)
+                        return "NHANVIEN" + dem;
+                    dem++;
+                } while (count != 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return "NHANVIEN" + (dem + 1);
         }
 
         public void taiAutoCompleteText()
         {
-            SqlDataReader rd = this.kn.comManReader("select TenNhanVien from NhanVien", "TenNhanVien");
-
-            while (rd.Read())
+            try
             {
-                txtTimtenNv.AutoCompleteCustomSource.Add(rd["TenNhanVien"].ToString());
-            }
-            rd.Close();
+                SqlDataReader rd = this.kn.comManReader("select TenNhanVien from NhanVien", "TenNhanVien");
 
-            this.kn.closeConnection();
+                while (rd.Read())
+                {
+                    txtTimtenNv.AutoCompleteCustomSource.Add(rd["TenNhanVien"].ToString());
+                }
+                rd.Close();
+
+                this.kn.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void txtTimtenNv_TextChanged(object sender, EventArgs e)
         {
-            if (txtTimtenNv.Text.Trim().Equals("") == true)
-                TaiNV();
-            else
-                dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien,TenNhanVien from NhanVien where TenNhanVien like N'" + txtTimtenNv.Text + "%'", "Nhan Vien").Tables["Nhan Vien"];
+            try
+            {
+                if (txtTimtenNv.Text.Trim().Equals("") == true)
+                    TaiNV();
+                else
+                    dataGridView_Nhanvien.DataSource = this.kn.comManTable("select MaNhanVien,TenNhanVien from NhanVien where TenNhanVien like N'" + txtTimtenNv.Text + "%'", "Nhan Vien").Tables["Nhan Vien"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
-
        
     }
 }

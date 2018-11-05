@@ -16,7 +16,15 @@ namespace QuanLySieuThi
 
         public string timTenNhanVien(string manv)
         {
-            return link.comMandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
+            try
+            {
+                return link.comMandScalar("select TenNhanVien from NhanVien where MaNhanVien = '" + manv + "'");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return "";
         }
 
         public frmMain(KetNoiDuLieu link, string manv)
@@ -84,6 +92,7 @@ namespace QuanLySieuThi
             else
             {
                 tab.Items.Clear();
+
                 DevComponents.DotNetBar.DockContainerItem item = new DevComponents.DotNetBar.DockContainerItem("Hóa đơn", "Hóa đơn");
                 tab.Items.Add(item);
                 Image a = global::QuanLySieuThi.Properties.Resources.bill_icon;
